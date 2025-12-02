@@ -7,7 +7,7 @@ import LocationEnvironmentSection from '../components/form/LocationEnvironmentSe
 import RegulatorySection from '../components/form/RegulatorySection';
 import ResourcePlanningSection from '../components/form/ResourcePlanningSection';
 import VendorSupplyChainSection from '../components/form/VendorSupplyChainSection';
-import PredictionResults from '../components/form/PredictionResults';
+import PredictionResultsModal from '../components/form/PredictionResults';
 import FormSkeleton from '../components/form/FormSkeleton';
 import { GradientBackground } from '@/components/ui/gradient-background';
 
@@ -59,6 +59,7 @@ export default function TransmissionLineForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [prediction, setPrediction] = useState(null);
+  const [isResultsModalOpen, setIsResultsModalOpen] = useState(false);
 
   useEffect(() => {
     // Simulate initial loading
@@ -181,9 +182,8 @@ export default function TransmissionLineForm() {
 
     if (missingFields.length > 0) {
       setPrediction(null);
-      const preview = missingFields.slice(0, 2).join(', ');
-      const remainder = missingFields.length - 2;
-      setSubmitError('Please complete the required information.');
+      console.log('Missing fields:', missingFields);
+      setSubmitError(`Missing: ${missingFields.join(', ')}`);
       return;
     }
 
@@ -222,6 +222,7 @@ export default function TransmissionLineForm() {
         throw new Error(response?.error || 'Prediction failed');
       }
       setPrediction(response.data);
+      setIsResultsModalOpen(true);
     } catch (err) {
       setPrediction(null);
       setSubmitError(err.message || 'Failed to fetch prediction');
@@ -315,7 +316,11 @@ export default function TransmissionLineForm() {
             </button>
           </div>
 
-          <PredictionResults prediction={prediction} />
+          <PredictionResultsModal 
+            prediction={prediction} 
+            open={isResultsModalOpen}
+            onClose={() => setIsResultsModalOpen(false)}
+          />
         </form>
       </div>
       </div>
