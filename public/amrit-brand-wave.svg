@@ -1,0 +1,16 @@
+<svg width="640" height="240" viewBox="0 0 640 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="240" fill="transparent"/>
+  <path d="M0 70C76 40 148 45 215 70C282 95 358 98 438 78C518 58 599 64 640 78V120H0V70Z" fill="#C26430"/>
+  <path d="M0 120C62 104 133 111 201 131C269 151 337 153 417 138C497 123 579 133 640 152V180H0V120Z" fill="#FFFFFF"/>
+  <path d="M0 170C60 150 136 156 208 178C280 200 354 203 430 190C506 177 580 180 640 194V240H0V170Z" fill="#172111"/>
+  <circle cx="90" cy="70" r="8" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="120" cy="55" r="5" fill="#FFFFFF" opacity="0.7"/>
+  <path d="M470 62L505 35L540 62" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M470 178L505 205L540 178" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="140" fill="#172111" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="1">
+    Amrit Mahotsav
+  </text>
+  <text x="60" y="170" fill="#C26430" font-family="'Segoe UI', Arial, sans-serif" font-size="18" letter-spacing="3">
+    BRAND STRIPE
+  </text>
+</svg>
