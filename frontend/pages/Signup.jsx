@@ -14,7 +14,19 @@ export default function Signup() {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
+
+  // Cookie helper functions
+  const setCookie = (name, value, days) => {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Strict`;
+  };
+
+  const deleteCookie = (name) => {
+    document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/;SameSite=Strict`;
+  };
 
   useEffect(() => {
     const user = localStorage.getItem('user');
@@ -68,10 +80,10 @@ export default function Signup() {
         setShowVerification(true);
         setError('');
       } else {
-        setError(data.error || 'Failed to send verification code');
+        setError(data.error || 'Verification code send failed');
       }
     } catch (err) {
-      setError('Connection error. Make sure backend is running');
+      setError('Connection error. Ensure backend is running on port 5001');
     } finally {
       setLoading(false);
     }
@@ -101,7 +113,7 @@ export default function Signup() {
         setError(data.error || 'Invalid verification code');
       }
     } catch (err) {
-      setError('Connection error. Make sure backend is running');
+      setError('Connection error. Ensure backend is running on port 5001');
     } finally {
       setLoading(false);
     }
@@ -122,12 +134,22 @@ export default function Signup() {
         localStorage.setItem('user', JSON.stringify(data.user));
         localStorage.setItem('token', data.token);
         localStorage.setItem('isAuthenticated', 'true');
+
+        // Handle Remember Me
+        if (rememberMe) {
+          setCookie('rememberedEmail', email, 30); // 30 days
+          setCookie('rememberedPassword', btoa(password), 30); // Encode to base64
+        } else {
+          deleteCookie('rememberedEmail');
+          deleteCookie('rememberedPassword');
+        }
+
         navigate('/prediction', { replace: true });
       } else {
         setError(data.error || 'Signup failed');
       }
     } catch (err) {
-      setError('Connection error. Make sure backend is running');
+      setError('Connection error. Ensure backend is running on port 5001');
     }
   };
 
@@ -161,8 +183,10 @@ export default function Signup() {
                 <label className="block text-sm text-gray-700 mb-1">Full Name</label>
                 <input
                   type="text"
+                  name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  autoComplete="name"
                   required
                   className="w-full h-10 px-3 rounded-md border border-gray-200 bg-white text-sm outline-none focus:ring-2 focus:ring-slate-300"
                 />
@@ -172,8 +196,10 @@ export default function Signup() {
                 <label className="block text-sm text-gray-700 mb-1">Email address</label>
                 <input
                   type="email"
+                  name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  autoComplete="username email"
                   required
                   className="w-full h-10 px-3 rounded-md border border-gray-200 bg-white text-sm outline-none focus:ring-2 focus:ring-slate-300"
                 />
@@ -184,8 +210,10 @@ export default function Signup() {
                 <div className="relative">
                   <input
                     type={showPassword ? 'text' : 'password'}
+                    name="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    autoComplete="new-password"
                     required
                     minLength={6}
                     className="w-full h-10 px-3 pr-10 rounded-md border border-gray-200 bg-white text-sm outline-none focus:ring-2 focus:ring-slate-300"
@@ -210,8 +238,10 @@ export default function Signup() {
                 <div className="relative">
                   <input
                     type={showConfirmPassword ? 'text' : 'password'}
+                    name="confirmPassword"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
+                    autoComplete="new-password"
                     required
                     minLength={6}
                     className="w-full h-10 px-3 pr-10 rounded-md border border-gray-200 bg-white text-sm outline-none focus:ring-2 focus:ring-slate-300"
@@ -229,6 +259,19 @@ export default function Signup() {
                     )}
                   </button>
                 </div>
+              </div>
+
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="remember-me-signup"
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                  className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                />
+                <label htmlFor="remember-me-signup" className="ml-2 text-sm text-gray-700">
+                  Remember me
+                </label>
               </div>
 
               <button

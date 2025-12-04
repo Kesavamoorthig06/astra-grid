@@ -34,14 +34,6 @@ const Navbar = () => {
               >
                 <Link to="/prediction">Prediction</Link>
               </TabsTrigger>
-              
-              <TabsTrigger 
-                value="/simulation" 
-                disabled
-                className="opacity-40 cursor-not-allowed px-4 py-2 text-sm font-semibold text-white"
-              >
-                Simulation
-              </TabsTrigger>
             </TabsList>
             </Tabs>
           </div>
