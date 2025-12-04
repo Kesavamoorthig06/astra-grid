@@ -1,0 +1,104 @@
+{
+  "cost_metrics": {
+    "r2": 0.9667383960622399,
+    "mae": 7.928112833036117
+  },
+  "delay_metrics": {
+    "r2": 0.935352087020874,
+    "mae": 24.566577911376953
+  },
+  "risk_thresholds_cost": {
+    "low": 10.0,
+    "medium": 25.0,
+    "high": 50.0
+  },
+  "risk_thresholds_delay": {
+    "low": 30.0,
+    "medium": 90.0,
+    "high": 180.0
+  },
+  "hotspot_cost": [
+    [
+      "Material_Cost_Estimate_INR",
+      0.7255991697311401
+    ],
+    [
+      "Labour_Cost_Estimate_INR",
+      0.0726340189576149
+    ],
+    [
+      "Num_Skilled_Workers_Required",
+      0.018100081011652946
+    ],
+    [
+      "Regulatory_Hotspot_Region_Uttarakhand",
+      0.014306239783763885
+    ],
+    [
+      "Project_Type_Consultancy",
+      0.012652621604502201
+    ],
+    [
+      "Regulatory_Hotspot_Region_Arunachal Pradesh",
+      0.002642678329721093
+    ],
+    [
+      "Year_2011-12",
+      0.0026416813489049673
+    ],
+    [
+      "Project_Type_Rural Electrification",
+      0.0025915203150361776
+    ],
+    [
+      "Regulatory_Hotspot_Region_Western Region",
+      0.002562312874943018
+    ],
+    [
+      "Regulatory_Hotspot_Region_Kerala",
+      0.00251640728674829
+    ]
+  ],
+  "hotspot_delay": [
+    [
+      "Duration_Efficiency",
+      0.1728353500366211
+    ],
+    [
+      "Escalation_Reason_Manpower",
+      0.11698014289140701
+    ],
+    [
+      "Vendor_Performance_Rating",
+      0.06965547055006027
+    ],
+    [
+      "Project_Type_Joint Venture Project",
+      0.025895865634083748
+    ],
+    [
+      "Project_Type_HVDC Transmission Link",
+      0.020301517099142075
+    ],
+    [
+      "Project_Type_Transmission System (TBCB)",
+      0.017667759209871292
+    ],
+    [
+      "Material_Availability_Issue",
+      0.017286641523241997
+    ],
+    [
+      "Escalation_Reason_Material",
+      0.01630067639052868
+    ],
+    [
+      "Project_Type_Transmission Project SPV",
+      0.015379607677459717
+    ],
+    [
+      "Material_Cost_Estimate_INR",
+      0.014768657274544239
+    ]
+  ]
+}

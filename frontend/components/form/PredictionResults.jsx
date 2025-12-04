@@ -15,7 +15,13 @@ import { Badge } from '../ui/badge';
 import { Card, CardContent, CardHeader, CardHeading, CardToolbar } from '../ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../ui/collapsible';
 import { Button } from '../ui/button';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, ChevronRight } from 'lucide-react';
+import BarChart from '../charts/BarChart';
+import PieChart from '../charts/PieChart';
+import RadarChart from '../charts/RadarChart';
+import LineChart from '../charts/LineChart';
+import Heatmap from '../charts/Heatmap';
+import ScatterPlot from '../charts/ScatterPlot';
 
 function RiskBadge({ level }) {
   const variantMap = {
@@ -120,6 +126,7 @@ function MetricCard({ title, value, unit, subtitle, showNumbers, animationKey, t
 export default function PredictionResultsModal({ prediction, open, onClose }) {
   const [showNumbers, setShowNumbers] = useState(false);
   const [animationKey, setAnimationKey] = useState(0);
+  const [metricDetailsOpen, setMetricDetailsOpen] = useState(false);
 
   useEffect(() => {
     if (!prediction || !open) {
@@ -134,6 +141,16 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
     return () => clearTimeout(timer);
   }, [prediction, open]);
 
+  useEffect(() => {
+    if (metricDetailsOpen) {
+      // Scroll to top when metrics are opened
+      const dialogContent = document.querySelector('[role="dialog"]');
+      if (dialogContent) {
+        dialogContent.scrollTop = 0;
+      }
+    }
+  }, [metricDetailsOpen]);
+
   const riskAnalysis = prediction?.risk_analysis;
   const hotspotAnalysis = prediction?.hotspot_analysis;
 
@@ -141,7 +158,7 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
     <Dialog open={open} onOpenChange={(isOpen) => !isOpen && onClose()}>
       <DialogPortal>
         <DialogBackdrop />
-        <DialogPopup>
+        <DialogPopup className={metricDetailsOpen ? 'max-w-7xl' : 'max-w-3xl'}>
           <DialogHeader className="border-b pb-4 mb-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -159,7 +176,10 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
           </DialogHeader>
 
           {prediction && (
-            <div className="space-y-6">
+            <div className="flex flex-col min-h-[500px]">
+              <div className="flex-1 space-y-6">
+              {!metricDetailsOpen && (
+                <>
               {/* Primary Metrics with Collapsible Cards */}
               <div className="grid gap-4 sm:grid-cols-2">
                 <MetricCard
@@ -297,7 +317,7 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
               {/* Recommendations Section (just accordion) */}
               {prediction.recommendations && prediction.recommendations.length > 0 && (
                 <div className="rounded-xl border bg-gray-50 p-5">
-                  <Accordion type="single" collapsible indicator="plus" className="w-full" defaultValue="rec-0">
+                  <Accordion type="single" collapsible indicator="plus" className="w-full">
                     {prediction.recommendations.map((rec, idx) => (
                       <AccordionItem key={rec.id} value={`rec-${idx}`}>
                         <AccordionTrigger>
@@ -344,21 +364,105 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
                 </div>
               )}
 
+                </>
+              )}
+
+              {metricDetailsOpen && (
+                <div className="space-y-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Prediction Analytics & Visualizations</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Chart 1: Risk Score Comparison */}
+                    <Card className="bg-white border border-gray-200 overflow-hidden shadow-sm">
+                      <CardHeader className="p-4 pb-2">
+                        <CardHeading className="text-sm font-medium text-gray-700">Risk Score Comparison</CardHeading>
+                      </CardHeader>
+                      <CardContent className="p-4 h-[350px] flex items-center justify-center">
+                        <BarChart prediction={prediction} width={450} height={300} />
+                      </CardContent>
+                    </Card>
+
+                    {/* Chart 2: Cost Escalation Analysis */}
+                    <Card className="bg-white border border-gray-200 overflow-hidden shadow-sm">
+                      <CardHeader className="p-4 pb-2">
+                        <CardHeading className="text-sm font-medium text-gray-700">Cost Escalation Breakdown</CardHeading>
+                      </CardHeader>
+                      <CardContent className="p-4 h-[350px] flex items-center justify-center">
+                        <PieChart prediction={prediction} width={450} height={300} />
+                      </CardContent>
+                    </Card>
+
+                    {/* Chart 3: Multi-Metric Risk Radar */}
+                    <Card className="bg-white border border-gray-200 overflow-hidden shadow-sm">
+                      <CardHeader className="p-4 pb-2">
+                        <CardHeading className="text-sm font-medium text-gray-700">Multi-Dimensional Risk Assessment</CardHeading>
+                      </CardHeader>
+                      <CardContent className="p-4 h-[350px] flex items-center justify-center">
+                        <RadarChart prediction={prediction} width={450} height={300} />
+                      </CardContent>
+                    </Card>
+
+                    {/* Chart 4: Cost Trend Analysis */}
+                    <Card className="bg-white border border-gray-200 overflow-hidden shadow-sm">
+                      <CardHeader className="p-4 pb-2">
+                        <CardHeading className="text-sm font-medium text-gray-700">Project Cost Trend</CardHeading>
+                      </CardHeader>
+                      <CardContent className="p-4 h-[350px] flex items-center justify-center">
+                        <LineChart prediction={prediction} width={450} height={300} />
+                      </CardContent>
+                    </Card>
+
+                    {/* Chart 5: Risk Impact Matrix */}
+                    <Card className="bg-white border border-gray-200 overflow-hidden shadow-sm">
+                      <CardHeader className="p-4 pb-2">
+                        <CardHeading className="text-sm font-medium text-gray-700">Risk Impact Heatmap</CardHeading>
+                      </CardHeader>
+                      <CardContent className="p-4 h-[350px] flex items-center justify-center">
+                        <Heatmap prediction={prediction} width={450} height={300} />
+                      </CardContent>
+                    </Card>
+
+                    {/* Chart 6: Schedule Timeline */}
+                    <Card className="bg-white border border-gray-200 overflow-hidden shadow-sm">
+                      <CardHeader className="p-4 pb-2">
+                        <CardHeading className="text-sm font-medium text-gray-700">Project Timeline & Delays</CardHeading>
+                      </CardHeader>
+                      <CardContent className="p-4 h-[350px] flex items-center justify-center">
+                        <ScatterPlot prediction={prediction} />
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              )}
+              </div>
+
               {/* Action Footer */}
-              <div className="flex items-center justify-between pt-4 border-t">
-                <p className="text-xs text-gray-500">
-                  Generated on {new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
-                </p>
-                <div className="flex gap-2">
+              <div className="pt-4 border-t">
+                <div className="flex items-center justify-between">
+                  <p className="text-xs text-gray-500">
+                    Generated on {new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+                  </p>
+                  <button
+                    onClick={() => setMetricDetailsOpen((prev) => !prev)}
+                    className="h-10 w-10 flex items-center justify-center rounded-full bg-white dark:bg-black border-[3px] border-gray-300 dark:border-gray-700 text-black dark:text-white transition-all duration-200 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black hover:shadow-md shadow-lg"
+                    aria-label={metricDetailsOpen ? 'Show charts' : 'Show details'}
+                  >
+                    {metricDetailsOpen ? (
+                      <ChevronRight className="h-4 w-4 rotate-180 transition-transform duration-300" />
+                    ) : (
+                      <ChevronRight className="h-4 w-4 transition-transform duration-300" />
+                    )}
+                  </button>
+                  <div className="flex gap-2 items-center">
                   <button
                     onClick={onClose}
-                    className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                    className="px-6 py-2 bg-white dark:bg-black border-[3px] border-gray-300 dark:border-gray-700 text-black dark:text-white rounded-md font-semibold transition-all duration-200 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black hover:shadow-md shadow-lg"
                   >
                     Close
                   </button>
                   <button
                     onClick={() => window.print()}
-                    className="px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition-colors flex items-center gap-2"
+                    className="px-6 py-2 bg-white dark:bg-black border-[3px] border-gray-300 dark:border-gray-700 text-black dark:text-white rounded-md font-semibold transition-all duration-200 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black hover:shadow-md shadow-lg flex items-center gap-2"
                   >
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
@@ -366,7 +470,8 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
                     Export
                   </button>
                 </div>
-              </div>
+                </div>
+            </div>
             </div>
           )}
         </DialogPopup>

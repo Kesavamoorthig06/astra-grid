@@ -1,0 +1,1118 @@
+Region,State,Substation,Type,Voltage Level,Start Date,Actual Date of Completion,latitude,longitude,geocode_status
+Western Region,Maharashtra,135,AIS,220kV,,,19.1066478,74.5443345,success
+Western Region - II,Madhya Pradesh,142INDORE EAST (BICHOLI.M.),AIS,220kV,,,23.8143419,77.5340719,state_center
+Western Region,Maharashtra,154,AIS,220kV,,,19.1066478,74.5443345,success
+Western Region,Maharashtra,257,AIS,220kV,,,19.1066478,74.5443345,success
+Western Region,Maharashtra,258,GIS,220kV,,,19.1066478,74.5443345,success
+Western Region,Maharashtra,275,AIS,220kV,,,19.1066478,74.5443345,success
+Southern Region,Telangana,4000/11kV Velgatoor S/s,AIS,400kV,APR-24,,17.8495919,79.1151663,state_center
+Western Region,Maharashtra,60MW100MW150MW,AIS,220kV,,,18.9068356,75.6741579,state_center
+Northern Region II,Haryana,ABDULLAPUR,AIS,400kV,,,29.0,76.0,state_center
+Western Region,Gujarat,Achchhalia S/S,AIS,400kV,JUL-19,04/19,22.3850051,71.745261,state_center
+Western Region,Gujarat,Achhalia,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region - II,Madhya Pradesh,ADAMPUR,AIS,220kV,,,23.269829,77.5506568,success
+Southern Region,Karnataka,Afzlapur,AIS,220kV,SEP-19,,14.5203896,75.7223521,state_center
+North Eastern Region,Meghalaya,AGIA,AIS,220kV,,,25.5379432,91.2999102,state_center
+Western Region,Gujarat,Agiyol,AIS,220kV,,,22.3850051,71.745261,state_center
+Northern Region,Uttar Pradesh,Agra S/S,AIS,765kV,JUL-17,,27.1527804,77.9992403,success
+Northern Region III,Uttar Pradesh,AGRA,AIS,765kV,,,27.1752554,78.0098161,success
+Western Region,Gujarat,Ahmedabad New SS,AIS,765kV,MAR-25,,22.3850051,71.745261,state_center
+Northern Region,Delhi,AIIMS,AIS,220kV,MAR-17,,28.5668602,77.2078058,success
+Northern Region 1,Rajasthan,AJMER,AIS,765kV,,,26.4563076,74.6279567,success
+Northern Region III,Uttar Pradesh,ALIGARH,GIS,765kV,,,27.8761073,78.1358153,success
+Eastern Region - 2,West Bengal,ALIPURDUAR,AIS,400kV,,,26.4904901,89.4610065,success
+Northern Region III,Uttar Pradesh,ALLAHABAD,AIS,400kV,,,25.4381302,81.8338005,success
+Northern Region,Uttarakhand,Almora,AIS,220kV,JUN-17,,29.702651,79.4326318,success
+Southern Region,Andhra Pradesh,Amaravathi S/s-I in CRDA,AIS,400kV,AUG-20,,16.5214577,80.6795308,success_v2_medium
+Southern Region,Andhra Pradesh,Amaravathi SS-II in CRDA,AIS,400kV,AUG-21,,15.9240905,80.1863809,state_center
+Northern Region III,Uttar Pradesh,Amaryia (Pilibhit),AIS,220kV,,,27.1303344,80.859666,state_center
+Southern Region - II,Kerala,Ambalamugal,AIS,220kV,,,9.9709934,76.3813312,success
+Western Region,Gujarat,Ambheta,AIS,220kV,,,21.2617244,72.7454881,success
+Southern Region,Telangana,Ammavaripet,AIS,220kV,AUG-24,,17.9422881,79.5605396,success
+Western Region,Gujarat,Amod,AIS,220kV,,,21.9907832,72.8706259,success
+Western Region,Gujarat,Amreli,AIS,400kV,,,21.4176122,71.249609,success
+Northern Region II,Punjab,AMRITSAR,AIS,400kV,,,31.6356659,74.8787496,success
+Western Region - I,Maharastra,Anand Nagar,AIS,220kV,,,20.9252581,77.740353,success
+Southern Region - I,Andhra Pradesh,Anantapur-II,AIS,220kV,,,14.6783221,77.6065039,success
+Southern Region - I,Andhra Pradesh,Anantapur-II,AIS,765kV,,,14.6783221,77.6065039,success
+ODISHA,Odisha,ANGUL,AIS,765kV,,,21.102538,84.9536825,success
+Western Region - II,Madhya Pradesh,ANOOPPUR,AIS,220kV,,,23.8143419,77.5340719,state_center
+Western Region,Madhya Pradesh,Anuppur S/S,AIS,220kV,,,23.0346179,81.7510255,success_v2_medium
+Eastern Region - 1,Bihar,ARA,AIS,220kV,,,25.5484661,84.6616316,success
+Southern Region - II,Tamil Nadu,ARASUR,AIS,400kV,,,10.8473525,79.1218506,success
+Southern Region - II,Kerala,Areacode,AIS,220kV,,,11.2345587,76.049183,success
+Northern Region,Delhi,Ariyalur,AIS,765kV,,,28.6328027,77.2197713,state_center
+Southern Region,Tamil Nadu,Ariyalur,AIS,765kV,JAN-25,12/24,11.1530559,79.2585797,success
+Western Region - II,Madhya Pradesh,ASHTA,AIS,400kV,,,21.6619918,78.1687487,success
+Western Region,Gujarat,Asoj,AIS,400kV,,,22.4643124,73.392092,success
+Southern Region,Andhra Pradesh,Aspiri S/s,AIS,400kV,AUG-18,,15.9240905,80.1863809,state_center
+Northern Region 1,Rajasthan,Aspur,AIS,220kV,,,23.9552726,74.0772639,success
+Eastern Region,Bihar,at Banka,AIS,400kV,NOV-24,10/24,24.8810826,86.9197693,success
+Northern Region,Uttar Pradesh,at Fatehgarh-2 PS,AIS,400kV,DEC-23,,27.1303344,80.859666,state_center
+Southern Region,Andhra Pradesh,Atchuthapuram GIS,AIS,220kV,,,15.9240905,80.1863809,state_center
+ODISHA,Odisha,Atri,AIS,220kV,,,20.2066364,85.5127961,success
+Western Region,Gujarat,Atul,AIS,220kV,,,20.5472816,72.9278239,success
+Northern Region,Uttar Pradesh,Aurai s/s,AIS,400kV,,,25.2948295,82.5809489,success_v2_medium
+Western Region,Maharashtra,Aurangabad,AIS,400kV,SEP-20,,19.877263,75.3390241,success
+Western Region - I,Maharastra,AURANGABAD,AIS,765kV,,,19.877263,75.3390241,success
+Northern Region III,Uttar Pradesh,Ayodhya,GIS,220kV,23-Nov-18,,26.7990707,82.2052321,success
+Northern Region III,Uttar Pradesh,Azizpur,AIS,220kV,31-Jan-19,,27.1303344,80.859666,state_center
+Northern Region III,Uttar Pradesh,Babina (Jhansi),AIS,220kV,19-Dec-18,,25.2393732,78.4698691,success
+Northern Region,Himachal Pradesh,Baddi,AIS,220kV,,,30.9763026,76.7674001,success
+Northern Region III,Uttar Pradesh,Badhaikalan,AIS,220kV,01-Mar-19,,27.1303344,80.859666,state_center
+Western Region - II,Madhya Pradesh,BADNAGAR,AIS,220kV,,,23.1351955,77.1256406,success
+Western Region,Madhya Pradesh,Badnawar S/S,AIS,400kV,,,23.0231263,75.2065,success_v2_medium
+Western Region - II,Madhya Pradesh,BADNAWAR,AIS,400kV,,,23.0231263,75.2065,success
+Western Region - II,Madhya Pradesh,BADOD,AIS,220kV,,,24.1047639,75.278263,success
+Northern Region,Haryana,Badshapur,AIS,220kV,,,29.0,76.0,state_center
+Western Region,Gujarat,Bagodara,AIS,220kV,,,22.3850051,71.745261,state_center
+Northern Region 1,Uttar Pradesh,BAGPAT,GIS,400kV,,,28.9672601,77.6647822,success
+Northern Region,Haryana,Bagun PS,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,Bahadurgarh,AIS,220kV,,,28.6609648,76.8346765,success
+Northern Region 1,Haryana,BAHADURGARH,AIS,400kV,,,28.6609648,76.8346765,success
+Western Region - II,Madhya Pradesh,BAIRAGARH,AIS,220kV,,,23.1499829,77.4101825,success
+Eastern Region - 1,Bihar,Bakhtiyarpur,GIS,400kV,,,25.4586233,85.5369022,success
+ODISHA,Odisha,Balasore,AIS,220kV,,,21.5006421,86.919884,success
+Northern Region III,Uttar Pradesh,BALIA,AIS,765kV,,,28.1661891,79.515996,success
+Eastern Region,Odisha,Balianta (,AIS,220kV,,,20.2715874,85.9088595,success
+Eastern Region,Odisha,Balichandarpur Palei GSS,AIS,220kV,JAN-25,12/24,20.5431241,84.6897321,state_center
+Eastern Region,Odisha,Baliguda S/S,AIS,220kV,JUN-26,,20.1813146,83.8733221,success_v2_medium
+ODISHA,Odisha,Balimela,AIS,220kV,,,18.2296614,82.0630683,success
+North Eastern Region,Assam,BALIPARA,AIS,400kV,,,26.8225305,92.7798718,success
+Northern Region,Haryana,Ballabgarh,AIS,220kV,,,28.2940728,77.3592238,success
+Northern Region 1,Haryana,BALLABHGARH,AIS,400kV,,,28.340002,77.3164509,success
+Northern Region III,Uttar Pradesh,Balrampur,AIS,220kV,15-Jul-19,,27.4476988,82.3956245,success
+Western Region,Maharashtra,Balsane,AIS,400kV,MAR-20,,18.9068356,75.6741579,state_center
+Northern Region,Delhi,Bamnoli S/S,AIS,400kV,MAR-18,,28.5441341,77.0315979,success
+Northern Region,Rajasthan,Banar GIS,AIS,220kV,NOV-24,10/24,26.3395264,73.1470625,success_v2_medium
+Western Region,Chhattisgarh,BANARI (CHAMPA),AIS,220kV,,,21.6637359,81.8406351,state_center
+Western Region,Gujarat,Banaskanta S/S,AIS,400kV,APR-18,,22.3850051,71.745261,state_center
+Western Region - II,Gujarat,Banaskantha,AIS,765kV,,,24.2693921,72.1620246,success
+Southern Region - II,Karnataka,BANGALORE,AIS,400kV,,,12.9767936,77.590082,success
+Eastern Region - 1,Bihar,BANKA,AIS,400kV,,,24.8328273,86.8161114,success
+Eastern Region,West Bengal,Bankura PS,AIS,220kV,,,23.132377,87.2081925,success_v2_medium
+Northern Region 1,Rajasthan,Bansur,AIS,220kV,,,27.6846426,76.3552224,success
+Northern Region,Uttarakhand,Barahamwari New,AIS,220kV,DEC-21,,30.0417376,79.089691,state_center
+Northern Region,Uttarakhand,Baram s/s,AIS,220kV,APR-22,,29.8526,80.35401,success_v2_medium
+Northern Region III,Uttarakhand,Baram,GIS,220kV,,,29.8526,80.35401,success
+Western Region,Maharashtra,BARAMATI,AIS,220kV,,,18.2198537,74.4534054,success
+Northern Region,Uttarakhand,Baramwari,AIS,220kV,DEC-23,,30.4843244,79.0764795,success
+Northern Region III,Uttar Pradesh,Bara-TPS ICT Installation &,AIS,765kV,,,25.1956733,81.6535431,success_v2_medium
+Eastern Region,Bihar,Barauni,AIS,220kV,,,25.4314543,86.0283753,success
+Northern Region III,Uttar Pradesh,BAREILLY New,AIS,765kV,,,28.3491364,79.4213871,success
+Northern Region,Uttar Pradesh,Bareilly,AIS,220kV,DEC-24,11/24,28.4582344,79.4047452,success
+Northern Region III,Uttar Pradesh,BAREILLY,AIS,400kV,,,28.4582344,79.4047452,success
+Western Region,Gujarat,Barejadi,AIS,220kV,,,22.8959246,72.6782442,success
+Northern Region,Haryana,Barhi,AIS,220kV,,,29.0,76.0,state_center
+ODISHA,Odisha,BARIPADA,AIS,400kV,,,21.9342456,86.7308825,success
+ODISHA,Odisha,Barkote,AIS,220kV,,,21.545832,84.9788725,success
+Northern Region,Himachal Pradesh,Barsaini S/S,AIS,220kV,MAR-16,,31.9292352,77.1828462,state_center
+Western Region,Chhattisgarh,BARSOOR,AIS,220kV,,,19.1362384,81.386217,success
+Northern Region,Haryana,Barula PS,AIS,220kV,,,29.0,76.0,state_center
+Western Region - II,Madhya Pradesh,BARWAHA,AIS,220kV,,,22.2561316,76.0309936,success
+Southern Region - II,Karnataka,Basarkod,AIS,220kV,,,15.5811245,74.7552649,success
+Northern Region 1,Rajasthan,BASSI,AIS,400kV,,,24.2402328,73.3772464,success
+Western Region,Gujarat,Bechrahi,AIS,220kV,,,22.3850051,71.745261,state_center
+Eastern Region,West Bengal,Behrampur. S/s,AIS,400kV,DEC-16,,22.9964948,87.6855882,state_center
+Western Region,Chhattisgarh,BEMETARA,AIS,220kV,,,21.6783867,81.4412578,success
+Eastern Region - 2,West Bengal,BERHAMPUR,AIS,400kV,,,22.9964948,87.6855882,state_center
+Southern Region,Andhra Pradesh,Bethamcherla,AIS,220kV,,,15.4517249,78.1471135,success
+Western Region - II,Madhya Pradesh,BETUL,AIS,220kV,,,21.8797472,77.8753651,success
+Western Region - II,Madhya Pradesh,BETUL,GIS,400kV,,,21.8797472,77.8753651,success
+Northern Region,Himachal Pradesh,BHABA,AIS,220kV,,,31.6608917,78.0117032,success
+Northern Region,Himachal Pradesh,Bhabha,AIS,220kV,,,31.9292352,77.1828462,state_center
+Western Region - II,Gujarat,BHACHAU,AIS,400kV,,,23.3040626,70.3507333,success
+Northern Region 1,Rajasthan,BHADLA,AIS,765kV,,,25.2591738,73.9998292,success
+Northern Region,Rajasthan,Bhadla-II (,AIS,765kV,,,25.2591738,73.9998292,success
+Northern Region 1,Rajasthan,Bhadla-II,AIS,765kV,,,25.2591738,73.9998292,success
+Western Region - I,Maharastra,BHADRAWATI,AIS,400kV,,,20.1108408,79.1213108,success
+ODISHA,Odisha,Bhanjanagar,AIS,220kV,,,20.0209156,84.4864172,success
+Western Region - II,Madhya Pradesh,BHANPURA,AIS,220kV,,,23.7019249,80.4087748,success
+Northern Region,Rajasthan,Bharatpur,AIS,220kV,NOV-24,10/24,27.0246959,77.2920116,success
+Western Region,Gujarat,Bharuch/Dahej,AIS,765kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Bhat S/s,AIS,220kV,JUL-18,04/18,23.1026771,72.6329349,success_v2_medium
+Western Region,Gujarat,Bhat,AIS,220kV,,,23.1026771,72.6329349,success
+Western Region - I,Chattishgarh,BHATAPARA,AIS,400kV,,,21.2555727,81.6923437,state_center
+Western Region,Chhattisgarh,BHATAPARA,AIS,220kV,,,21.7353478,81.9444592,success
+Western Region,Maharashtra,Bhenda,AIS,220kV,,,18.9068356,75.6741579,state_center
+Western Region,Gujarat,Bhilad,AIS,220kV,,,20.2754926,72.887325,success
+Western Region,Chhattisgarh,BHILAI,AIS,220kV,,,21.2120677,81.3732849,success
+Western Region - II,Madhya Pradesh,Bhind,AIS,220kV,,,26.3518828,78.6863189,success
+Northern Region 1,Rajasthan,BHINMAL,AIS,400kV,,,25.0071053,72.2653077,success
+Northern Region,Haryana,Bhiwadi,AIS,220kV,,,28.2117533,76.8386491,success
+Northern Region 1,Rajasthan,BHIWADI,AIS,400kV,,,28.2039413,76.837441,success
+Northern Region 1,Haryana,BHIWANI,AIS,765kV,,,28.7931703,76.1391283,success
+Northern Region,Himachal Pradesh,Bhoktoo,AIS,220kV,,,31.9292352,77.1828462,state_center
+Southern Region,Telangana,Bhoopalapally S/S,AIS,400kV,,,17.8495919,79.1151663,state_center
+Southern Region,Telangana,Bhoopalapally SS,AIS,400kV,,,17.8495919,79.1151663,state_center
+Western Region - II,Madhya Pradesh,BHOPAL,AIS,220kV,,,23.2584857,77.401989,success
+Western Region - II,Madhya Pradesh,BHOPAL,AIS,400kV,,,23.2584857,77.401989,success
+Western Region - II,Gujarat,Bhuj,AIS,765kV,,,23.2472446,69.668339,success
+Western Region - II,Gujarat,Bhuj-II,GIS,765kV,,,23.2472446,69.668339,success
+Southern Region,Telangana,Bhupalapally SS,AIS,220kV,JUN-24,,17.8495919,79.1151663,state_center
+Western Region,Gujarat,Bhutiya,AIS,220kV,,,23.0619977,73.2337622,success
+Southern Region - II,Karnataka,BIDADI,GIS,400kV,,,12.7981864,77.4020512,success
+ODISHA,Odisha,Bidanasi,AIS,220kV,,,20.4820141,85.8408058,success
+Southern Region - I,Andhra Pradesh,Bidar,AIS,765kV,,,15.9240905,80.1863809,state_center
+Western Region,Maharashtra,Bidkin T/f,AIS,220kV,MAR-22,,19.7038137,75.3022753,success_v2_medium
+Eastern Region,Bihar,Biharshariff S/S,AIS,220kV,DEC-16,,25.6440845,85.906508,state_center
+Eastern Region - 1,Bihar,BIHARSHRIFF,AIS,400kV,,,25.6440845,85.906508,state_center
+Eastern Region,Bihar,Bihta S/S,AIS,220kV,,,25.561037,84.8723411,success_v2_medium
+Northern Region,Haryana,Bijawa,AIS,220kV,,,29.0,76.0,state_center
+Northern Region III,Uttar Pradesh,Bijnor,AIS,220kV,19-Jul-19,,29.4074203,78.4821406,success
+Northern Region,Rajasthan,Bikaner PS,AIS,400kV,JAN-24,,28.0159286,73.3171367,success_v2_medium
+Northern Region 1,Rajasthan,BIKANER,AIS,400kV,,,28.0159286,73.3171367,success
+Northern Region,Rajasthan,Bikaner,AIS,765kV,SEP-24,,28.0159286,73.3171367,success
+Northern Region 1,Rajasthan,Bikaner-II PS,AIS,400kV,,,28.0159286,73.3171367,success_v2_medium
+Northern Region 1,Rajasthan,Bikaner-II,AIS,400kV,,,28.0159286,73.3171367,success
+Southern Region,Karnataka,Bilagi s/s,AIS,220kV,OCT-24,,16.3464175,75.6190861,success_v2_medium
+Western Region - I,Chattishgarh,BILASPUR,AIS,765kV,,,21.2555727,81.6923437,state_center
+Western Region,Chhattisgarh,Bilaspur,AIS,400kV,MAR-25,,22.1638486,82.1365923,success
+Western Region - II,Madhya Pradesh,BINA,AIS,220kV,,,24.1712328,78.1851809,success
+Western Region - II,Madhya Pradesh,BINA,AIS,400kV,,,24.1712328,78.1851809,success
+Western Region - II,Madhya Pradesh,BINA,AIS,765kV,,,24.1712328,78.1851809,success
+Eastern Region - 2,West Bengal,BIRPARA,AIS,220kV,,,26.711324,89.1390175,success
+Western Region - II,Madhya Pradesh,BIRSINGHPUR,AIS,220kV,,,24.800264,80.9767153,success
+North Eastern Region,Assam,BISHWANATH CHARIALI,AIS,400kV,,,26.7203673,93.1428974,success
+Eastern Region,Bihar,Bodhgaya,AIS,220kV,DEC-16,,24.6962612,84.9937642,success
+Western Region - II,Maharastra,BOISOR,AIS,400kV,,,18.9068356,75.6741579,state_center
+ODISHA,Odisha,BOLANGIR,AIS,400kV,,,20.7502257,83.2499464,success
+ODISHA,Odisha,Bonai,AIS,220kV,,,20.5431241,84.6897321,state_center
+Northern Region III,Uttar Pradesh,Boner,AIS,220kV,,,27.1303344,80.859666,state_center
+North Eastern Region,Assam,BONGAIGAON,AIS,400kV,,,26.4800126,90.5580387,success
+Southern Region,Telangana,Bonguloor S/S,AIS,220kV,,,17.230314,78.5785014,success_v2_medium
+Northern Region III,Uttar Pradesh,Botanical Garden Sector 38A,AIS,220kV,,,27.1303344,80.859666,state_center
+Southern Region - I,Telangana,Bowrampet,AIS,220kV,,,17.5610356,78.3982185,success
+Southern Region - II,Kerala,Brahmapuram,AIS,220kV,,,9.9982499,76.3694144,success
+Northern Region,Jammu & Kashmir,Budgam 2nd Trf.,AIS,220kV,,,33.6649297,75.1629584,state_center
+Northern Region,Jammu & Kashmir,Budgam,AIS,220kV,,,33.9098746,74.6270357,success
+ODISHA,Odisha,Budhipadar,AIS,220kV,,,20.8984481,83.5208559,success
+Western Region - II,Madhya Pradesh,Budhni,AIS,220kV,,,22.786886,77.6814749,success
+Northern Region III,Uttar Pradesh,Bukhari Basti,GIS,400kV,,,27.1303344,80.859666,state_center
+Northern Region III,Uttar Pradesh,Bus Reactor Bay,AIS,400kV,,,27.1303344,80.859666,state_center
+Western Region,Maharashtra,Butibori Addl T/F,AIS,220kV,MAR-21,,18.9068356,75.6741579,state_center
+North Eastern Region,Meghalaya,BYRNIHAT,AIS,400kV,,,26.0543348,91.8696498,success
+Eastern Region - 1,Jharkhand,CHAIBASA,AIS,400kV,,,22.5483518,85.8188876,success
+Northern Region II,Himachal Pradesh,CHAMBA,GIS,400kV,,,32.6923316,76.1631552,success
+Western Region,Maharashtra,Chamorshi T/F,AIS,220kV,SEP-19,,19.9370829,79.8893906,success_v2_medium
+Western Region - I,Chattishgarh,CHAMPA PS,AIS,765kV,,,21.2555727,81.6923437,state_center
+ODISHA,Odisha,Chandaka,AIS,220kV,,,20.3218354,85.7192517,success
+ODISHA,Odisha,Chandaka-B,AIS,220kV,,,20.3669374,85.7672381,success
+Southern Region,Andhra Pradesh,Chandanada,AIS,220kV,,,17.3696095,82.7008523,success
+Southern Region,Telangana,Chandanvally,AIS,220kV,JUN-24,,17.2329844,78.1720041,success
+Eastern Region - 1,Bihar,Chandauti,AIS,400kV,,,24.7501319,84.9839828,success
+Northern Region II,Chandigarh,Chandigarh,GIS,220kV,,,30.7334421,76.7797143,success
+Northern Region III,Uttar Pradesh,Chandpur (Bijnor),AIS,220kV,01-Nov-19,,29.14257,78.2901819,success
+Western Region,Gujarat,Chandrapura,AIS,220kV,,,22.3850051,71.745261,state_center
+Eastern Region - 1,Jharkhand,CHANDWA,GIS,400kV,,,23.6589217,84.7859732,success
+Western Region - II,Madhya Pradesh,CHAPDA,AIS,220kV,,,23.8143419,77.5340719,state_center
+Western Region,Gujarat,Charadava,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Charadva,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Charanka,AIS,400kV,,,23.8812456,71.1809174,success
+Western Region,Gujarat,Charkha,AIS,220kV,,,21.8795371,71.2454507,success
+Northern Region,Himachal Pradesh,Charor,AIS,220kV,,,31.9292352,77.1828462,state_center
+Western Region - II,Madhya Pradesh,CHHANERA,AIS,220kV,,,21.9636413,76.7072779,success
+Western Region,Gujarat,Chhara S/S,AIS,400kV,MAR-21,,23.0707163,72.6407615,success_v2_medium
+Western Region,Gujarat,Chharodi,AIS,400kV,,,23.1002552,72.4807497,success
+Western Region - II,Madhya Pradesh,CHHATARPUR,AIS,220kV,,,24.7606089,79.6781776,success
+Western Region,Gujarat,Chhatral,AIS,220kV,,,23.2779379,72.4450501,success
+Western Region - II,Madhya Pradesh,CHHEGAON MAKHAN,AIS,400kV,,,21.8366096,76.2168252,success
+Western Region - II,Madhya Pradesh,CHHINDWARA,AIS,220kV,,,22.2071897,78.798833,success
+Western Region - II,Madhya Pradesh,CHICHLI,AIS,220kV,,,23.1635303,77.3919089,success
+Western Region,Gujarat,Chikhli,AIS,220kV,,,20.7581399,73.0598983,success
+Southern Region,Andhra Pradesh,Chilakaluripeta S/s,AIS,400kV,,,16.0933343,80.1555568,success_v2_medium
+Southern Region - I,Andhra Pradesh,Chilkaluripeta,AIS,400kV,,,15.9240905,80.1863809,state_center
+Western Region,Maharashtra,Chimur T/F,AIS,220kV,MAR-21,,20.4942258,79.373825,success_v2_medium
+Western Region,Maharashtra,CHINCHWAD,AIS,220kV,,,18.6403548,73.7917128,success
+Western Region,Maharashtra,CHITEGAON,AIS,220kV,,,20.4041077,74.9583864,success
+Southern Region,Andhra Pradesh,Chittoor Dist.,AIS,220kV,MAY-24,04/24,15.9240905,80.1863809,state_center
+Northern Region 1,Rajasthan,CHITTORGARH,AIS,765kV,,,24.7171578,74.4718129,success
+Northern Region,Jammu & Kashmir,Chowadhi S/S,AIS,220kV,SEP-19,,33.6649297,75.1629584,state_center
+Southern Region - II,Karnataka,CN'Halli,AIS,765kV,,,17.8401056,76.8684901,success
+Southern Region,Tamil Nadu,Coimbatore,AIS,765kV,MAR-25,,11.0018115,76.9628425,success
+Western Region - I,Maharastra,Colourchem,AIS,220kV,,,18.9068356,75.6741579,state_center
+Southern Region - I,Andhra Pradesh,C'Peta (Cuddapah),AIS,765kV,,,15.8340195,78.0411462,success_v2_medium
+Southern Region - I,Andhra Pradesh,Cuddapah,AIS,765kV,,,14.4956602,78.8349278,success
+Western Region,Goa,CUNCOLIM,AIS,220kV,,,15.1801323,73.9978596,success
+ODISHA,Odisha,Cuttack,AIS,220kV,,,20.4686,85.8792,success
+Northern Region,Haryana,Dadri,AIS,220kV,,,28.6020969,76.1909292,success
+Western Region,Gujarat,Dahej,AIS,220kV,,,21.709301,72.5893963,success
+Northern Region,Uttar Pradesh,Dahi Chaoki,AIS,400kV,,,27.1303344,80.859666,state_center
+Eastern Region - 2,West Bengal,DALKHOLA,AIS,220kV,,,25.8739615,87.8391252,success
+Western Region - II,Madhya Pradesh,DALODA,AIS,220kV,,,23.9559753,75.1041283,success
+Eastern Region - 1,Jharkhand,DALTONGANJ,AIS,400kV,,,24.0397192,84.0658109,success
+Western Region - II,Madhya Pradesh,DAMOH,AIS,220kV,,,23.7981005,79.5419356,success
+Western Region - II,Madhya Pradesh,DAMOH,AIS,400kV,,,23.7981005,79.5419356,success
+Eastern Region,Odisha,Daspalla S/S,AIS,220kV,JUN-25,,20.5431241,84.6897321,state_center
+Western Region - II,Madhya Pradesh,DATIA,AIS,220kV,,,25.9182946,78.6644962,success
+Northern Region,Haryana,Daukhera PS,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,Daultabad,AIS,220kV,,,28.4822734,76.9925651,success
+Southern Region - II,Karnataka,Davangere,AIS,765kV,,,14.4661266,75.9206361,success
+Northern Region,Haryana,Deepalpur,AIS,400kV,,,29.0,76.0,state_center
+Northern Region,Himachal Pradesh,Dehan,AIS,220kV,,,32.067356,76.5168142,success
+Western Region - II,Gujarat,DEHGAM,AIS,400kV,,,23.1640326,72.8818319,success
+Northern Region 1,Uttarakhand,DEHRADUN,AIS,400kV,,,30.3255646,78.0436813,success
+Eastern Region,Bihar,Dehri S/S,AIS,220kV,DEC-16,,24.9258862,84.1728723,success_v2_medium
+Western Region - II,Gujarat,Deodar,AIS,220kV,,,24.1920148,71.7893701,success
+Western Region - II,Madhya Pradesh,DEPALPUR,AIS,220kV,,,22.8494212,75.5437738,success
+Southern Region - II,Karnataka,Devanahalli,AIS,400kV,,,13.2483502,77.7134377,success
+Western Region - II,Madhya Pradesh,DEWAS,AIS,220kV,,,22.8057498,76.2940408,success
+Eastern Region,Odisha,Dhamara S/S,AIS,220kV,,,20.7964003,86.8994884,success
+Eastern Region,Odisha,Dhamra S/S,AIS,220kV,APR-23,,20.7955666,86.9010186,success_v2_medium
+Northern Region,Haryana,Dhanaunda,AIS,400kV,,,28.350748,76.253807,success
+Western Region,Gujarat,Dhansura,AIS,220kV,,,23.3467,73.2054,success
+Western Region - II,Madhya Pradesh,DHAR,AIS,220kV,,,22.5786572,75.2258637,success
+Western Region - I,Chattishgarh,DHARAMJAYGARH,AIS,765kV,,,21.2555727,81.6923437,state_center
+Eastern Region,West Bengal,Dharampur,AIS,220kV,MAR-18,,25.2751246,88.1258009,success
+Southern Region - II,Tamil Nadu,DHARMAPURI (SALEM PS),AIS,400kV,,,11.6739064,78.1521557,success_v2_medium
+Southern Region,Andhra Pradesh,Dharmavaram,AIS,220kV,JUL-24,,14.4138405,77.7208432,success
+Northern Region,Haryana,Dharuhera,AIS,220kV,,,28.2055216,76.7953099,success
+Western Region,Gujarat,Dhokadava,AIS,220kV,,,22.3850051,71.745261,state_center
+Southern Region,Karnataka,Dhoni,AIS,400kV,OCT-18,,14.5203896,75.7223521,state_center
+Western Region,Gujarat,Dhrangadhra,AIS,220kV,,,22.9914292,71.4663753,success
+Western Region,Maharashtra,DHULE,AIS,220kV,,,21.1305215,74.4900614,success
+North Eastern Region,Nagaland,DIMAPUR,GIS,400kV,,,25.9041378,93.7177609,success
+Northern Region,Ladakh,Diskit,AIS,220kV,,,34.5512277,77.5506547,success
+Western Region,Chhattisgarh,DOMA,AIS,220kV,,,21.7738634,82.9918746,success
+Northern Region II,UT-Ladakh,DRASS GIS,GIS,220kV,,,33.5232404,77.7179641,state_center
+ODISHA,Odisha,Duburi,AIS,220kV,,,20.9885855,85.9889574,success
+Eastern Region,Odisha,Duburi,AIS,400kV,JUN-25,,20.9885855,85.9889574,success
+Northern Region III,Uttar Pradesh,Dulhipar (Sant Kabir,AIS,220kV,,,27.1303344,80.859666,state_center
+Eastern Region,Bihar,Dumraon s/s,AIS,220kV,JAN-23,,25.5238346,84.1599531,success_v2_medium
+Eastern Region - 2,West Bengal,DURGAPUR,AIS,400kV,,,23.5350475,87.3380425,success
+Northern Region 1,Delhi,Dwarka,GIS,400kV,,,28.6158874,77.0224342,success
+Eastern Region,West Bengal,East Mednipur PS,AIS,220kV,,,22.9964948,87.6855882,state_center
+Southern Region - II,Kerala,Edamon,AIS,220kV,,,9.0030806,76.9825555,success
+Southern Region - II,Kerala,Edappon,AIS,220kV,,,9.2288737,76.6270488,success
+Southern Region,Karnataka,Electronic city S/S,AIS,400kV,DEC-20,,12.8436448,77.6686835,success
+Southern Region,Andhra Pradesh,Eluru S/s,AIS,400kV,AUG-18,,16.7104257,81.1153816,success_v2_medium
+Eastern Region,West Bengal,Falakata 220 KV GIS,AIS,220kV,,,22.9964948,87.6855882,state_center
+Northern Region,Haryana,Farakhnagar S/s,AIS,400kV,,,29.0,76.0,state_center
+Northern Region,Haryana,Farakhnagar,AIS,400kV,,,29.0,76.0,state_center
+Eastern Region,West Bengal,Farakka,AIS,400kV,APR-22,,24.7658067,87.9126789,success
+Western Region,Gujarat,Faredi,AIS,220kV,,,22.3850051,71.745261,state_center
+Northern Region III,Uttar Pradesh,Faridpur (Bareilly),AIS,220kV,,,28.2083265,79.5375964,success
+Northern Region III,Uttar Pradesh,Faridpur,AIS,220kV,,,28.2083265,79.5375964,success
+Northern Region II,Haryana,FATEHABAD,AIS,400kV,,,29.5359209,75.5752901,success
+Northern Region,Uttar Pradesh,Fatehgarh-3,AIS,765kV,FEB-25,,27.3632957,79.6279515,success
+Northern Region 1,Rajasthan,FATEHGARH-II,AIS,765kV,,,29.5104498,74.2432434,success
+Northern Region 1,Rajasthan,FATEHGARH-III,AIS,400kV,,,26.8105777,73.7684549,state_center
+Northern Region III,Uttar Pradesh,FATEHPUR,AIS,765kV,,,25.8348023,80.9154547,success
+Western Region,Gujarat,Fedra S/S,AIS,400kV,MAR-21,,22.4535565,72.1599905,success_v2_medium
+Northern Region,Uttar Pradesh,Firozabad S/S,AIS,220kV,,,27.1941954,78.4604956,success_v2_medium
+Northern Region,Uttar Pradesh,Firozabad S/S,AIS,400kV,,,27.1941954,78.4604956,success_v2_medium
+Northern Region III,Uttar Pradesh,Firozabad,AIS,400kV,,,27.1941954,78.4604956,success
+Western Region - I,Maharastra,Five star MIDC,AIS,220kV,,,16.6223809,74.350228,success
+Eastern Region,West Bengal,Food Park 220 KV GIS,AIS,220kV,SEP-24,08/24,22.9964948,87.6855882,state_center
+Western Region,Maharashtra,GADCHIROLI,AIS,220kV,,,19.7590704,80.1622807,success
+Western Region,Madhya Pradesh,Gandhinagar S/S,AIS,220kV,,,22.826531,78.8856071,success_v2_medium
+Southern Region,Karnataka,Gangavathi s/s,AIS,220kV,,,15.4308872,76.5319723,success_v2_medium
+Northern Region,Jammu and Kashmir,Gangavathi,AIS,220kV,,,33.6649297,75.1629584,state_center
+Western Region - II,Madhya Pradesh,GANJBASODA,AIS,220kV,,,23.8143419,77.5340719,state_center
+Western Region,Gujarat,Gatrad S/S,AIS,220kV,,,22.9789376,72.7053047,success_v2_medium
+Western Region,Gujarat,Gavasad,AIS,220kV,,,22.3850051,71.745261,state_center
+Eastern Region - 1,Bihar,GAYA,AIS,765kV,,,24.679389,85.0115833,success
+Southern Region - I,Andhra Pradesh,GAZUWAKA,AIS,400kV,,,15.9240905,80.1863809,state_center
+Northern Region,Delhi,Geeta Colony,AIS,220kV,MAR-17,,28.6510892,77.2749996,success
+Western Region,Maharashtra,Georai,AIS,220kV,MAR-25,,19.2621403,75.7396019,success
+Northern Region,Uttarakhand,Ghansali New,AIS,220kV,DEC-18,,30.0417376,79.089691,state_center
+Northern Region,Uttarakhand,Ghansali,AIS,220kV,DEC-21,,30.603913,78.7305223,success
+Western Region - II,Gujarat,Ghodasar,AIS,220kV,,,22.9735213,72.8644393,success
+Northern Region,Himachal Pradesh,Giri,AIS,220kV,,,30.9002389,77.2296313,success
+Western Region,Maharashtra,Girnare T/F,AIS,220kV,MAR-20,,20.0742649,73.6609469,success_v2_medium
+Northern Region,Haryana,GIS Rai S/s,AIS,220kV,,,29.0,76.0,success_v2_medium
+Northern Region,Haryana,GIS Sector,AIS,220kV,,,29.0,76.0,success_v2_medium
+Northern Region,Delhi,GIS Timarpur,AIS,220kV,MAY-24,03/24,28.6328027,77.2197713,success_v2_medium
+Eastern Region,Odisha,Gobindpalli,AIS,220kV,JUN-25,,20.5431241,84.6897321,state_center
+Southern Region,Andhra Pradesh,Godavari Dist.,AIS,220kV,JUN-24,05/24,15.9240905,80.1863809,state_center
+Southern Region,Andhra Pradesh,Godavari Dist,AIS,220kV,JUN-24,05/24,15.9240905,80.1863809,state_center
+Western Region,Gujarat,Godhra,AIS,220kV,,,22.7785001,73.6245157,success
+Northern Region III,Uttar Pradesh,Gola,AIS,220kV,30-Sep-19,,26.3635958,83.3641374,success
+Eastern Region,Jharkhand,Gola-B,AIS,220kV,,,23.5335629,85.7171737,success
+Eastern Region,Jharkhand,Gola-B,AIS,400kV,,,23.5335629,85.7171737,success
+Northern Region,Uttar Pradesh,Gonda,AIS,400kV,SEP-25,,27.1103723,81.9238906,success
+Southern Region - I,Andhra Pradesh,GOOTY,AIS,400kV,,,15.12279,77.636011,success
+Northern Region,Delhi,Gopalpur GIS,AIS,400kV,MAR-22,,28.6328027,77.2197713,state_center
+Northern Region,Delhi,Gopalpur,GIS,400kV,,,28.6328027,77.2197713,state_center
+Northern Region,Delhi,Goplapur S/S,AIS,220kV,MAR-21,,28.6328027,77.2197713,state_center
+Western Region - II,Madhya Pradesh,GORABAZAR,AIS,220kV,,,23.8143419,77.5340719,state_center
+Northern Region III,Uttar Pradesh,GORAKHPUR,AIS,400kV,,,26.6677977,83.3642334,success
+Western Region,Maharashtra,Goregaon Filmcity T/F - I,AIS,220kV,MAR-20,,18.9068356,75.6741579,state_center
+Western Region,Maharashtra,Goregaon Filmcity T/F,AIS,220kV,MAR-20,,18.9068356,75.6741579,state_center
+Western Region,Gujarat,Gotri,AIS,220kV,,,22.3142488,73.1388124,success
+Northern Region,Uttar Pradesh,Greater Noida AIS,AIS,765kV,,,27.1303344,80.859666,state_center
+Eastern Region,Jharkhand,GSS Baliyapur s/s,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Barkatha s/s,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Chandil s/s,AIS,400kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Chandrapura s/s,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Domchanch s/s,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Dumka s/s,AIS,400kV,,,23.4559809,85.2557301,state_center
+Eastern Region,Jharkhand,GSS Gomia/Kathara,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Jadugoda s/s,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Jasidih s/s,AIS,400kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Khunti s/s,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Koderma s/s,AIS,400kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Mander s/s,AIS,400kV,MAR-24,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Noamundi s/s,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS PTPS,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Simdega s/s,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Tamar s/s,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Eastern Region,Jharkhand,GSS Topchanchi s/s,AIS,220kV,,,23.4559809,85.2557301,success_v2_medium
+Western Region - II,Madhya Pradesh,GUDGAON,AIS,220kV,,,21.6005626,77.7156496,success
+Southern Region,Andhra Pradesh,Gudivada,AIS,400kV,APR-25,,16.4330413,80.9936856,success
+Southern Region,Karnataka,Gulbarga S/S,AIS,400kV,SEP-19,,16.5836136,77.2757634,success
+Northern Region,Himachal Pradesh,Gumma,AIS,220kV,,,31.964557,76.8521014,success
+Northern Region,Himachal Pradesh,Gumma,AIS,400kV,,,31.964557,76.8521014,success
+Western Region - II,Madhya Pradesh,GUNA,AIS,220kV,,,24.5001772,77.2600959,success
+Western Region - II,Madhya Pradesh,Guna,AIS,400kV,,,24.5001772,77.2600959,success
+Southern Region,Andhra Pradesh,Guntur Dist,AIS,400kV,MAR-25,02/25,16.4418901,80.5866942,success
+Northern Region 1,Haryana,GURGAON,GIS,400kV,,,28.4646148,77.0299194,success
+Northern Region,Haryana,Gurgoan Sector-107 GIS,AIS,220kV,AUG-21,,29.0,76.0,state_center
+Western Region,Chhattisgarh,GURUR,AIS,220kV,,,20.6829433,81.4016832,success
+Western Region - II,Madhya Pradesh,GWALIOR MAHALGAON,AIS,220kV,,,23.8143419,77.5340719,state_center
+Western Region - II,Madhya Pradesh,GWALIOR,AIS,765kV,,,26.2037247,78.1573628,success
+Western Region - II,Madhya Pradesh,GWALIOR-II,AIS,220kV,,,26.2037247,78.1573628,success
+Western Region,Gujarat,Hadala,AIS,400kV,,,22.4403247,70.7619095,success
+Western Region,Gujarat,Haldarwa,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Halvad,AIS,220kV,,,23.0182418,71.1833818,success
+Western Region,Gujarat,Halvad,AIS,400kV,,,23.0182418,71.1833818,success
+Northern Region II,Himachal Pradesh,HAMIRPUR,GIS,400kV,,,31.687996,76.5192522,success
+Northern Region,Himachal Pradesh,Hamirpur-II,AIS,220kV,,,31.6848695,76.5254488,success
+Western Region,Madhya Pradesh,Handia S/S,AIS,400kV,,,23.8143419,77.5340719,state_center
+Western Region - II,Madhya Pradesh,HANDIYA,AIS,220kV,,,22.4821606,76.9871929,success
+Northern Region 1,Haryana,Harfali,AIS,220kV,,,29.0,76.0,state_center
+Southern Region - II,Karnataka,HASSAN,AIS,400kV,,,13.0301852,76.1744968,success
+Northern Region,Himachal Pradesh,Hatkoti,AIS,220kV,,,31.1308028,77.7457165,success
+Eastern Region,Jharkhand,Hazaribagh s/s,AIS,220kV,,,24.0866962,85.4912231,success_v2_medium
+Northern Region,Himachal Pradesh,Heiling,AIS,220kV,,,31.9292352,77.1828462,state_center
+Southern Region,Andhra Pradesh,Hindupur,AIS,400kV,,,13.8306127,77.492635,success
+Western Region,Maharashtra,Hingoli T/f,AIS,220kV,MAR-19,,19.5431163,77.1739432,success_v2_medium
+Western Region,Maharashtra,Hinjewadi T/F,AIS,220kV,MAR-18,,18.5924659,73.7606865,success_v2_medium
+Southern Region - II,Karnataka,HIRIYUR,AIS,400kV,,,13.9443237,76.6167407,success
+Northern Region 1,Haryana,HISSAR,AIS,400kV,,,29.813025,76.4776537,success
+Southern Region - II,Karnataka,Hoody,AIS,400kV,,,12.994363,77.7203698,success
+Southern Region - II,Karnataka,Hosakote,AIS,220kV,,,13.4599411,77.2148778,success
+Western Region - II,Madhya Pradesh,HOSHANGABAD,AIS,220kV,,,22.7545538,77.7198249,success
+Southern Region - II,Tamil Nadu,HOSUR,AIS,400kV,,,12.7183361,77.8229481,success
+Northern Region,Haryana,HSIIDC Rai Sonepat (,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,HSIIDC Rai Sonepat,AIS,220kV,,,29.0,76.0,state_center
+Southern Region,Telangana,Husnabad s/s,AIS,220kV,AUG-24,,18.1266495,79.2111468,success_v2_medium
+Southern Region,Telangana,Husnabad,AIS,220kV,MAY-24,,18.1266495,79.2111468,success
+Southern Region,Telangana,Huzumagar S/S,AIS,220kV,,,17.8495919,79.1151663,state_center
+Northern Region,Haryana,HVPNL),AIS,220kV,AUG-24,07/24,28.4561866,77.0358549,success
+Southern Region - I,Andhra Pradesh,Hyderabad,AIS,400kV,,,15.8142294,78.0268079,success
+Southern Region - I,Telangana,HYDERABAD,AIS,400kV,,,17.360589,78.4740613,success
+Western Region,Gujarat,Ichchhapore,AIS,220kV,,,21.1892898,72.7213149,success
+Northern Region 1,Rajasthan,IG Nagar,AIS,220kV,,,26.8105777,73.7684549,state_center
+Northern Region III,Uttar Pradesh,IITGNL,AIS,220kV,12-Dec-18,,27.1303344,80.859666,state_center
+North Eastern Region,Manipur,IMPHAL (PG),AIS,400kV,,,24.7991162,93.9364419,success_v2_medium
+North Eastern Region,Manipur,IMPHAL,AIS,400kV,,,24.7991162,93.9364419,success
+Northern Region,Haryana,IMT Manesar,AIS,220kV,,,28.3671851,76.920669,success
+Southern Region,Karnataka,in Bidar Dist.),AIS,220kV,MAR-25,02/25,14.5203896,75.7223521,state_center
+Western Region - II,Madhya Pradesh,INDORE (NORTH ZONE),AIS,220kV,,,22.7203616,75.8681996,success_v2_medium
+Western Region - II,Madhya Pradesh,INDORE (SOUTH ZONE),AIS,220kV,,,22.7203616,75.8681996,success_v2_medium
+Western Region - II,Madhya Pradesh,INDORE,AIS,400kV,,,22.7203616,75.8681996,success
+Western Region - II,Madhya Pradesh,INDORE,AIS,765kV,,,22.7203616,75.8681996,success
+Western Region - II,Madhya Pradesh,INDORE-II (JETPURA),AIS,220kV,,,22.5902303,75.1778864,success
+ODISHA,Odisha,INDRAVATI,AIS,400kV,,,19.2275,82.8279449,success
+ODISHA,Odisha,Infocity-II,AIS,220kV,,,20.3428251,85.8063721,success
+Northern Region,Uttar Pradesh,Integrated Township Noida S/s,AIS,220kV,,,27.1303344,80.859666,state_center
+Western Region - II,Madhya Pradesh,ITARSI,AIS,220kV,,,22.6122527,77.7782601,success
+Western Region - II,Madhya Pradesh,ITARSI,AIS,400kV,,,22.6122527,77.7782601,success
+North Eastern Region,Sikkim,J and K) Drass,AIS,220kV,,,27.6021259,88.4561608,state_center
+North Eastern Region,Sikkim,J and K) Kargil,AIS,220kV,,,27.6021259,88.4561608,state_center
+Western Region - II,Madhya Pradesh,JABALPUR PS,AIS,765kV,,,23.1701522,79.9324505,success_v2_medium
+Western Region - II,Madhya Pradesh,JABALPUR,AIS,220kV,,,23.1701522,79.9324505,success
+Western Region - II,Madhya Pradesh,JABALPUR,AIS,400kV,,,23.1701522,79.9324505,success
+Southern Region,Telangana,Jadcherla S/S,AIS,220kV,,,16.7699159,78.1377227,success_v2_medium
+Eastern Region,Jharkhand,Jainamore GSS,AIS,220kV,MAR-23,,23.6637204,86.0222634,success_v2_medium
+Eastern Region,Jharkhand,Jainamore,AIS,220kV,,,23.6637204,86.0222634,success
+Northern Region 1,Rajasthan,JAIPUR SOUTH,AIS,400kV,,,26.8105777,73.7684549,state_center
+Northern Region 1,Rajasthan,Jaisalmer-2,AIS,400kV,,,26.9116615,70.9124888,success
+Northern Region,Haryana,Jajji,AIS,400kV,,,29.0,76.0,state_center
+Northern Region II,Punjab,JALANDHAR,AIS,400kV,,,31.2922312,75.5678878,success
+Western Region,Maharashtra,JALNA,AIS,220kV,,,19.918833,75.8708599,success
+Western Region - I,Maharastra,Jambhul,AIS,220kV,,,18.1070647,73.0825192,success
+Western Region,Gujarat,Jambuva,AIS,220kV,,,22.2142841,73.1954875,success
+Western Region,Gujarat,Jamla,AIS,220kV,,,23.3991341,72.5742553,success
+Western Region,Gujarat,Jamnagar,AIS,220kV,,,22.4732415,70.0552102,success
+Eastern Region - 1,Jharkhand,JAMSHEDPUR,AIS,400kV,,,22.8015194,86.2029579,success
+Western Region - II,Gujarat,Jangral,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region - II,Madhya Pradesh,JAORA,AIS,220kV,,,23.6379392,75.1281756,success
+Northern Region,Delhi,Jasola GIS,AIS,220kV,MAR-20,,28.5427353,77.2913342,success_v2_medium
+Northern Region,Himachal Pradesh,Jassore,AIS,220kV,,,31.9292352,77.1828462,state_center
+Western Region,Maharashtra,JATH,AIS,220kV,,,17.0489913,75.21771,success
+Northern Region III,Uttarakhand,Jauljivi,GIS,400kV,,,30.0417376,79.089691,state_center
+Northern Region III,Uttar Pradesh,Jaunpur,AIS,400kV,21-Oct-19,,25.7967065,82.4888992,success
+ODISHA,Odisha,Jayanagar,AIS,220kV,,,18.8525218,82.5590916,success
+Southern Region,Karnataka,Jeerapur s/s,AIS,400kV,,,14.5203896,75.7223521,state_center
+Eastern Region - 2,West Bengal,Jeerut,AIS,400kV,,,22.9964948,87.6855882,state_center
+Northern Region III,Uttar Pradesh,Jehta (Hardoi Road),GIS,400kV,,,27.1303344,80.859666,state_center
+Northern Region,Himachal Pradesh,Jeori,AIS,220kV,,,31.4632802,76.8170285,success
+Western Region,Gujarat,Jetpur,AIS,400kV,,,21.7543725,70.6189391,success
+ODISHA,Odisha,JEYPORE,AIS,400kV,,,18.8812875,82.552768,success
+ODISHA,Odisha,JHARSUGUDA,AIS,765kV,,,21.8019368,83.9713964,success
+Northern Region,Delhi,Jhatikalan,AIS,400kV,MAR-23,,28.6328027,77.2197713,state_center
+Northern Region,Delhi,Jhatikara S/S,AIS,765kV,SEP-21,,28.5229951,76.9670028,success
+Northern Region 1,Delhi,JHATIKARA,AIS,765kV,,,28.5229951,76.9670028,success
+Northern Region 1,Haryana,JIND,AIS,400kV,,,29.3152073,76.314082,success
+ODISHA,Odisha,Joda,AIS,220kV,,,22.0324027,85.4566847,success
+Western Region - II,Madhya Pradesh,JULWANIA,AIS,220kV,,,21.8748578,75.2033652,success
+Western Region - II,Madhya Pradesh,JULWANIYA,AIS,400kV,,,21.6597812,75.1135663,success
+Southern Region,Tamil Nadu,Kadalangudy,AIS,220kV,DEC-15,12/15,10.9094334,78.3665347,state_center
+Western Region,Goa,Kadamba GIS,AIS,220kV,MAR-19,,15.5382853,73.8299407,success_v2_medium
+Southern Region - I,Andhra Pradesh,KADAPA,GIS,765kV,,,14.4752936,78.8216861,success
+Northern Region II,Haryana,KAITHAL,AIS,400kV,,,29.7996588,76.3989903,success
+Southern Region,Kerala,Kakkad,AIS,220kV,JUN-25,,11.0366863,75.9370753,success
+Western Region - II,Gujarat,KALA,GIS,400kV,,,23.3061466,72.3393616,success
+Northern Region,Himachal Pradesh,Kala-Amb,AIS,220kV,,,32.0131069,76.6687667,success
+Southern Region - II,Kerala,Kalamassery,AIS,220kV,,,10.0573412,76.3310412,success
+Southern Region - II,Tamil Nadu,KALIBANDHAPATU,AIS,400kV,,,10.9094334,78.3665347,state_center
+Southern Region,Andhra Pradesh,Kalpaka-II S/s,AIS,400kV,AUG-20,,15.9240905,80.1863809,state_center
+Southern Region,Telangana,Kamalapuram Substation,AIS,400kV,MAY-24,04/24,18.2680934,80.4849764,success_v2_medium
+Western Region,Gujarat,Kangasiyali,AIS,220kV,,,22.3850051,71.745261,state_center
+Northern Region,Himachal Pradesh,Kangoo,AIS,220kV,,,31.4316475,76.8436468,success
+Southern Region - II,Kerala,Kaniyampetta,AIS,220kV,,,10.3528744,76.5120396,state_center
+Southern Region - II,Kerala,Kanjirode,AIS,220kV,,,10.3528744,76.5120396,state_center
+Northern Region 1,Rajasthan,KANKROLI,AIS,400kV,,,25.0588278,73.885664,success
+Northern Region III,Uttar Pradesh,KANPUR New,GIS,765kV,,,27.1303344,80.859666,state_center
+Northern Region III,Uttar Pradesh,KANPUR,AIS,400kV,,,26.4609135,80.3217588,success
+Western Region - II,Madhya Pradesh,KANWAN,AIS,220kV,,,22.8731494,75.261826,success
+Western Region,Gujarat,Kapadwanj,AIS,220kV,,,23.0226211,73.0776832,success
+Southern Region - II,Tamil Nadu,KARAIKUDI,AIS,400kV,,,10.0728444,78.7795194,success
+Western Region,Gujarat,Karamsad,AIS,220kV,,,22.541545,72.9048945,success
+Northern Region,Uttarakhand,Karanprayag,AIS,400kV,JUN-17,,30.2624653,79.2166407,success
+Northern Region II,UT-Ladakh,KARGIL,GIS,220kV,,,33.5232404,77.7179641,state_center
+Northern Region,Himachal Pradesh,Karian,GIS,220kV,,,31.9292352,77.1828462,state_center
+Western Region,Gujarat,Karjan,AIS,220kV,,,22.0523055,73.1216703,success
+Southern Region,Karnataka,Karnataka Part-A Phase-I),AIS,400kV,OCT-24,09/24,14.5203896,75.7223521,state_center
+Northern Region,Delhi,Karol Bagh GIS,AIS,220kV,MAR-19,,28.6328027,77.2197713,state_center
+Southern Region,Kerala,Kasargode,AIS,400kV,JUL-23,,10.5684743,76.1959722,success
+Northern Region III,Uttar Pradesh,Kasganj,AIS,220kV,25-May-18,,27.7888527,78.8229701,success
+Northern Region 1,Uttarakhand,Kashipur,AIS,220kV,,,29.2117573,78.9617306,success
+Northern Region 1,Uttarakhand,Kashipur,AIS,400kV,,,29.2117573,78.9617306,success
+Western Region,Gujarat,Kasor,AIS,400kV,,,22.6340857,73.0124186,success
+Western Region - II,Madhya Pradesh,KATNI,AIS,400kV,,,23.7176393,80.2610181,success
+Western Region,Maharashtra,Kaudgaon T/f,AIS,220kV,MAR-21,,18.9068356,75.6741579,state_center
+Western Region,Gujarat,Kawant,AIS,220kV,,,22.0931741,74.0504514,success
+Southern Region,Tamil Nadu,Kayathar 400/230-110 KV SS,AIS,400kV,AUG-24,07/24,10.9094334,78.3665347,state_center
+ODISHA,Odisha,KEONJHAR,AIS,400kV,,,21.5,85.5,success
+Western Region,Gujarat,Keshod,AIS,220kV,,,21.3148629,70.2678937,success
+Western Region,Maharashtra,Kesurdi MIDC T/F,AIS,220kV,MAR-19,,18.9068356,75.6741579,state_center
+Northern Region II,Laddakh,KHALSTI,GIS,220kV,,,33.9456407,77.6568576,state_center
+Southern Region - I,Telangana,KHAMMAM,AIS,400kV,,,17.2465351,80.1500326,success
+Eastern Region,West Bengal,Khanakul 220 KV GIS,AIS,220kV,MAR-25,,22.9964948,87.6855882,state_center
+Western Region,Maharashtra,Khandeshwar T/F,AIS,220kV,MAR-20,,18.9068356,75.6741579,state_center
+Western Region - II,Madhya Pradesh,KHANDWA,AIS,400kV,,,21.8203752,76.3555424,success
+Western Region,Gujarat,Khanpur,AIS,220kV,,,22.3638559,72.8134534,success
+Western Region - I,Maharastra,Kharghar,AIS,400kV,,,19.0525298,73.0735111,success
+Northern Region,Haryana,Kharkhoda,AIS,220kV,,,28.9027674,76.903736,success
+Western Region - II,Gujarat,Khavda PS1,AIS,765kV,,,23.8244987,69.7298378,success
+Western Region - II,Gujrat,Khavda PS2,GIS,765kV,,,22.3367527,73.2270971,state_center
+Western Region - II,Gujrat,Khavda PS3,GIS,765kV,,,22.3367527,73.2270971,state_center
+Western Region,Chhattisgarh,KHEDAMARA,AIS,400kV,,,21.6637359,81.8406351,state_center
+Western Region,Gujarat,Kheralu,AIS,220kV,,,23.8851474,72.6172316,success
+Northern Region 1,Rajasthan,KHETRI,AIS,765kV,,,28.0003366,75.784133,success
+Northern Region,Uttar Pradesh,Khorabar S/s,AIS,220kV,JUN-25,,27.1303344,80.859666,state_center
+Eastern Region,Odisha,Kiakata,AIS,220kV,MAR-26,,20.8757343,84.338311,success
+Northern Region III,Uttar Pradesh,Kidwai Nagar (Govind Nagar,AIS,220kV,,,27.1303344,80.859666,state_center
+North Eastern Region,Meghalaya,Killing S/S,AIS,400kV,FEB-15,,25.5379432,91.2999102,state_center
+Western Region,Gujarat,Kim,AIS,220kV,,,21.3996957,72.92659,success
+Western Region,Maharashtra,KINI,AIS,220kV,,,18.2967374,76.0833049,success
+Western Region - II,Madhya Pradesh,KIRNAPUR,AIS,400kV,,,21.626404,80.3329713,success
+Eastern Region - 1,Bihar,KISHANGANJ,GIS,400kV,,,26.2984144,87.9466715,success
+Northern Region II,Jammu & Kashmir,KISHENPUR,AIS,400kV,,,33.6649297,75.1629584,state_center
+Southern Region,Telangana,KMTP SS,AIS,220kV,JUN-24,,17.8495919,79.1151663,state_center
+Southern Region - II,Kerala,KOCHI,AIS,400kV,,,9.9982499,76.3694144,success
+Eastern Region,Jharkhand,Koderma s/s,AIS,220kV,,,23.4559809,85.2557301,state_center
+North Eastern Region,Nagaland,Kohima S/S,AIS,220kV,DEC-18,,26.2754146,94.4643778,success
+Western Region,Maharashtra,Kohlapur S/S,AIS,400kV,NOV-15,,18.9068356,75.6741579,state_center
+Southern Region - II,Karnataka,KOLAR AC,AIS,400kV,,,13.1367201,78.1337246,success
+Western Region - I,Maharastra,KOLHAPUR,GIS,400kV,,,,,error
+Northern Region,Jammu & Kashmir,Kopli S/S,AIS,220kV,JUN-18,,,,error
+Western Region,Gujarat,Kosamba,AIS,400kV,,,,,error
+Northern Region 1,Rajasthan,KOTA,AIS,400kV,,,,,error
+Western Region - II,Madhya Pradesh,KOTAR,AIS,220kV,,,,,error
+Eastern Region,West Bengal,Kotasur GIS,AIS,220kV,MAR-20,,,,error
+Northern Region 1,Uttarakhand,KOTESHWAR,GIS,765kV,,,,,error
+Northern Region,Himachal Pradesh,Koti S/S,AIS,220kV,,,,,error
+Western Region,Chhattisgarh,"KOTMIKALA, PENDRA",AIS,220kV,,,,,error
+Northern Region,Rajasthan,Kotputli PG,AIS,400kV,DEC-25,,,,error
+Northern Region,Rajasthan,Kotputli S/S,AIS,400kV,,,,,error
+Northern Region 1,Rajasthan,KOTPUTLI,AIS,400kV,,,,,error
+Southern Region - II,Kerala,KOZHIKODE,AIS,400kV,,,,,error
+Southern Region,Andhra Pradesh,Krishnagiri S/s,AIS,220kV,JUL-24,06/24,,,error
+Western Region,Maharashtra,Krishnoor s/s,AIS,220kV,,,,,error
+Southern Region,Telangana,KTPP SS,AIS,400kV,,,,,error
+Eastern Region,Odisha,Kuanrmunda S/S,AIS,220kV,JUL-24,,,,error
+Southern Region,Karnataka,Kudgi S/S,AIS,765kV,DEC-15,,,,error
+Southern Region - II,Karnataka,KUDGI,GIS,400kV,,,,,error
+Western Region - II,Gujarat,Kukma,AIS,220kV,,,,,error
+Western Region - II,Madhya Pradesh,KUKSHI,AIS,220kV,,,,,error
+Southern Region - II,Kerala,Kundara,AIS,220kV,,,,,error
+Northern Region,Himachal Pradesh,Kunihar,AIS,220kV,,,,,error
+Western Region,Maharashtra,Kupwad T/F,AIS,220kV,MAR-19,,,,error
+Southern Region,Andhra Pradesh,Kurnool PS (Part-A and Part-B,AIS,400kV,FEB-25,,,,error
+Southern Region,Andhra Pradesh,Kurnool PS Part-A & Part-B,AIS,400kV,APR-25,03/25,,,error
+Southern Region - I,Andhra Pradesh,Kurnool,AIS,400kV,,,,,error
+Southern Region - I,Andhra Pradesh,KURNOOL,AIS,765kV,,,,,error
+Southern Region - I,Andhra Pradesh,Kurnool-III,AIS,765kV,,,,,error
+Southern Region - I,Andhra Pradesh,Kurnool-IV,AIS,220kV,,,,,error
+Southern Region - I,Andhra Pradesh,Kurnool-IV,AIS,765kV,,,,,error
+Southern Region - I,Andhra Pradesh,Kurnool-V,AIS,765kV,,,,,error
+Western Region - I,Chattishgarh,Kurud,AIS,400kV,,,,,error
+Western Region,Chhattisgarh,Kurud,AIS,400kV,APR-25,03/25,,,error
+Northern Region 1,Haryana,KURUKSHETRA,GIS,400kV,,,,,error
+Southern Region,Kerala,kV GIS Pathnamthitta,AIS,220kV,APR-25,03/25,,,error
+Northern Region,Uttarakhand,kV GIS S/s Baram,AIS,220kV,MAR-25,03/25,,,error
+Northern Region,Rajasthan,kV GSS Aspur,AIS,220kV,,,,,error
+Northern Region,Rajasthan,KV GSS Chandan,AIS,220kV,,,,,error
+Northern Region,Rajasthan,kV GSS Pachpadra,AIS,400kV,JAN-25,12/24,,,error
+Northern Region,Rajasthan,kV GSS Rayla,AIS,220kV,JUN-25,,,,error
+Northern Region,Rajasthan,kV GSS Sayla,AIS,220kV,MAR-25,02/25,,,error
+Northern Region,Rajasthan,"kV GSS, Bansur",AIS,220kV,,,,,error
+Northern Region,Rajasthan,"kV GSS, Bhiwadi",AIS,220kV,,,,,error
+Northern Region,Rajasthan,"kV GSS, Ratangarh",AIS,220kV,,,,,error
+Southern Region,Telangana,kV Jurala SS,AIS,220kV,MAR-25,02/25,,,error
+Southern Region,Telangana,kV Mahabubabad S/S,AIS,220kV,APR-25,03/25,,,error
+Northern Region,Haryana,kV Mehna Khera,AIS,220kV,FEB-25,01/25,,,error
+Northern Region,Haryana,kV Nawada,AIS,220kV,FEB-25,01/25,,,error
+Southern Region,Telangana,kV Nirmal SS,AIS,220kV,MAR-25,02/25,,,error
+Western Region,Maharashtra,kV Palghar SS,AIS,220kV,MAR-25,02/25,,,error
+Northern Region,Punjab,kV S/S Nakodar,AIS,400kV,DEC-24,11/24,,,error
+Northern Region,Haryana,kV Sampla,AIS,220kV,FEB-25,01/25,,,error
+Northern Region,Himachal Pradesh,Lahal S/S,AIS,220kV,MAR-20,,,,error
+Northern Region,Himachal Pradesh,Lahal,AIS,220kV,,,,,error
+Northern Region,Himachal Pradesh,Lahal,AIS,400kV,,,,,error
+Western Region,Maharashtra,Lakhampur / Dindori T/F,AIS,220kV,,,,,error
+Eastern Region - 1,Bihar,LAKHISARAI,AIS,400kV,,,,,error
+Western Region,Gujarat,Lalpar,AIS,220kV,,,,,error
+ODISHA,Odisha,Lapanga,AIS,220kV,,,,,error
+Northern Region,Jammu &amp; Kashmir,Lassipora,AIS,220kV,MAR-19,,,,error
+Eastern Region,Jharkhand,Latehar SS,AIS,400kV,JAN-25,12/24,,,error
+Eastern Region,Jharkhand,Latehar,AIS,400kV,,,,,error
+Eastern Region,Odisha,Laxmipur S/S,AIS,220kV,JUL-20,,,,error
+ODISHA,Odisha,Laxmipur,AIS,220kV,,,,,error
+Eastern Region,Sikkim,Legship Pool S/S,AIS,220kV,MAY-19,,,,error
+Eastern Region,Sikkim,Legship S/S,AIS,220kV,,,,,error
+Northern Region II,Laddakh,LEH,GIS,220kV,,,,,error
+Eastern Region,Jharkhand,Lohardaga GSS,AIS,220kV,JAN-25,12/24,,,error
+Eastern Region,Jharkhand,Lohardagga,AIS,220kV,,,,,error
+Northern Region,Haryana,Lohari/Jattal S/s,AIS,220kV,,,,,error
+Western Region,Maharashtra,Loinikand-II S/S,AIS,220kV,,,,,error
+Western Region - I,Maharastra,Lonikand-I,AIS,220kV,,,,,error
+Northern Region III,Uttar Pradesh,LUCKNOW New,AIS,765kV,,,,,error
+Northern Region III,Uttar Pradesh,LUCKNOW,AIS,400kV,,,,,error
+Northern Region II,Punjab,LUDHIANA,AIS,400kV,,,,,error
+Northern Region,Haryana,Lula Ahir,AIS,220kV,,,,,error
+Southern Region - II,Kerala,Madakkathara,AIS,400kV,,,,,error
+Northern Region III,Uttar Pradesh,Madhuban Bapudham,AIS,220kV,,,,,error
+Southern Region - II,Karnataka,MADHUGIRI (TUMKUR),AIS,400kV,,,,,error
+Southern Region - II,Tamil Nadu,MADRAS (Sriperumabdur),AIS,400kV,,,,,error
+Southern Region - II,Tamil Nadu,MADURAI,AIS,400kV,,,,,error
+Western Region - II,UT of Daman & Diu,MAGARWADA,GIS,400kV,,,,,error
+Southern Region - I,Telangana,Mahabubabad,AIS,220kV,,,,,error
+Eastern Region,West Bengal,Mahachanda GIS,AIS,220kV,MAR-20,,,,error
+Northern Region III,Uttar Pradesh,Maharajganj,AIS,220kV,22-Feb-19,,,,error
+Northern Region,Delhi,Maharanibagh GIS,AIS,220kV,MAR-19,,,,error
+Northern Region 1,Delhi,MAHARANIBAGH,GIS,400kV,,,,,error
+Western Region,Chhattisgarh,MAHASAMUND (PARASWANI),AIS,220kV,,,,,error
+Southern Region - I,Andhra Pradesh,Maheshwaram (PG),AIS,400kV,,,,,error
+Southern Region - I,Telangana,MAHESHWARAM,GIS,765kV,,,,,error
+Western Region - II,Madhya Pradesh,MAIHAR,AIS,220kV,,,,,error
+Northern Region,Uttar Pradesh,Mainpuri s/s,AIS,765kV,,,,,error
+Northern Region III,Uttar Pradesh,MAINPURI,AIS,400kV,,,,,error
+Eastern Region - 2,West Bengal,MAITHON,AIS,400kV,,,,,error
+Northern Region,Himachal Pradesh,Majra,AIS,220kV,,,,,error
+Western Region - II,Madhya Pradesh,Malanpur,AIS,220kV,,,,,error
+Southern Region - II,Kerala,Malaparamba,AIS,220kV,,,,,error
+Eastern Region - 2,West Bengal,MALDA,AIS,400kV,,,,,error
+Northern Region II,Punjab,MALERKOTLA,AIS,400kV,,,,,error
+ODISHA,Odisha,Malkangiri,AIS,220kV,,,,,error
+Northern Region III,Uttar Pradesh,Mallawan (Fatehpur),AIS,220kV,,,,,error
+Northern Region III,Uttar Pradesh,Mallawan,AIS,220kV,03-Dec-19,,,,error
+Northern Region,Haryana,Malsari Khera S/s,AIS,220kV,,,,,error
+Southern Region,Telangana,Manchippa LIS S/S,AIS,220kV,MAR-24,,,,error
+Northern Region,Himachal Pradesh,Mandhala,AIS,220kV,,,,,error
+Northern Region,Himachal Pradesh,MANDHALA,AIS,400kV,,,,,error
+Western Region - II,Madhya Pradesh,MANDIDEEP,AIS,220kV,,,,,error
+Northern Region 1,Uttar Pradesh,MANDOLA,AIS,400kV,,,,,error
+Western Region - II,Madhya Pradesh,MANDSAUR,AIS,400kV,,,,,error
+Northern Region,Haryana,Manesar,AIS,220kV,,,,,error
+Northern Region 1,Haryana,MANESAR,GIS,400kV,,,,,error
+Western Region - II,Madhya Pradesh,MANGALIYA,AIS,220kV,,,,,error
+Southern Region,Telangana,Manikonda S/S,AIS,220kV,DEC-18,,,,error
+Western Region,Maharashtra,Manjarsumba,AIS,220kV,MAR-18,,,,error
+Western Region,Maharashtra,Mankapur S/S,AIS,220kV,,,,,error
+Western Region,Gujarat,Mansar,AIS,400kV,,,,,error
+Western Region,Goa,Mapusa S/S,AIS,400kV,JUL-21,,,,error
+Western Region - I,Goa,MAPUSA,AIS,400kV,,,,,error
+Southern Region - I,Andhra Pradesh,Maradam,AIS,400kV,,,,,error
+North Eastern Region,Assam,MARIANI,AIS,220kV,,,,,error
+Northern Region,Haryana,Mau,AIS,220kV,,,,,error
+North Eastern Region,Meghalaya,MAWNGAP,AIS,220kV,,,,,error
+Eastern Region,West Bengal,Mayapur GIS,AIS,220kV,MAR-21,,,,error
+Eastern Region - 2,West Bengal,Medinipur,AIS,765kV,,,,,error
+Northern Region 1,Uttar Pradesh,MEERUT TBCB,AIS,400kV,,,,,error
+Northern Region 1,Uttar Pradesh,MEERUT(765 kV),AIS,765kV,,,,,error
+Western Region - II,Madhya Pradesh,MEHGAON,AIS,220kV,,,,,error
+Northern Region,Delhi,Mehrauli,AIS,220kV,MAR-19,,,,error
+Western Region,Gujarat,Mehsana,AIS,220kV,,,,,error
+ODISHA,Odisha,Meramundali,AIS,220kV,,,,,error
+ODISHA,Odisha,Meramundali,AIS,400kV,,,,,error
+Northern Region,Jammu & Kashmir,Mirbazar,AIS,220kV,,,,,error
+North Eastern Region,Assam,MISA,AIS,400kV,,,,,error
+Western Region,Gujarat,Mitha,AIS,220kV,,,,,error
+Northern Region II,Punjab,MOGA,AIS,765kV,,,,,error
+Western Region,Gujarat,Mogar,AIS,220kV,,,,,error
+Northern Region,Haryana,Moh ana,AIS,220kV,,,,,error
+North Eastern Region,Nagaland,MOKOKCHUNG,GIS,220kV,,,,,error
+Western Region,Chhattisgarh,MOPKA,AIS,220kV,,,,,error
+Northern Region,Uttar Pradesh,Moradabad,AIS,400kV,APR-25,,,,error
+Western Region,Gujarat,Morbi,AIS,220kV,,,,,error
+Western Region - II,Madhya Pradesh,MORENA,AIS,220kV,,,,,error
+Northern Region,Uttarakhand,Mori,AIS,220kV,,,,,error
+Western Region,Gujarat,Mota,AIS,220kV,,,21.1727852,73.0682073,success
+Western Region - II,Madhya Pradesh,MUGALIYACHAAP,AIS,220kV,,,23.8143419,77.5340719,state_center
+Southern Region,Telangana,Mughalkod,AIS,400kV,,,17.8495919,79.1151663,state_center
+Northern Region,Delhi,Mundka Bays,AIS,400kV,DEC-18,,28.6328027,77.2197713,state_center
+Southern Region,Karnataka,Munirabad at,AIS,400kV,,,15.2785018,76.3274884,success
+Southern Region - I,Karnataka,MUNIRABAD,AIS,400kV,,,15.2785018,76.3274884,success
+Southern Region,Tamil Nadu,Muppandal,AIS,220kV,MAR-25,,8.7086091,77.7423824,success
+Eastern Region - 1,Bihar,MUZAFFARPUR,AIS,400kV,,,26.1482548,85.3316097,success
+Southern Region - II,Kerala,Mylatty,AIS,220kV,,,10.3528744,76.5120396,state_center
+Southern Region,Andhra Pradesh,Mylavaram,AIS,400kV,JUL-20,,16.7612039,80.6418168,success
+Southern Region,Andhra Pradesh,Mylavarm S/s,AIS,400kV,AUG-18,,15.9240905,80.1863809,state_center
+Southern Region - II,Karnataka,MYSORE,AIS,400kV,,,12.3051828,76.6553609,success
+North Eastern Region,Sikkim,Nagaland) Kohima,AIS,220kV,,,27.6021259,88.4561608,state_center
+Southern Region - II,Tamil Nadu,NAGAPATTINAM,GIS,400kV,,,10.6026202,79.7619348,success
+Northern Region,Uttar Pradesh,Nagar,AIS,400kV,FEB-25,01/25,26.8731147,80.9100077,success
+Southern Region - I,Andhra Pradesh,NAGARJUNSAGAR,AIS,400kV,,,15.9240905,80.1863809,state_center
+Western Region - II,Madhya Pradesh,NAGDA,AIS,220kV,,,23.4578957,75.4191114,success
+Western Region - II,Madhya Pradesh,NAGDA,AIS,400kV,,,23.4578957,75.4191114,success
+Western Region - I,Maharastra,Nagewadi,AIS,220kV,,,18.3640286,76.8503523,success
+Northern Region,Jammu & Kashmir,Nagrota GSS,AIS,220kV,MAR-23,,33.6649297,75.1629584,state_center
+Northern Region,Jammu & Kashmir,Nagrota S/S,AIS,220kV,,,33.6649297,75.1629584,state_center
+Southern Region,Andhra Pradesh,Naidupeta S/S,AIS,220kV,AUG-20,,13.6289527,79.4634246,success
+Western Region - II,Madhya Pradesh,NALKHEDA,AIS,220kV,,,23.5907624,75.7733548,success
+Northern Region II,Himachal Pradesh,NALLAGARH,AIS,400kV,,,31.9292352,77.1828462,state_center
+Southern Region - II,Kerala,Nallalam,AIS,220kV,,,11.2170431,75.8174809,success
+North Eastern Region,Arunachal Pradesh,Namsai S/s,AIS,220kV,OCT-25,,28.0937702,94.5921326,state_center
+Western Region,Maharashtra,Nandurbar MIDC T/F,AIS,220kV,MAR-21,,18.9068356,75.6741579,state_center
+North Eastern Region,Meghalaya,Nangalbibra,AIS,220kV,,,25.5379432,91.2999102,state_center
+North Eastern Region,Meghalaya,NANGALBIBRA,AIS,400kV,,,25.5379432,91.2999102,state_center
+Western Region,Maharashtra,Narangwadi s/s,AIS,220kV,JUN-21,,18.9068356,75.6741579,state_center
+Southern Region - I,Andhra Pradesh,Narasaraopeta,AIS,220kV,,,16.228184,80.0506952,success
+Northern Region,Delhi,Narela,AIS,220kV,MAR-21,,28.8464766,77.0856631,success
+Northern Region,Delhi,Narela,AIS,765kV,NOV-23,,28.8464766,77.0856631,success
+Northern Region,Haryana,Narela,AIS,220kV,,,28.9017906,77.0687403,success
+Southern Region - II,Karnataka,Narendra,AIS,220kV,,,15.5087369,74.9768538,success
+Southern Region - II,Karnataka,NARENDRA,AIS,400kV,,,15.5087369,74.9768538,success
+ODISHA,Odisha,Narendrapur,AIS,220kV,,,19.3343487,84.8686552,success
+Southern Region - I,Andhra Pradesh,Narnoor,AIS,400kV,,,15.9240905,80.1863809,state_center
+Western Region - II,Madhya Pradesh,NARSINGHPUR,AIS,220kV,,,22.934556,79.0867849,success
+Western Region,Goa,NAVELI-AMONA,AIS,220kV,,,51.5323423,9.937216,state_center
+Western Region - II,Gujarat,Navsari SS,AIS,400kV,,,20.952407,72.9323831,success
+Western Region,Gujarat,Navsari,AIS,220kV,,,20.952407,72.9323831,success
+Western Region - II,Gujarat,NAVSARI,GIS,400kV,,,20.952407,72.9323831,success
+Northern Region,Haryana,Nawada,AIS,400kV,,,28.3947735,76.9402211,success
+Northern Region,Rajasthan,Nawalgarh s/s,AIS,220kV,,,26.8105777,73.7684549,state_center
+Northern Region,Rajasthan,Nawalgarh,AIS,220kV,DEC-16,,27.8503,75.2741,success
+ODISHA,Odisha,Nayagarh,AIS,220kV,,,20.2393682,85.050728,success
+Western Region - II,Madhya Pradesh,Neemach,AIS,400kV,,,23.8143419,77.5340719,state_center
+Northern Region 1,Rajasthan,NEEMARANA,AIS,400kV,,,26.8105777,73.7684549,state_center
+Western Region - II,Madhya Pradesh,NEEMUCH,AIS,220kV,,,24.6305517,75.1829,success
+Northern Region,Delhi,Nehru Place GIS,AIS,220kV,MAR-21,,28.6328027,77.2197713,state_center
+Southern Region - II,Karnataka,Nelamangala,AIS,400kV,,,13.0979667,77.3945591,success
+Southern Region - I,Andhra Pradesh,NELLORE PS,AIS,765kV,,,15.9240905,80.1863809,state_center
+Southern Region - I,Andhra Pradesh,NELLORE,AIS,400kV,,,14.4493717,79.9873763,success
+Southern Region,Andhra Pradesh,Nellore,AIS,765kV,MAR-17,,14.4493717,79.9873763,success
+Western Region - II,Madhya Pradesh,NEPANAGAR,AIS,220kV,,,21.4641072,76.3968819,success
+ODISHA,Odisha,New Bolangir,AIS,220kV,,,20.5431241,84.6897321,state_center
+Eastern Region,West Bengal,New Chanditala,AIS,400kV,NOV-24,10/24,22.7660556,88.2583626,success
+ODISHA,Odisha,New Duburi,AIS,220kV,,,20.5431241,84.6897321,state_center
+ODISHA,Odisha,New Duburi,AIS,400kV,,,20.5431241,84.6897321,state_center
+Eastern Region,West Bengal,New Katwa GIS,AIS,400kV,MAR-21,,22.9964948,87.6855882,state_center
+North Eastern Region,Assam,New Mariani S/S,AIS,400kV,APR-21,,26.4073841,93.2551303,state_center
+Eastern Region - 2,Sikkim,NEW MELLI,GIS,220kV,,,27.6021259,88.4561608,state_center
+Western Region - II,Gujarat,New Navsari,GIS,400kV,,,20.8291968,72.9493751,success
+Eastern Region - 1,Bihar,NEW PURNEA,AIS,400kV,,,25.7676772,87.46104,success
+Eastern Region - 2,West Bengal,NEW SILIGURI,AIS,400kV,,,26.6828552,88.4424796,success
+Eastern Region,West Bengal,New Town AA-IIC GIS,AIS,220kV,DEC-22,,22.9964948,87.6855882,state_center
+Eastern Region,West Bengal,New Town AA-IIC,AIS,220kV,OCT-23,,22.9964948,87.6855882,state_center
+Northern Region II,Jammu & Kashmir,NEW WANPOH,AIS,400kV,,,33.6649297,75.1629584,state_center
+Southern Region - I,Andhra Pradesh,Nidadavole,AIS,220kV,,,16.9051311,81.6540622,success
+Western Region - II,Madhya Pradesh,NIMRANI,AIS,220kV,,,22.1157923,75.4536773,success
+Northern Region III,Uttar Pradesh,Nirpura (Baghpat),AIS,220kV,,,29.2315865,77.3974371,success
+Southern Region - I,Telangana,NIZAMABAD,GIS,765kV,,,18.6732693,78.0978477,success
+Northern Region,Uttarakhand,Nogaon,AIS,220kV,MAR-18,,30.0417376,79.089691,state_center
+Northern Region,Haryana,Nonand S/s,AIS,220kV,DEC-26,,29.0,76.0,state_center
+Southern Region,Andhra Pradesh,NP Kunta PS,AIS,400kV,,,15.9240905,80.1863809,state_center
+Southern Region - I,Andhra Pradesh,NP KUNTA,AIS,400kV,,,13.9330933,78.3439238,success
+Northern Region,Haryana,Nunamazra,AIS,220kV,,,29.0,76.0,state_center
+Western Region,Gujarat,Nyara,AIS,220kV,,,22.4509949,70.0409996,success
+Northern Region,Delhi,Okhla,AIS,220kV,NOV-19,,28.5636616,77.2890546,success
+Western Region,Maharashtra,ONGC Panvel Addl T/F,AIS,220kV,MAR-19,,18.9068356,75.6741579,state_center
+Northern Region III,Uttar Pradesh,ORAI,GIS,765kV,,,25.9359555,79.4243277,success
+Southern Region - II,Kerala,Orkatteri,AIS,220kV,,,11.6540966,75.6004811,success
+Western Region,Gujarat,Otha,AIS,220kV,,,21.5283809,70.4651732,success
+Western Region - I,Maharastra,Padghe,AIS,400kV,,,18.9068356,75.6741579,state_center
+Western Region - I,Maharastra,PADGHE,GIS,765kV,,,18.9068356,75.6741579,state_center
+Northern Region,Ladakh,Padum S/S,AIS,220kV,,,33.9456407,77.6568576,state_center
+Northern Region,Haryana,Pahari S/s,AIS,220kV,,,29.0,76.0,state_center
+Southern Region - II,Kerala,Palakkad,AIS,220kV,,,10.7873692,76.4742172,success
+Western Region,Gujarat,Palanpur,AIS,220kV,,,24.1709794,72.4366375,success
+Eastern Region,Odisha,Palei,AIS,220kV,JUN-24,05/24,20.4851656,85.8538136,success
+Western Region,Maharashtra,Palghar T/F,AIS,220kV,MAR-19,,18.9068356,75.6741579,state_center
+Northern Region,Haryana,Pali,AIS,220kV,,,28.3793564,77.2457099,success
+Northern Region,Haryana,Palla,AIS,220kV,,,28.1217446,76.9801441,success
+Southern Region - II,Kerala,PALLAKAD,AIS,400kV,,,10.3528744,76.5120396,state_center
+Southern Region - II,Kerala,Pallom,AIS,220kV,,,9.528549,76.514907,success
+Eastern Region,Jharkhand,Palojori s/s,AIS,220kV,,,23.4559809,85.2557301,state_center
+Northern Region,Haryana,Palwal,AIS,220kV,,,28.0599426,77.3223422,success
+Western Region - II,Madhya Pradesh,PANAGAR,AIS,220kV,,,24.6971115,79.4862967,success
+Eastern Region,West Bengal,Panagarh,AIS,220kV,,,23.4430436,87.4587011,success
+Northern Region II,Haryana,PANCHKULA,AIS,400kV,,,30.6975401,76.8551066,success
+Western Region,Maharashtra,PANDHARPUR,AIS,220kV,,,17.7255921,75.3001936,success
+Western Region - II,Madhya Pradesh,PANDHURNA,AIS,220kV,,,21.5898263,78.5258059,success
+ODISHA,Odisha,PANDIABILI,GIS,400kV,,,20.5431241,84.6897321,state_center
+Northern Region,Haryana,Panipat,AIS,220kV,,,29.3912753,76.9771675,success
+Northern Region,Delhi,Panjabi Bagh GIS,AIS,220kV,MAR-19,,28.6328027,77.2197713,state_center
+Northern Region,Uttarakhand,Pantnagar,AIS,220kV,MAR-17,,29.028405,79.4832094,success
+Northern Region II,Himachal Pradesh,PARBATI PS / BANALA,GIS,400kV,,,31.9292352,77.1828462,state_center
+Western Region,Maharashtra,Pardi SS (,AIS,220kV,,,20.8156996,77.823919,success
+Western Region - I,Maharastra,PARLI,AIS,400kV,,,18.8485632,76.5297124,success
+Northern Region III,Uttar Pradesh,Partapur (Meerut),AIS,220kV,05-Apr-16,,28.9165978,77.6478052,success
+Western Region,Maharashtra,PARTUR,AIS,220kV,,,19.4882762,76.2606978,success
+Western Region,Maharashtra,PARVATI,AIS,220kV,,,19.1094874,72.8295914,success
+Southern Region,Kerala,Pathanamthitta,AIS,220kV,MAY-25,,9.2780841,76.9737443,success
+Southern Region - II,Kerala,Pathnamthitta,GIS,220kV,,,10.3528744,76.5120396,state_center
+Northern Region II,Punjab,PATIALA,AIS,400kV,,,30.2092778,76.3397231,success
+Eastern Region - 1,Bihar,PATNA,AIS,400kV,,,25.6093239,85.1235252,success
+Western Region,Maharashtra,Patoda s/s,AIS,220kV,,,18.9068356,75.6741579,state_center
+Northern Region,Delhi,Patparganj,AIS,220kV,MAR-17,,28.6115923,77.2905644,success
+Northern Region,Punjab,patran S/s,AIS,400kV,JAN-25,12/24,30.9293211,75.5004841,state_center
+Eastern Region,Jharkhand,Patratu GSS,AIS,220kV,,,23.4559809,85.2557301,state_center
+Southern Region - II,Karnataka,PAVAGADA,AIS,400kV,,,14.0994177,77.2804049,success
+Southern Region,Gorantla,Penukonda,AIS,220kV,JUN-24,,13.9950176,77.7798757,state_center
+Western Region,Maharashtra,PETH,AIS,220kV,,,20.3640407,76.3317913,success
+Northern Region,Himachal Pradesh,Phojal,GIS,220kV,,,32.0956974,77.0885321,success
+Northern Region III,Uttar Pradesh,Phoolbagh,GIS,220kV,,,27.1303344,80.859666,state_center
+Western Region,Maharashtra,Phursungi S/S,AIS,220kV,,,18.9068356,75.6741579,state_center
+Western Region - II,Madhya Pradesh,PIPARIYA,AIS,220kV,,,22.7630881,78.3431799,success
+Western Region,Gujarat,Pipavav S/S,AIS,400kV,MAR-21,,22.3850051,71.745261,state_center
+Northern Region,Uttarakhand,Piran Kaliyar,AIS,220kV,SEP-18,,29.9226501,77.9393977,success
+Western Region - II,Gujarat,PIRANA,AIS,400kV,,,22.9661748,72.557483,success
+Western Region - II,Madhya Pradesh,PITHAMPUR (Sec-III),AIS,220kV,,,23.8143419,77.5340719,state_center
+Western Region - II,Madhya Pradesh,PITHAMPUR,AIS,400kV,,,22.6105576,75.6790283,success
+Western Region - II,Madhya Pradesh,PITHAMPUR-II (Sec-I),AIS,220kV,,,23.8143419,77.5340719,state_center
+Northern Region III,Uttarakhand,PITHORAGARH,AIS,220kV,,,29.585871,80.215167,success
+North Eastern Region,Sikkim,PMDP-Jammu) Chowadhi,AIS,220kV,,,27.6021259,88.4561608,state_center
+Northern Region,Jammu and Kashmir,PMDP-Jammu) Nagrota,AIS,220kV,,,33.6649297,75.1629584,state_center
+Northern Region,Jammu and Kashmir,PMDP-Jammu) Samba,AIS,220kV,,,33.6649297,75.1629584,state_center
+Western Region,Goa,Ponda s/s,AIS,220kV,MAR-19,,15.3979351,74.0079788,success
+Western Region,Gujarat,Popda,AIS,220kV,,,22.3850051,71.745261,state_center
+Southern Region,Andhra Pradesh,Porumamilla,AIS,220kV,,,15.0036346,79.0322201,success
+Southern Region - II,Kerala,Pothencode,AIS,220kV,,,8.6184233,76.8976931,success
+Northern Region,Himachal Pradesh,Pragati Nagar S/S,AIS,400kV,JUN-19,,31.9292352,77.1828462,state_center
+Northern Region,Himachal Pradesh,Pragati Nagar,AIS,400kV,MAR-20,,31.9292352,77.1828462,state_center
+Western Region,Gujarat,Prantij S/S,AIS,400kV,MAR-21,,22.3850051,71.745261,state_center
+Northern Region III,Uttar Pradesh,Pratap Vihar (Gaziabad),AIS,220kV,,,28.6444638,77.4097432,success
+Northern Region III,Uttar Pradesh,Pratap Vihar,AIS,220kV,,,28.6444638,77.4097432,success
+Eastern Region,Odisha,Pratapsasan,AIS,220kV,AUG-21,,20.5431241,84.6897321,state_center
+Northern Region,Himachal Pradesh,Prini,AIS,220kV,,,32.2221873,77.2022869,success
+Northern Region,Haryana,Prithala S/s,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,PTPS Panipat,AIS,220kV,,,29.3968816,76.8787432,success
+Southern Region - II,Pondicherry,PUDUCHERRY,AIS,400kV,,,11.9340568,79.8306447,success
+Southern Region - II,Tamil Nadu,PUGALUR (Karur),AIS,400kV,,,11.076244,78.0040454,success
+Southern Region - II,Tamil Nadu,Pugalur GIS,GIS,400kV,,,10.9094334,78.3665347,state_center
+Northern Region,Uttarakhand,Puhana,AIS,220kV,MAR-17,,29.9146866,77.8462353,success
+Western Region - I,Maharastra,PUNE (TALEGAON),AIS,400kV,,,18.7661106,73.6967492,success
+Western Region - I,Maharastra,PUNE New,GIS,765kV,,,18.5814375,73.7838745,success
+Northern Region,Delhi,Punjabi Bagh GIS,AIS,220kV,MAR-20,,28.6328027,77.2197713,state_center
+Northern Region,Punjab,Punjabi Bagh,GIS,220kV,,,30.9293211,75.5004841,state_center
+Southern Region - II,Kerala,Punnapra,AIS,220kV,,,9.4258585,76.3401958,success
+Eastern Region - 1,Bihar,PURNEA,AIS,220kV,,,25.7773601,87.4731227,success
+Western Region,Maharashtra,PURTI,AIS,220kV,,,20.949397,79.2258743,success
+Eastern Region,Bihar,Pusali,AIS,400kV,JAN-20,,25.6440845,85.906508,state_center
+Eastern Region,Bihar,Pusauli S/S,AIS,220kV,,,25.6440845,85.906508,state_center
+Southern Region - I,Andhra Pradesh,Rachaganneri,AIS,220kV,,,15.9240905,80.1863809,state_center
+Southern Region,Andhra Pradesh,Rachaganneru S/s,AIS,400kV,AUG-18,,15.9240905,80.1863809,state_center
+Southern Region,Andhra Pradesh,Rachagunneri,AIS,400kV,DEC-24,,13.7199038,79.6370793,success
+Southern Region,Andhra Pradesh,Racherla,AIS,220kV,,,15.4996459,78.9089523,success
+Western Region - II,Gujarat,Radhanesda,GIS,400kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Radhanpur,AIS,220kV,,,23.8472862,71.5858439,success
+Northern Region III,Uttar Pradesh,RAEBAREILLY,AIS,220kV,,,27.1303344,80.859666,state_center
+Northern Region,Uttar Pradesh,Raebareli S/s,AIS,400kV,MAR-26,,27.1303344,80.859666,state_center
+Southern Region - I,Karnataka,RAICHUR,AIS,765kV,,,16.0547194,76.9003647,success
+Western Region - I,Chattishgarh,RAIGARH (KOTRA) PS,AIS,765kV,,,21.2555727,81.6923437,state_center
+Western Region - I,Chattishgarh,RAIGARH (TAMNAR) PS,AIS,765kV,,,21.2555727,81.6923437,state_center
+Western Region,Chhattisgarh,Raigarh Kotra Section-A),AIS,765kV,NOV-24,10/24,21.6637359,81.8406351,state_center
+Western Region,Chhattisgarh,Raigarh Kotra Section-B),AIS,765kV,FEB-25,,21.6637359,81.8406351,state_center
+Western Region - I,Chattishgarh,RAIGARH,AIS,400kV,,,21.2555727,81.6923437,state_center
+Western Region,Chhattisgarh,RAIGARH,AIS,220kV,,,22.2361795,83.3529534,success
+Western Region - I,Chattishgarh,RAIPUR (DURG) PS,AIS,765kV,,,21.2555727,81.6923437,state_center
+Western Region - I,Chattishgarh,RAIPUR,AIS,400kV,,,21.2555727,81.6923437,state_center
+Eastern Region - 2,West Bengal,RAJARHAT,GIS,400kV,,,22.6286173,88.44061,success
+Western Region - II,Madhya Pradesh,RAJGARH ( DHAR),AIS,220kV,,,22.6648274,74.9520066,success
+Western Region - II,Madhya Pradesh,RAJGARH (BIORA),AIS,220kV,,,23.8143419,77.5340719,state_center
+Western Region - II,Madhya Pradesh,RAJGARH,AIS,400kV,,,23.8716706,76.7744703,success
+Northern Region,Delhi,Rajghat S/S,AIS,400kV,OCT-21,,28.6328027,77.2197713,state_center
+Western Region,Chhattisgarh,Rajim SS,AIS,220kV,MAR-25,02/25,20.9684716,81.8796833,success
+Western Region,Gujarat,Rajula,AIS,220kV,,,21.038617,71.4438845,success
+Southern Region,Telangana,Ramadugu S/S,AIS,400kV,JAN-20,,17.8495919,79.1151663,state_center
+Southern Region,Karnataka,Ramasamuda S/S,AIS,220kV,OCT-22,,14.5203896,75.7223521,state_center
+Eastern Region,Jharkhand,Ramgarh-B,AIS,220kV,,,23.6303213,85.5215878,success
+Eastern Region,West Bengal,Ramkanli-B,AIS,220kV,,,22.9964948,87.6855882,state_center
+Eastern Region,West Bengal,Ramkanli-B,AIS,400kV,,,22.9964948,87.6855882,state_center
+Northern Region III,Uttar Pradesh,Rampur,GIS,400kV,,,28.7934728,79.1845806,success
+Western Region,Gujarat,Ranasan,AIS,220kV,,,23.4680107,73.1120471,success
+Eastern Region - 1,Jharkhand,RANCHI (NEW),AIS,765kV,,,23.3795613,85.3297516,success
+Eastern Region - 1,Jharkhand,RANCHI,AIS,400kV,,,23.3700501,85.3250387,success
+Eastern Region,Sikkim,Rangpo S/S (GIS,AIS,400kV,,,27.6021259,88.4561608,state_center
+Eastern Region - 2,Sikkim,RANGPO,GIS,400kV,,,27.1744361,88.5303403,success
+Northern Region III,Uttar Pradesh,Rasra,AIS,400kV,03-Aug-18,,25.8861049,83.8825267,success
+Western Region - II,Madhya Pradesh,RATANGARH,AIS,220kV,,,24.8184032,75.1096358,success
+Northern Region 1,Rajasthan,Ratangarh,AIS,220kV,,,28.0749601,74.6243533,success
+Western Region - II,Madhya Pradesh,RATLAM,AIS,220kV,,,23.50222,74.9551534,success
+ODISHA,Odisha,Rengali,AIS,220kV,,,21.6360466,84.0424879,success
+ODISHA,Odisha,RENGALI,AIS,400kV,,,21.6360466,84.0424879,success
+Western Region - II,Madhya Pradesh,REWA,AIS,220kV,,,24.7560846,81.3810574,success
+Western Region - II,Madhya Pradesh,REWA,AIS,400kV,,,24.7560846,81.3810574,success
+Northern Region,Haryana,Rewari,AIS,220kV,,,28.1956468,76.6165179,success
+Northern Region,Delhi,Ringanwada,AIS,220kV,,,28.6328027,77.2197713,state_center
+Northern Region 1,Uttarakhand,Rishikesh,AIS,220kV,,,30.1086537,78.2916193,success
+Northern Region 1,Uttarakhand,Rishikesh,AIS,400kV,,,30.1086537,78.2916193,success
+Northern Region,Haryana,Rohtak RoadDelhi,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,Rohtak,AIS,220kV,,,28.9010899,76.5801935,success
+Northern Region,Haryana,Roj-Ka-Meo Palwal,AIS,220kV,JUN-25,,29.0,76.0,state_center
+Northern Region 1,Uttarakhand,ROORKEE,AIS,400kV,,,29.8693496,77.8902124,success
+ODISHA,Odisha,ROURKELA,AIS,400kV,,,22.2309255,84.8678705,success
+Northern Region III,Uttar Pradesh,Rukhi (Sayana),AIS,220kV,29-Dec-16,,27.1303344,80.859666,state_center
+Western Region,Gujarat,Rupakheda,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Rupkheda,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region - II,Madhya Pradesh,SABALGARH,AIS,220kV,,,26.2485682,77.4097285,success
+Western Region,Gujarat,Sachin,AIS,220kV,,,21.0778781,72.8744643,success
+Western Region,Gujarat,Sadla,AIS,220kV,,,23.1373805,71.8571252,success
+Western Region,Gujarat,Sagapara,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region - II,Madhya Pradesh,SAGAR,AIS,400kV,,,23.8083076,78.758254,success
+Northern Region 1,Uttar Pradesh,SAHARANPUR,AIS,400kV,,,29.9856799,77.5040646,success
+Eastern Region - 1,Bihar,Saharsa,AIS,400kV,,,25.8330757,86.6143751,success
+Northern Region III,Uttar Pradesh,Sahupuri (Chandauli),GIS,400kV,,,27.1303344,80.859666,state_center
+Western Region - II,Madhya Pradesh,SAILANA,AIS,220kV,,,23.4559437,74.9273527,success
+North Eastern Region,Assam,SALAKATI,AIS,220kV,,,26.4426999,90.3538048,success
+Western Region,Gujarat,Salejada,AIS,220kV,,,22.3850051,71.745261,state_center
+Southern Region - II,Tamil Nadu,SALEM,AIS,400kV,,,11.6469616,78.2106958,success
+Western Region,Goa,Saligao,AIS,220kV,JUL-19,,15.5462074,73.7891386,success
+ODISHA,Odisha,Samagara,AIS,220kV,,,20.5431241,84.6897321,state_center
+Northern Region,Haryana,Samayapur Palwal,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,Samayapur,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Jammu & Kashmir,Samba S/S,AIS,220kV,NOV-19,,33.6649297,75.1629584,state_center
+Northern Region II,Jammu & Kashmir,SAMBHA,AIS,400kV,,,33.6649297,75.1629584,state_center
+Northern Region III,Uttar Pradesh,Sambhal,GIS,400kV,,,28.4271927,78.5564546,success
+Northern Region,Haryana,Sampla,AIS,220kV,,,28.8192189,76.7609033,success
+Northern Region III,Uttar Pradesh,Sangipur,AIS,220kV,31-Dec-16,,26.0445446,81.6663457,success
+Western Region,Gujarat,Sankhari,AIS,220kV,,,23.7809865,72.1603581,success
+Western Region,Gujarat,Santej,AIS,220kV,,,23.1060238,72.4759517,success
+Western Region,Gujarat,Saria,AIS,220kV,DEC-12,,22.3850051,71.745261,state_center
+Western Region - II,Gujarat,Sarigam,AIS,220kV,,,20.2834614,72.8705969,success
+Western Region - II,Madhya Pradesh,SARNI,AIS,220kV,,,22.1201139,78.1666291,success
+Western Region,Gujarat,Sartanpar,AIS,220kV,,,22.3850051,71.745261,state_center
+Eastern Region,Bihar,Sasaram S/S,AIS,765kV,MAR-14,,25.6440845,85.906508,state_center
+Eastern Region - 1,Bihar,SASARAM,AIS,765kV,,,24.9509656,84.0148733,success
+Western Region - II,Madhya Pradesh,SATNA,AIS,220kV,,,24.6954445,80.7770348,success
+Western Region - II,Madhya Pradesh,SATNA,AIS,765kV,,,24.6954445,80.7770348,success
+Northern Region III,Uttar Pradesh,Satrikh Road (Lucknow),AIS,220kV,,,27.1303344,80.859666,state_center
+Western Region,Gujarat,Savarkundla,AIS,220kV,,,21.3355059,71.3130864,success
+Western Region,Gujarat,Savdasna Mauda,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Savdasna,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Savdasnamuvada,AIS,220kV,,,22.3850051,71.745261,state_center
+Northern Region,Rajasthan,Sawai Madhopur,AIS,220kV,NOV-24,10/24,26.1137182,76.4240637,success
+Northern Region,Haryana,Sector - 77 GIS Gurgaon S/s,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,Sector - 85 GIS S/s,AIS,220kV,OCT-19,,29.0,76.0,state_center
+Northern Region,Haryana,Sector 56 Gurgaon,AIS,220kV,,,28.4253232,77.0985157,success
+Northern Region,Haryana,Sector 72 Gurgaon,AIS,220kV,,,28.4159257,77.0290772,success
+Northern Region,Haryana,Sector -86 Faridabad S/s,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,Sector,AIS,220kV,,,30.7001192,76.8601404,success
+Northern Region 1,Haryana,Sector-15-II Gurugram,AIS,220kV,,,28.4614487,77.0460104,success
+Northern Region 1,Haryana,Sector-32 Panchkula,AIS,220kV,,,30.6975401,76.8551066,success
+Northern Region,Uttar Pradesh,Sector-62 Noida,AIS,220kV,AUG-25,,28.6211447,77.3643493,success
+Western Region,Chhattisgarh,Semariya,AIS,220kV,,,21.3103168,81.7319728,success
+Western Region - II,Madhya Pradesh,SENDHWA,AIS,220kV,,,21.6926812,75.0978792,success
+Western Region - II,Madhya Pradesh,SEONI,AIS,220kV,,,22.2748109,79.7202522,success
+Western Region - I,Madhya Pradesh,SEONI,AIS,765kV,,,22.2748109,79.7202522,success
+Northern Region,Haryana,Sewah,AIS,400kV,,,29.0,76.0,state_center
+Western Region - II,Madhya Pradesh,SHAHDOL,AIS,220kV,,,23.3002343,81.364771,success
+Northern Region III,Uttar Pradesh,SHAHJAHANPUR,AIS,400kV,,,27.9128583,79.7476254,success
+Western Region - II,Madhya Pradesh,SHAJAPUR,AIS,220kV,,,23.4171001,76.6074794,success
+Northern Region,Uttar Pradesh,Shamli S/s,AIS,400kV,DEC-25,,27.1303344,80.859666,state_center
+Northern Region,Uttar Pradesh,Shamli T/F-II,AIS,400kV,AUG-24,,27.1303344,80.859666,state_center
+Northern Region III,Uttar Pradesh,Shamli,GIS,400kV,16-Jan-19,,29.4811507,77.2901344,success
+Western Region,Madhya Pradesh,Shankargarh / Khsipra S/S,AIS,220kV,,,23.8143419,77.5340719,state_center
+Western Region,Gujarat,Shapar,AIS,400kV,,,22.1587575,70.7979969,success
+Western Region,Gujarat,Shapur,AIS,220kV,,,21.4675648,70.3697081,success
+Western Region - II,Madhya Pradesh,SHEOPUR KALAN,AIS,220kV,,,25.6713529,76.7005775,success
+Western Region,Maharashtra,Shevgaon/Pathardi,AIS,220kV,MAR-22,,19.2791661,74.9025352,success
+Western Region - II,Madhya Pradesh,SHIVPURI,AIS,220kV,,,25.3741215,77.8278866,success
+Southern Region - II,Kerala,Shornur,AIS,220kV,,,10.4333232,76.2167311,success
+Western Region - II,Madhya Pradesh,SHUJALPUR,AIS,220kV,,,23.3805757,76.7232104,success
+Western Region - II,Madhya Pradesh,SHUJALPUR,AIS,400kV,,,23.3805757,76.7232104,success
+Western Region - II,Madhya Pradesh,SIDHI,AIS,220kV,,,24.2112687,81.7000415,success
+Northern Region 1,Rajasthan,SIKAR,AIS,400kV,,,27.6625058,75.0279905,success
+Northern Region 1,Rajasthan,SIKAR-2 TBCB,AIS,400kV,,,26.8105777,73.7684549,state_center
+North Eastern Region,Sikkim,Sikkim) Legship Pool,AIS,220kV,,,27.6021259,88.4561608,state_center
+North Eastern Region,Assam,Silchar S/S,AIS,400kV,NOV-18,,26.4073841,93.2551303,state_center
+North Eastern Region,Assam,SILCHAR,AIS,400kV,,,24.830302,92.7875689,success
+Eastern Region - 2,West Bengal,SILIGURI,AIS,220kV,,,26.7164127,88.4309916,success
+Western Region,Chhattisgarh,SILTARA,AIS,220kV,,,21.3684469,81.669445,success
+Northern Region 1,Uttar Pradesh,SIMBHAVALI,GIS,400kV,,,28.757365,77.9658874,success
+Northern Region,Uttar Pradesh,Simbholi S/s,AIS,400kV,,,27.1303344,80.859666,state_center
+Southern Region,Karnataka,Sindagi,AIS,220kV,SEP-19,,16.9194778,76.2350305,success
+Northern Region,Haryana,Singhani PS,AIS,220kV,,,29.0,76.0,state_center
+Western Region - II,Madhya Pradesh,SIRMOUR,AIS,220kV,,,24.7754851,81.4313628,success
+Northern Region III,Uttar Pradesh,Sirsira (Raebareli),AIS,400kV,,,27.1303344,80.859666,state_center
+Western Region - II,Gujarat,Sisrana,AIS,220kV,,,22.3850051,71.745261,state_center
+Eastern Region - 1,Bihar,Sitamarhi,AIS,400kV,,,26.5942841,85.500428,success
+Northern Region III,Uttarakhand,SITARGANJ,AIS,220kV,,,28.95915,79.7282695,success
+Western Region,Maharashtra,Slinnar T/F,AIS,220kV,MAR-21,,18.9068356,75.6741579,state_center
+Western Region,Goa,Soccorro S/S,AIS,220kV,MAR-17,,51.5323423,9.937216,state_center
+Northern Region III,Uttar Pradesh,SOHAWAL,AIS,400kV,,,26.7330586,81.9732242,success
+Western Region,Gujarat,Soja,AIS,400kV,,,23.3718946,72.5806742,success
+Western Region,Maharashtra,Solapur,AIS,400kV,OCT-15,,17.8499067,75.2763203,success
+Western Region - I,Maharastra,SOLAPUR,AIS,765kV,,,17.8499067,75.2763203,success
+Southern Region - II,Karnataka,Somanahalli,AIS,400kV,,,12.7744351,77.5050345,success
+Southern Region,Karnataka,Somannm S/S,AIS,400kV,,,14.5203896,75.7223521,state_center
+Southern Region,Karnataka,Somasamudra SS,AIS,220kV,DEC-24,11/24,15.2394087,76.9002247,success
+Northern Region 1,Haryana,SONEPAT,AIS,400kV,,,28.99197,77.0342633,success
+Western Region,Maharashtra,SOUTH SOLAPUR,AIS,220kV,,,17.6047162,76.0346941,success
+Western Region,Maharashtra,SOUTH,AIS,220kV,,,21.1218192,79.0500518,success
+Southern Region - I,Andhra Pradesh,SRIKAKULAM,GIS,765kV,,,18.2949307,83.8938844,success
+Northern Region 1,Uttarakhand,Srinagar (Garhwal),AIS,220kV,,,30.2238064,78.7879045,success
+Northern Region 1,Uttarakhand,Srinagar (Garhwal),AIS,400kV,,,30.2238064,78.7879045,success
+Northern Region,Haryana,sub -station Chhajpur,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,sub -station Palli,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,sub,AIS,220kV,,,28.4573351,76.9942505,success
+Northern Region,Haryana,Sub,AIS,400kV,,,28.4573351,76.9942505,success
+Eastern Region - 2,West Bengal,SUBHASHGRAM,AIS,400kV,,,22.416762,88.4347796,success
+Western Region,Madhya Pradesh,substation Bisonikala,AIS,220kV,NOV-25,,23.8143419,77.5340719,state_center
+Northern Region,Haryana,substation Deepalpur,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,substation Sector,AIS,220kV,,,30.7001192,76.8601404,success
+Northern Region,Haryana,substation Sector,AIS,400kV,,,30.7001192,76.8601404,success
+Northern Region,Haryana,substations Sector,AIS,220kV,,,29.0,76.0,state_center
+Western Region,Chhattisgarh,SUHELA,AIS,220kV,,,21.615377,81.969554,success
+Western Region - II,Madhya Pradesh,SUKHA,AIS,220kV,,,24.0385083,81.3573013,success
+Northern Region,Uttar Pradesh,Sultanpur Road s/s,AIS,400kV,,,27.1303344,80.859666,state_center
+Northern Region,Himachal Pradesh,Sunda,AIS,220kV,,,31.2311605,77.8647208,success
+Western Region,Maharashtra,Supa MIDC/Dhotre T/F,AIS,220kV,MAR-19,,18.9068356,75.6741579,state_center
+Northern Region 1,Rajasthan,Suratgarh,AIS,220kV,,,29.3203309,73.9026728,success
+Western Region,Gujarat,Suva,GIS,220kV,,,22.1799467,69.2122287,success
+Western Region - II,Madhya Pradesh,SUWASRA,AIS,220kV,,,24.0700426,75.6488577,success
+Northern Region,Himachal Pradesh,Tahliwal,AIS,220kV,MAR-25,,31.3491982,76.2691449,success
+Northern Region,Punjab,Tajpur GSS,AIS,220kV,FEB-25,,30.9293211,75.5004841,state_center
+Western Region,Gujarat,Talangpore,AIS,220kV,,,22.3850051,71.745261,state_center
+Northern Region,Uttar Pradesh,Tanda TPS,AIS,400kV,,,27.1303344,80.859666,state_center
+Western Region - II,Gujarat,Tappar,AIS,220kV,,,23.0204586,69.6620536,success
+Northern Region,Himachal Pradesh,Taran tulla,AIS,220kV,,,31.9292352,77.1828462,state_center
+ODISHA,Odisha,Tarkera,AIS,220kV,,,20.5431241,84.6897321,state_center
+Northern Region 1,Haryana,Tepla,AIS,220kV,,,30.3058297,76.946575,success
+Eastern Region - 1,Bihar,Thakurganj,AIS,220kV,,,26.4274675,88.1289535,success
+Southern Region - II,Kerala,Thaliparamba,AIS,220kV,,,12.0421885,75.3669363,success
+Western Region,Gujarat,Tharad,AIS,220kV,,,24.3897272,71.6292685,success
+Western Region,Gujarat,Thavar,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region,Chhattisgarh,THELKADIH,AIS,220kV,,,21.6637359,81.8406351,state_center
+ODISHA,Odisha,Therubali,AIS,220kV,,,19.3292664,83.4447584,success
+Southern Region,Telangana,Thimmajipet S/S,AIS,220kV,MAR-17,,17.8495919,79.1151663,state_center
+Southern Region - II,Tamil Nadu,THIRUNELVELI GIS,GIS,400kV,,,10.9094334,78.3665347,state_center
+Southern Region - II,Tamil Nadu,THIRUNELVELI,AIS,400kV,,,10.9094334,78.3665347,state_center
+Southern Region - II,Kerala,THIRUVANAN-THAPURAM,AIS,400kV,,,10.3528744,76.5120396,state_center
+North Eastern Region,Manipur,THOUBAL,AIS,400kV,,,24.6252503,94.0083522,success
+Western Region - II,Madhya Pradesh,TIKAMGARH,AIS,220kV,,,24.8552105,79.0472546,success
+Western Region,Maharashtra,Tilawani,AIS,220kV,MAR-25,,18.9068356,75.6741579,state_center
+Western Region - I,Maharastra,Tilwani,AIS,220kV,,,16.7128583,74.4086811,success
+Western Region,Gujarat,Timbdi,AIS,220kV,,,22.6496747,70.5907119,success
+Southern Region - II,Tamil Nadu,TIRUVALEM,GIS,765kV,,,10.9094334,78.3665347,state_center
+Southern Region,Andhra Pradesh,Tiruvuru,AIS,220kV,JUL-24,,17.1132968,80.6107396,success
+Western Region,Goa,Tivim SS,AIS,220kV,MAR-25,02/25,15.6213808,73.8542286,success
+Western Region,Goa,TIVIM,AIS,220kV,,,15.6213808,73.8542286,success
+Northern Region,Uttar Pradesh,Trans Ganga city,AIS,220kV,JUL-25,,26.5272518,80.3575358,success
+Northern Region,Haryana,Transmission,AIS,220kV,,,29.0,76.0,state_center
+Northern Region,Haryana,Transmission,AIS,400kV,,,29.0,76.0,state_center
+Southern Region - II,Kerala,TRICHUR,AIS,400kV,,,10.5161402,76.2084616,success
+Southern Region - II,Tamil Nadu,TRICHY,AIS,400kV,,,10.8071144,78.6880939,success
+Southern Region - II,Kerala,TRISSUR GIS,GIS,400kV,,,10.3528744,76.5120396,state_center
+Western Region,Goa,Tuem GIS,AIS,220kV,MAR-19,,51.5323423,9.937216,state_center
+Northern Region,Delhi,Tughlakabad,AIS,400kV,NOV-23,,28.5034421,77.2970508,success
+Northern Region 1,Delhi,TUGLAKABAD,GIS,400kV,,,28.5089676,77.2652186,success
+Southern Region - II,Karnataka,Tumkur (Pavagada),AIS,220kV,,,14.2736163,77.2489569,success
+Southern Region - II,Karnataka,Tumkur (Pavagada),AIS,400kV,,,14.2736163,77.2489569,success
+Southern Region,Karnataka,Tumkur PS,AIS,400kV,,,14.5203896,75.7223521,state_center
+Southern Region,Karnataka,Tumkur,AIS,400kV,,,13.3400771,77.1006208,success
+Northern Region III,Uttar Pradesh,Tundla,AIS,220kV,20-Jan-20,,27.2132859,78.2371117,success
+Eastern Region,Odisha,Turumunga GSS (,AIS,220kV,,,20.5431241,84.6897321,state_center
+Southern Region - II,Tamil Nadu,TUTICORIN PS,AIS,400kV,,,10.9094334,78.3665347,state_center
+Western Region - II,Madhya Pradesh,UDAIPURA,AIS,220kV,,,26.2073028,78.2850175,success
+Southern Region - I,Andhra Pradesh,Udandpur,AIS,400kV,,,15.9240905,80.1863809,state_center
+Southern Region - II,Tamil Nadu,UDUMALPET,AIS,400kV,,,10.5812766,77.2437652,success
+Western Region - II,Madhya Pradesh,UJJAIN,AIS,220kV,,,23.1885131,75.7716562,success
+Western Region - II,Madhya Pradesh,UJJAIN,AIS,400kV,,,23.1885131,75.7716562,success
+Western Region,Gujarat,Ukai Hydro,AIS,220kV,,,21.2482093,73.5893585,success
+Western Region,Gujarat,Ukai,AIS,400kV,MAR-23,,21.2373185,73.5772512,success
+Western Region,Maharashtra,UMRED,AIS,220kV,,,20.8473369,79.3247598,success
+Northern Region,Himachal Pradesh,Uperla Nangal,AIS,220kV,,,31.9292352,77.1828462,state_center
+Northern Region,Himachal Pradesh,Uperla Nangal,AIS,400kV,,,31.9292352,77.1828462,state_center
+Southern Region,Andhra Pradesh,Uravakonda,AIS,400kV,,,14.9467802,77.2577907,success
+Western Region,Chhattisgarh,URLA,AIS,220kV,,,21.3083942,81.6192122,success
+Southern Region,Andhra Pradesh,urvakonda-II S/s,AIS,400kV,,,15.9240905,80.1863809,state_center
+Western Region - II,Gujarat,Vadavi,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Vadavi,AIS,400kV,,,22.3850051,71.745261,state_center
+Western Region - II,Gujarat,VADODARA,GIS,765kV,,,22.2973142,73.1942567,success
+Western Region,Gujarat,Vagra,AIS,220kV,,,21.8447606,72.8448749,success
+Western Region,Gujarat,Vapi,AIS,220kV,,,20.3735482,72.9084376,success
+Western Region - II,Gujarat,VAPI,AIS,400kV,,,20.3735482,72.9084376,success
+Northern Region III,Uttar Pradesh,VARANASI,GIS,765kV,,,25.3356491,83.0076292,success
+Western Region,Gujarat,Varsana,AIS,400kV,,,23.1762662,70.2065206,success
+Western Region,Gujarat,Vartej,AIS,220kV,,,21.7397432,72.0644938,success
+Western Region,Gujarat,Vav,AIS,400kV,,,24.363947,71.5123139,success
+Southern Region,Tamil Nadu,Vellalaviduthi (,AIS,400kV,DEC-24,11/24,10.4671867,79.0303981,success
+Western Region,Gujarat,Veloda,AIS,400kV,,,22.3850051,71.745261,state_center
+Southern Region - I,Andhra Pradesh,Veltoor TS,AIS,400kV,,,15.9240905,80.1863809,state_center
+Southern Region - I,Andhra Pradesh,Veltoor-II,AIS,765kV,,,15.9240905,80.1863809,state_center
+Southern Region - I,Andhra Pradesh,VEMAGIRI,GIS,765kV,,,16.9277195,81.7946715,success
+Western Region,Goa,Verna GIS,AIS,220kV,MAR-19,,51.5323423,9.937216,state_center
+Western Region - II,Madhya Pradesh,VIDISHA,AIS,220kV,,,23.8463004,77.8370209,success
+Western Region,Gujarat,Vijapur,AIS,220kV,,,23.5590941,72.7449399,success
+Southern Region - I,Andhra Pradesh,VIJAYAWADA,AIS,400kV,,,16.5115306,80.6160469,success
+Western Region - II,Madhya Pradesh,VINDHYACHAL PS,AIS,765kV,,,23.8143419,77.5340719,state_center
+Western Region,Gujarat,Viramgam,AIS,220kV,,,23.1224522,72.0483946,success
+Western Region,Gujarat,Virpore,AIS,220kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Virpur,AIS,220kV,,,21.8490419,70.707834,success
+Southern Region,Tamil Nadu,Virudhunagar,AIS,765kV,MAR-24,,9.4926289,77.8631831,success
+Western Region,Maharashtra,VIRUR,AIS,220kV,,,19.8596465,79.1268504,success
+Western Region,Gujarat,Visavadar,AIS,220kV,,,21.3417058,70.7534299,success
+Northern Region III,Uttar Pradesh,Vrindavan (Mathura),AIS,220kV,01-Feb-19,,27.5753726,77.6938045,success
+Western Region,Gujarat,Vyankatpura,AIS,220kV,,,22.4106423,73.3703783,success
+Northern Region II,Jammu & Kashmir,WAGOORA,AIS,400kV,,,33.9898837,74.8666303,success
+Western Region,Gujarat,Wagra,AIS,220kV,,,22.3850051,71.745261,state_center
+Northern Region,Himachal Pradesh,Wangtoo,AIS,220kV,,,31.5406846,78.0153212,success
+Northern Region,Himachal Pradesh,Wangtoo,AIS,400kV,,,31.5406846,78.0153212,success
+Western Region,Maharashtra,Wani,AIS,220kV,MAR-20,,20.0574,78.9565,success
+Western Region,Gujarat,Wankaner,AIS,220kV,,,22.6153934,70.9495617,success
+Northern Region,Jammu & Kashmir,Wanpon S/S,AIS,400kV,JUL-14,,33.6649297,75.1629584,state_center
+Western Region - I,Maharastra,WARDHA,AIS,765kV,,,20.8256231,78.6131455,success
+Southern Region - I,Telangana,WARRANGAL,AIS,400kV,,,17.8495919,79.1151663,state_center
+Western Region,Maharashtra,Washi T/f,AIS,220kV,MAR-22,,18.9068356,75.6741579,state_center
+Western Region,Maharashtra,WAtwate T/F,AIS,220kV,MAR-22,,18.9068356,75.6741579,state_center
+Eastern Region,West Bengal,West Mednipur PS,AIS,220kV,,,22.9964948,87.6855882,state_center
+Western Region,Goa,Xeldem New SS,AIS,400kV,NOV-24,10/24,51.5323423,9.937216,state_center
+Western Region,Goa,XELDEM,AIS,220kV,,,15.2452423,74.0905288,success
+Northern Region,Uttar Pradesh,Yeida Sec-24 T/F-II,AIS,220kV,,,27.1303344,80.859666,state_center
+Southern Region - II,Karnataka,Yelahanka,GIS,220kV,,,13.1006982,77.5963454,success
+Southern Region - II,Karnataka,YELAHANKA,GIS,400kV,,,13.1006982,77.5963454,success
+Northern Region,Jammu & Kashmir,Yonus Wahipora S/S,AIS,220kV,MAR-17,,33.6649297,75.1629584,state_center
+Western Region,Gujarat,Zagadia,AIS,220kV,,,22.3850051,71.745261,state_center
+Northern Region,Jammu & Kashmir,Zainkote,AIS,220kV,MAR-08,,33.6649297,75.1629584,state_center
+Northern Region,Delhi,Zakhira GIS,AIS,220kV,MAR-20,,28.6328027,77.2197713,state_center
+Northern Region,Punjab,Zakhira,GIS,220kV,,,30.9293211,75.5004841,state_center
+Western Region,Gujarat,Zalod,AIS,220kV,,,23.1105359,73.4619658,success
+Western Region,Gujarat,Zerda through,AIS,400kV,,,22.3850051,71.745261,state_center
+Western Region,Gujarat,Zerda,AIS,400kV,,,22.3850051,71.745261,state_center
