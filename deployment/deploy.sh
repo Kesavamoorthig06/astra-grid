@@ -212,7 +212,7 @@ done
 systemctl daemon-reload
 
 # Enable services
-systemctl enable astra-unified.service
+systemctl enable astra-prediction-model.service
 systemctl enable astra-auth.service
 systemctl enable astra-simulation.service
 systemctl enable astra-chatbot.service
@@ -276,9 +276,9 @@ fi
 ################################################################################
 # Step 11: Start Services
 ################################################################################
-echo -e "\n${BLUE}[11/11] Starting backend services...${NC}"
+echo -e "\n${BLUE}[10/10] Starting services...${NC}"
 
-systemctl start astra-unified.service
+systemctl start astra-prediction-model.service
 systemctl start astra-auth.service
 systemctl start astra-simulation.service
 systemctl start astra-chatbot.service
@@ -288,8 +288,8 @@ systemctl start astra-document-extractor.service
 sleep 3
 
 # Check service status
-echo -e "\n${BLUE}Service Status:${NC}"
-systemctl status astra-unified.service --no-pager || true
+echo -e "\n${YELLOW}Service Status:${NC}"
+systemctl status astra-prediction-model.service --no-pager || true
 systemctl status astra-auth.service --no-pager || true
 systemctl status astra-simulation.service --no-pager || true
 systemctl status astra-chatbot.service --no-pager || true
@@ -317,8 +317,8 @@ echo -e "  Chatbot API:       127.0.0.1:5003"
 echo -e "  Document Extract:  127.0.0.1:5004"
 
 echo -e "\n${BLUE}Useful Commands:${NC}"
-echo -e "  View logs:          sudo journalctl -u astra-unified.service -f"
-echo -e "  Check status:       sudo systemctl status astra-unified.service"
+echo -e "  View logs:          sudo journalctl -u astra-prediction-model.service -f"
+echo -e "  Check status:       sudo systemctl status astra-prediction-model.service"
 echo -e "  Restart services:   sudo systemctl restart astra-*.service"
 echo -e "  View access logs:   sudo tail -f /var/log/nginx/access.log"
 echo -e "  Edit config:        sudo nano $ENV_FILE"
