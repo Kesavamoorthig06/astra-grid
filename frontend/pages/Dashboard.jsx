@@ -6,6 +6,7 @@ import { Pagination, PaginationContent, PaginationItem } from '../components/ui/
 import { ChevronLeft, ChevronRight, Map } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import IndiaTownMap from '../components/IndiaTownMap';
+import ChatBot from '../components/ChatBot';
 
 const Dashboard = () => {
   const { t, i18n } = useTranslation();
@@ -584,6 +585,9 @@ const Dashboard = () => {
           </CardContent>
         </Card>
       </div>
+      
+      {/* ChatBot Fixed Overlay */}
+      <ChatBot />
     </div>
   );
 };

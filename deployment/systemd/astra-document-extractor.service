@@ -1,0 +1,37 @@
+[Unit]
+Description=ASTRA GRID Document Extractor Service
+After=network.target
+
+[Service]
+Type=notify
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/astra-grid
+Environment="PATH=/opt/astra-grid/venv/bin"
+Environment="FLASK_ENV=production"
+EnvironmentFile=/opt/astra-grid/backend/.env.production
+
+ExecStart=/opt/astra-grid/venv/bin/gunicorn \
+  --workers 2 \
+  --worker-class sync \
+  --bind 127.0.0.1:5004 \
+  --timeout 300 \
+  --access-logfile /var/log/astra-grid/extractor-access.log \
+  --error-logfile /var/log/astra-grid/extractor-error.log \
+  backend.document_extractor_api:app
+
+ExecReload=/bin/kill -s HUP $MAINPID
+KillMode=mixed
+KillSignal=SIGQUIT
+
+# Restart policy
+Restart=on-failure
+RestartSec=5s
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=astra-extractor
+
+[Install]
+WantedBy=multi-user.target

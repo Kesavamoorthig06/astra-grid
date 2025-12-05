@@ -10,8 +10,9 @@ import RegulatorySection from '../components/form/RegulatorySection';
 import ResourcePlanningSection from '../components/form/ResourcePlanningSection';
 import VendorSupplyChainSection from '../components/form/VendorSupplyChainSection';
 import PredictionResultsModal from '../components/form/PredictionResults';
-import FormSkeleton from '../components/form/FormSkeleton';
 import { GradientBackground } from '@/components/ui/gradient-background';
+import VoiceInput from '../components/VoiceInput';
+import DocumentExtractor from '../components/DocumentExtractor';
 
 const UNIT_MULTIPLIERS = {
   lakh: 100000,
@@ -279,7 +280,6 @@ const formatHistoryDate = (timestamp) => {
 export default function TransmissionLineForm() {
   const { t } = useTranslation();
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
   const [formData, setFormData] = useState({
     // Project Basics
     project_type: '',
@@ -323,14 +323,8 @@ export default function TransmissionLineForm() {
   const [prediction, setPrediction] = useState(null);
   const [isResultsModalOpen, setIsResultsModalOpen] = useState(false);
   const [history, setHistory] = useState([]);
-
-  useEffect(() => {
-    // Simulate initial loading
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-    return () => clearTimeout(timer);
-  }, []);
+  const [isVoiceInputOpen, setIsVoiceInputOpen] = useState(false);
+  const [isDocExtractorOpen, setIsDocExtractorOpen] = useState(false);
 
   // Check if coming from history page with prediction data
   useEffect(() => {
@@ -648,10 +642,6 @@ export default function TransmissionLineForm() {
     }
   };
 
-  if (isLoading) {
-    return <FormSkeleton />;
-  }
-
   return (  
     <div className="relative min-h-screen overflow-hidden">
       <GradientBackground className="absolute inset-0 opacity-75" />
@@ -740,6 +730,80 @@ export default function TransmissionLineForm() {
         </form>
       </div>
       </div>
+      
+      {/* Fixed Document Extractor Button (Above Voice Button) */}
+      <button
+        type="button"
+        onClick={() => setIsDocExtractorOpen(true)}
+        className="fixed bottom-24 right-6 w-16 h-16 bg-white dark:bg-black border-[3px] border-gray-300 dark:border-gray-700 text-black dark:text-white rounded-full font-semibold transition-all duration-200 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black hover:shadow-lg shadow-lg z-50 flex items-center justify-center"
+        title="Extract from Document"
+      >
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      </button>
+      
+      {/* Fixed Voice Input Button */}
+      <button
+        type="button"
+        onClick={() => setIsVoiceInputOpen(true)}
+        className="fixed bottom-6 right-6 w-16 h-16 bg-white dark:bg-black border-[3px] border-gray-300 dark:border-gray-700 text-black dark:text-white rounded-full font-semibold transition-all duration-200 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black hover:shadow-lg shadow-lg z-50 flex items-center justify-center"
+        title="Voice Input"
+      >
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+        </svg>
+      </button>
+      
+      {/* Document Extractor Modal */}
+      <DocumentExtractor
+        isOpen={isDocExtractorOpen}
+        onClose={() => setIsDocExtractorOpen(false)}
+        onComplete={(extractedFields) => {
+          // Auto-fill form fields with extracted data
+          if (extractedFields) {
+            const updatedFormData = { ...formData };
+            
+            // Map extracted fields to form data
+            Object.keys(extractedFields).forEach(key => {
+              if (extractedFields[key] !== null && extractedFields[key] !== undefined) {
+                updatedFormData[key] = extractedFields[key];
+              }
+            });
+            
+            setFormData(updatedFormData);
+            
+            // Handle unit conversions for cost fields
+            if (extractedFields.target_cost_inr) {
+              const crores = extractedFields.target_cost_inr / 10000000;
+              setTargetCostValue(crores.toString());
+              setTargetCostUnit('crore');
+            }
+            if (extractedFields.labour_cost_estimate_inr) {
+              const crores = extractedFields.labour_cost_estimate_inr / 10000000;
+              setLabourCostValue(crores.toString());
+              setLabourCostUnit('crore');
+            }
+            if (extractedFields.material_cost_estimate_inr) {
+              const crores = extractedFields.material_cost_estimate_inr / 10000000;
+              setMaterialCostValue(crores.toString());
+              setMaterialCostUnit('crore');
+            }
+          }
+          
+          setTimeout(() => setIsDocExtractorOpen(false), 2000);
+        }}
+      />
+      
+      {/* Voice Input Modal */}
+      <VoiceInput 
+        isOpen={isVoiceInputOpen} 
+        onClose={() => setIsVoiceInputOpen(false)}
+        onComplete={(responses) => {
+          setIsVoiceInputOpen(false);
+          // Handle voice responses if needed
+        }}
+      />
     </div>
   );
 }
