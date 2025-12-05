@@ -26,7 +26,7 @@ echo Starting all services...
 echo.
 echo Services to start:
 echo   1. Frontend (React/Vite) ...................... Port 3000
-echo   2. Unified API ............................. Port 5000
+echo   2. Prediction Model (ML Engine) .............. Port 5000
 echo   3. Auth Service ............................ Port 5001
 echo   4. Simulation (ML Engine) .................. Port 5002
 echo   5. Chatbot API ............................. Port 5003
@@ -92,16 +92,17 @@ start "ASTRA GRID - Frontend" cmd /k ^
 timeout /t 3 /nobreak >nul
 
 REM ============================================================================
-REM START UNIFIED API (Port 5000)
+REM START PREDICTION MODEL API (Port 5000) - THE ACTUAL ML MODEL
 REM ============================================================================
-echo [2] Starting Unified API on port 5000...
-start "ASTRA GRID - Unified API (5000)" cmd /k ^
-    cd /d "%SCRIPT_DIR%\backend" ^& ^
+echo [2] Starting Prediction Model API on port 5000...
+start "ASTRA GRID - Prediction Model (5000)" cmd /k ^
+    cd /d "%SCRIPT_DIR%\backend\Model" ^& ^
     echo ========================================== ^& ^
-    echo ASTRA GRID - UNIFIED API ^& ^
+    echo ASTRA GRID - PREDICTION MODEL (ML ENGINE) ^& ^
     echo Port: 5000 ^& ^
+    echo Model: model.pkl ^& ^
     echo ========================================== ^& ^
-    python unified_api.py
+    python app.py
 
 timeout /t 2 /nobreak >nul
 
@@ -176,9 +177,10 @@ echo   [✓] Frontend (React/Vite)
 echo       URL: http://localhost:3000
 echo       Status: Check the Frontend window
 echo.
-echo   [✓] Unified API
+echo   [✓] Prediction Model (ML Engine)
 echo       URL: http://localhost:5000
-echo       Health: http://localhost:5000/api/health
+echo       Endpoints: /predict, /health
+echo       Model: model.pkl (11MB)
 echo.
 echo   [✓] Auth Service
 echo       URL: http://localhost:5001
@@ -208,8 +210,8 @@ echo.
 echo   # Test Frontend
 echo   start http://localhost:3000
 echo.
-echo   # Test Unified API
-echo   curl http://localhost:5000/api/health
+echo   # Test Prediction Model
+echo   curl http://localhost:5000/health
 echo.
 echo   # Test Auth Service
 echo   curl http://localhost:5001/health
@@ -227,7 +229,7 @@ echo ===========================================================================
 echo.
 echo Windows Open:
 echo   - Frontend: Check the "ASTRA GRID - Frontend" window
-echo   - Unified API: Check the "ASTRA GRID - Unified API (5000)" window
+echo   - Model: Check the "ASTRA GRID - Prediction Model (5000)" window
 echo   - Auth: Check the "ASTRA GRID - Auth Service (5001)" window
 echo   - Simulation: Check the "ASTRA GRID - Simulation API (5002)" window
 echo   - Chatbot: Check the "ASTRA GRID - Chatbot API (5003)" window
