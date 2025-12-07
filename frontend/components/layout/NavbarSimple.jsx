@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import NavigationMenuDemo from '../navigation-menu/default';
 import { Avatar, AvatarImage, AvatarFallback } from '../ui/avatar';
+import { authUrl } from '../../config/backends';
 
 export default function NavbarSimple() {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ export default function NavbarSimple() {
 
   const handleLogout = async () => {
     try {
-      await fetch('http://localhost:5001/api/logout', {
+      await fetch(authUrl('/api/logout'), {
         method: 'POST',
         credentials: 'include'
       });

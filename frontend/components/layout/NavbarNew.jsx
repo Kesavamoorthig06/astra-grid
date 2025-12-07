@@ -4,6 +4,7 @@ import { Tabs, TabsList, TabsTrigger } from '../ui/tabs';
 import NavigationMenuDemo from '../navigation-menu/default';
 import { Avatar, AvatarImage, AvatarFallback } from '../ui/avatar';
 import { useTranslation } from 'react-i18next';
+import { authUrl } from '../../config/backends';
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await fetch('http://localhost:5001/api/logout', {
+      await fetch(authUrl('/api/logout'), {
         method: 'POST',
         credentials: 'include'
       });

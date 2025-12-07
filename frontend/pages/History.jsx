@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { authUrl } from '../config/backends';
 import { Trash2, Calendar, DollarSign, Clock, TrendingUp, AlertTriangle } from 'lucide-react';
 
 export default function History() {
@@ -27,7 +28,7 @@ export default function History() {
         return;
       }
 
-      const response = await fetch(`http://localhost:5001/api/prediction-history?page=${page}&limit=20`, {
+      const response = await fetch(authUrl(`/api/prediction-history?page=${page}&limit=20`), {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -56,7 +57,7 @@ export default function History() {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5001/api/prediction-history/${predictionId}`, {
+      const response = await fetch(authUrl(`/api/prediction-history/${predictionId}`), {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

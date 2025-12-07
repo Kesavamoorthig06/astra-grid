@@ -7,6 +7,7 @@ import { AnimatePresence, motion as Motion } from 'framer-motion';
 import { TextReveal } from '@/components/ui/text-reveal';
 import { ShimmeringText } from '@/components/ui/shimmering-text';
 import { useToast } from '@/hooks/use-toast';
+import { authUrl } from '../config/backends';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -72,7 +73,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5001/api/login', {
+      const response = await fetch(authUrl('/api/login'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { authUrl } from '../../config/backends';
 
 export default function ProtectedRoute({ children }) {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function ProtectedRoute({ children }) {
       }
 
       try {
-        const response = await fetch('http://localhost:5001/api/verify-token', {
+        const response = await fetch(authUrl('/api/verify-token'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',
