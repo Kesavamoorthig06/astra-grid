@@ -52,7 +52,7 @@ export default function Signup() {
     setLoading(true);
 
     try {
-      const checkResponse = await fetch('http://localhost:5001/api/check-email', {
+      const checkResponse = await fetch(authUrl('/api/check-email'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -67,7 +67,7 @@ export default function Signup() {
         return;
       }
 
-      const response = await fetch('http://localhost:5001/api/send-verification', {
+      const response = await fetch(authUrl('/api/send-verification'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -95,7 +95,7 @@ export default function Signup() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5001/api/verify-code', {
+      const response = await fetch(authUrl('/api/verify-code'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -121,7 +121,7 @@ export default function Signup() {
 
   const handleSignup = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/signup', {
+      const response = await fetch(authUrl('/api/signup'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

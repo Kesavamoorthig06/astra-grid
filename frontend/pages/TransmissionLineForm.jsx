@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { predictRisk } from '../utils/api';
+import { authUrl } from '../config/backends';
 import FormErrorAlert from '../components/form/FormErrorAlert';
 import ProjectBasicsSection from '../components/form/ProjectBasicsSection';
 import TechnicalSpecsSection from '../components/form/TechnicalSpecsSection';
@@ -508,7 +509,7 @@ export default function TransmissionLineForm() {
     try {
       const token = localStorage.getItem('token');
       if (token) {
-        await fetch('http://localhost:5001/api/prediction-history', {
+        await fetch(authUrl('/api/prediction-history'), {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
