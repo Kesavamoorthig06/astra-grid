@@ -17,15 +17,29 @@ CORS(app, supports_credentials=True)
 
 # Load project dataset
 try:
-    df = pd.read_csv('/astra-grid/Final_dataset.csv')
-    print(f"Loaded {len(df)} project records from dataset")
-except:
-    try:
-        df = pd.read_csv('Final_dataset.csv')
-        print(f"Loaded {len(df)} project records from dataset")
-    except:
-        df = None
-        print("Warning: Could not load dataset")
+    # Try multiple paths
+    paths = [
+        '../Final_dataset.csv',  # From backend directory
+        'Final_dataset.csv',      # From current directory
+        '/astra-grid/Final_dataset.csv',  # Absolute path
+        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'Final_dataset.csv')  # Relative to parent
+    ]
+    
+    df = None
+    for path in paths:
+        try:
+            if os.path.exists(path):
+                df = pd.read_csv(path)
+                print(f"✓ Loaded {len(df)} project records from {path}")
+                break
+        except:
+            continue
+    
+    if df is None:
+        print("⚠ Warning: Could not load dataset from any path")
+except Exception as e:
+    print(f"⚠ Dataset loading error: {e}")
+    df = None
 
 # Conversation context
 conversation_history = []

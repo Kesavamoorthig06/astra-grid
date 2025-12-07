@@ -69,11 +69,11 @@ const ChatBot = () => {
 
       const botMessage = {
         id: messages.length + 2,
-        text: data.response || "I couldn't process your request. Please try again.",
+        text: data.response || data.message || "I couldn't process your request. Please try again.",
         sender: 'bot',
         timestamp: new Date().toLocaleTimeString(),
-        type: 'text',
-        sources: data.sources || []
+        type: data.type || 'text',
+        category: data.category
       };
 
       setMessages(prev => [...prev, botMessage]);
@@ -82,7 +82,7 @@ const ChatBot = () => {
       console.error('Error:', error);
       const errorMessage = {
         id: messages.length + 2,
-        text: "⚠️ **Connection Error**\n\nMake sure your backend is running.",
+        text: "⚠️ Connection Error\n\nMake sure your backend is running on port 5000.",
         sender: 'bot',
         timestamp: new Date().toLocaleTimeString(),
         type: 'error'

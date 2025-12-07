@@ -51,12 +51,14 @@ def create_app(config=None):
     from app.routes.prediction_routes import prediction_bp
     from app.routes.simulation_routes import simulation_bp
     from app.routes.document_routes import document_bp
+    from app.routes.chatbot_routes import chatbot_bp
     
     app.register_blueprint(health_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(prediction_bp)
     app.register_blueprint(simulation_bp)
     app.register_blueprint(document_bp)
+    app.register_blueprint(chatbot_bp)
     
     logger.info("✓ All blueprints registered")
     
