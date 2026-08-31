@@ -143,7 +143,3 @@ This project demonstrates:
 ## Notes
 
 This is a clean public-facing version of the application intended for GitHub and portfolio review. The repo has been curated to highlight the actual product value rather than raw internal deployment artifacts.
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
