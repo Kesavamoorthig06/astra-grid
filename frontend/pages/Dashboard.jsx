@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, Map } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import IndiaTownMap from '../components/IndiaTownMap';
 import ChatBot from '../components/ChatBot';
+import ComprehensivePowerGridDashboard from '../components/ComprehensivePowerGridDashboard';
 
 const Dashboard = () => {
   const { t, i18n } = useTranslation();
@@ -160,19 +161,114 @@ const Dashboard = () => {
 
   const carouselItems = [
     {
-      title: t('carousel.fact1Title'),
-      description: t('carousel.fact1Desc'),
+      title: "India's Largest Grid",
+      description: "India operates one of the world's largest synchronized power grids, serving over 1.4 billion people across 28 states and 8 union territories.",
       icon: '⚡'
     },
     {
-      title: t('carousel.fact2Title'),
-      description: t('carousel.fact2Desc'),
-      icon: '🏗️'
+      title: "765 kV Ultra High Voltage",
+      description: "765 kV transmission lines are the backbone of India's grid, transmitting power over distances exceeding 2,500 km with minimal losses.",
+      icon: '🔌'
     },
     {
-      title: t('carousel.fact3Title'),
-      description: t('carousel.fact3Desc'),
+      title: "Green Energy Target",
+      description: "India aims to achieve 500 GW of renewable energy capacity by 2030, requiring massive grid expansion and modernization projects.",
+      icon: '🌱'
+    },
+    {
+      title: "Cost Overrun Challenges",
+      description: "Average project cost overrun across transmission projects is 23%, primarily due to material costs and environmental compliance requirements.",
+      icon: '💰'
+    },
+    {
+      title: "Timeline Delays",
+      description: "Average timeline delays span 8 months, with terrain complexity and regulatory approvals being major contributing factors.",
+      icon: '⏱️'
+    },
+    {
+      title: "Terrain Complexity Impact",
+      description: "Mountain terrain can increase project costs by 2.8x and timeline by 35-40% compared to plains transmission projects.",
+      icon: '🏔️'
+    },
+    {
+      title: "Environmental Conservation",
+      description: "Transmission projects on average require 220 hectares of forest land assessment, emphasizing the importance of environmental impact mitigation.",
+      icon: '🌳'
+    },
+    {
+      title: "Permit Processing",
+      description: "Average permit approval lag is 187 days, with some regions experiencing delays exceeding 300 days due to regulatory complexity.",
+      icon: '📋'
+    },
+    {
+      title: "Grid Synchronization",
+      description: "'One Nation, One Grid, One Frequency' - India maintains a synchronized frequency of 50 Hz across its entire national grid system.",
+      icon: '🔄'
+    },
+    {
+      title: "Voltage Levels",
+      description: "India's transmission system includes 765 kV, 400 kV, 220 kV, and 132 kV lines, each serving specific regional and local distribution requirements.",
+      icon: '⚙️'
+    },
+    {
+      title: "Right of Way Challenges",
+      description: "Securing right of way across populated areas adds 20-30% to project timelines, requiring coordination with multiple stakeholders.",
+      icon: '🛣️'
+    },
+    {
+      title: "Material Supply Issues",
+      description: "Material availability problems affect 15-20% of projects, causing delays in critical equipment delivery and installation.",
+      icon: '📦'
+    },
+    {
+      title: "Skilled Workforce",
+      description: "Large transmission projects require 2,000-3,000 skilled workers, creating challenges in resource allocation and project management.",
+      icon: '👷'
+    },
+    {
+      title: "Vendor Performance",
+      description: "Average vendor performance rating is 6.5/10, with vendor changes occurring in 15-20% of projects, impacting timelines and costs.",
+      icon: '⭐'
+    },
+    {
+      title: "Weather Impact",
+      description: "Extreme weather events average 10-15 days per year on project sites, causing work stoppages and equipment damage.",
+      icon: '⛈️'
+    },
+    {
+      title: "Project Success Rate",
+      description: "Only 35% of transmission projects complete on time and within budget, highlighting the complexity of grid infrastructure development.",
+      icon: '📊'
+    },
+    {
+      title: "Commodity Price Volatility",
+      description: "Steel and copper price fluctuations impact project budgets, with average escalation reaching 15-25% during multi-year projects.",
+      icon: '📈'
+    },
+    {
+      title: "Substation Density",
+      description: "India has over 350 substations managing power distribution across all states, with an average of 8-12 bays per station.",
+      icon: '🏢'
+    },
+    {
+      title: "Power Loss Reduction",
+      description: "India's transmission network achieves 3.5-4% technical loss rate, one of the best globally, through continuous modernization.",
+      icon: '💡'
+    },
+    {
+      title: "POWERGRID Operations",
+      description: "POWERGRID manages 99.93% grid availability with 24/7 monitoring of 180,000+ circuit km of transmission lines across India.",
       icon: '📡'
+    },
+    {
+      title: "Renewable Integration",
+      description: "Integrating variable renewable energy requires smart grid technology and real-time forecasting systems to maintain grid stability.",
+      icon: '🌞'
+    },
+    {
+      title: "Regional Interconnections",
+      description: "Five regional grids (North, South, East, West, Northeast) are interconnected through HVDC links for power balancing.",
+      icon: '🌐'
     }
   ];
 
@@ -234,13 +330,15 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-7xl mx-auto space-y-8">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2 tracking-tight">{t('dashboard.title')}</h1>
-          <p className="text-muted-foreground text-base">{t('dashboard.subtitle')}</p>
-        </div>
+    <div className="min-h-screen bg-background">
+      {/* Additional Details Section */}
+      <div className="p-6">
+        <div className="max-w-7xl mx-auto space-y-8">
+          {/* Header */}
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold text-foreground mb-2 tracking-tight">{t('dashboard.title')}</h1>
+            <p className="text-muted-foreground text-base">{t('dashboard.subtitle')}</p>
+          </div>
 
         {/* Top Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -260,15 +358,15 @@ const Dashboard = () => {
         </div>
 
         {/* Risk Analysis */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="powerGridCharts">
           <MetricCard title={t('dashboard.highRisk')} value={dashboardData.riskAnalysis.highRisk} subtitle={t('dashboard.requiresAttention')} />
           <MetricCard title={t('dashboard.mediumRisk')} value={dashboardData.riskAnalysis.mediumRisk} subtitle={t('dashboard.monitorProgress')} />
           <MetricCard title={t('dashboard.lowRisk')} value={dashboardData.riskAnalysis.lowRisk} subtitle={t('dashboard.onTrack')} />
           <MetricCard title={t('dashboard.materialIssues')} value={dashboardData.materialIssues} subtitle={t('dashboard.supplyChainRisk')} />
         </div>
 
-        {/* Map Holder */}
-        <Card className="border-border/40 shadow-xs">
+        {/* Map Section */}
+        <Card className="border-border/40 shadow-xs" id="gridMap">
           <CardHeader>
             <CardHeading className="text-lg flex items-center gap-2">
               <Map className="w-5 h-5 text-primary" />
@@ -276,14 +374,14 @@ const Dashboard = () => {
             </CardHeading>
           </CardHeader>
           <CardContent>
-            <IndiaTownMap height="h-[600px]" />
+            <IndiaTownMap height="h-[700px]" />
           </CardContent>
         </Card>
 
         {/* Substation Details with Pagination */}
-        <Card className="border-border/40 shadow-xs">
+        <Card className="border-border/40 shadow-xs" id="substationDetails">
           <CardHeader>
-            <CardHeading className="text-lg">{t('dashboard.substationDetails')} ({substations.length} Total)</CardHeading>
+            <CardHeading className="text-lg">{t('dashboard.substationDetails')}</CardHeading>
           </CardHeader>
           <CardContent>
             <div className="overflow-x-auto">
@@ -332,7 +430,7 @@ const Dashboard = () => {
                   </PaginationItem>
                   <PaginationItem>
                     <span className="text-sm text-muted-foreground px-3">
-                      {t('dashboard.page')} {currentPage} {t('dashboard.of')} {totalPages}
+                      {currentPage} / {totalPages}
                     </span>
                   </PaginationItem>
                   <PaginationItem>
@@ -353,7 +451,7 @@ const Dashboard = () => {
         </Card>
 
         {/* Voltage Distribution */}
-        <Card className="border-border/40 shadow-xs">
+        <Card className="border-border/40 shadow-xs" id="voltageDistribution">
           <CardHeader>
             <CardHeading className="text-lg">{t('dashboard.voltageDistribution')}</CardHeading>
           </CardHeader>
@@ -363,7 +461,6 @@ const Dashboard = () => {
                 <div key={idx} className="p-4 border border-border/40 rounded-lg hover:shadow-sm transition-shadow bg-card">
                   <p className="text-sm font-semibold text-foreground mb-1">{voltage} kV</p>
                   <p className="text-2xl font-bold text-primary">{count}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{((count / dashboardData.totalProjects) * 100).toFixed(1)}% {t('dashboard.ofTotal')}</p>
                 </div>
               ))}
             </div>
@@ -386,7 +483,7 @@ const Dashboard = () => {
                     </PaginationItem>
                     <PaginationItem>
                       <span className="text-sm text-muted-foreground px-3">
-                        {t('dashboard.page')} {voltagePage} {t('dashboard.of')} {voltageTotalPages}
+                        {voltagePage} / {voltageTotalPages}
                       </span>
                     </PaginationItem>
                     <PaginationItem>
@@ -408,9 +505,9 @@ const Dashboard = () => {
         </Card>
 
         {/* Regional Performance */}
-        <Card className="border-border/40 shadow-xs">
+        <Card className="border-border/40 shadow-xs" id="regionalPerformance">
           <CardHeader>
-            <CardHeading className="text-lg">{t('dashboard.regionalPerformance')} ({regionEntries.length} {t('dashboard.regions')})</CardHeading>
+            <CardHeading className="text-lg">{t('dashboard.regionalPerformance')}</CardHeading>
           </CardHeader>
           <CardContent>
             <div className="overflow-x-auto">
@@ -454,7 +551,7 @@ const Dashboard = () => {
                     </PaginationItem>
                     <PaginationItem>
                       <span className="text-sm text-muted-foreground px-3">
-                        {t('dashboard.page')} {regionPage} {t('dashboard.of')} {regionTotalPages}
+                        {regionPage} / {regionTotalPages}
                       </span>
                     </PaginationItem>
                     <PaginationItem>
@@ -476,7 +573,7 @@ const Dashboard = () => {
         </Card>
 
         {/* Project Type Summary */}
-        <Card className="border-border/40 shadow-xs">
+        <Card className="border-border/40 shadow-xs" id="projectTypeSummary">
           <CardHeader>
             <CardHeading className="text-lg">{t('dashboard.projectTypeSummary')} ({projectTypeEntries.length} {t('dashboard.types')})</CardHeading>
           </CardHeader>
@@ -508,9 +605,9 @@ const Dashboard = () => {
                       </Button>
                     </PaginationItem>
                     <PaginationItem>
-                      <span className="text-sm text-muted-foreground px-3">
-                        {t('dashboard.page')} {projectTypePage} {t('dashboard.of')} {projectTypeTotalPages}
-                      </span>
+                        <span className="text-sm text-muted-foreground px-3">
+                          {projectTypePage} / {projectTypeTotalPages}
+                        </span>
                     </PaginationItem>
                     <PaginationItem>
                       <Button
@@ -529,61 +626,117 @@ const Dashboard = () => {
             )}
           </CardContent>
         </Card>
+        </div>
+      </div>
+      
+      {/* Comprehensive Charts Dashboard */}
+      <ComprehensivePowerGridDashboard />
 
-        {/* Did You Know - Carousel */}
-        <Card className="shadow-xs border-primary/20 bg-primary/5">
-          <CardHeader>
-            <CardHeading className="text-lg flex items-center gap-2">
-              <span className="text-2xl">ℹ️</span>
+      {/* Did You Know - Carousel */}
+      <div className="p-6">
+        <div className="max-w-7xl mx-auto">
+        <Card className="shadow-md border-0 overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
+          <CardHeader style={{ backgroundColor: '#f8f9fa', padding: '16px 24px', borderBottom: '1px solid #e5e7eb' }}>
+            <CardHeading className="text-lg flex items-center gap-3" style={{ color: '#1a2744', margin: 0 }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: '#0066cc', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '16px' }}>i</div>
               {t('dashboard.didYouKnow')}
             </CardHeading>
           </CardHeader>
-          <CardContent>
+          <CardContent style={{ padding: '24px' }}>
             <div className="relative">
-              <div className="bg-card rounded-lg p-8 min-h-32 border border-border/40">
-                <div className="flex items-start justify-between">
+              <div className="rounded-lg p-6 min-h-32 bg-linear-to-r from-blue-50 to-blue-100 border border-blue-200">
+                <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <p className="text-lg font-semibold text-foreground mb-2">{carouselItems[currentSlide].title}</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{carouselItems[currentSlide].description}</p>
+                    <p className="text-base font-semibold mb-2" style={{ color: '#1a2744' }}>{carouselItems[currentSlide].title}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: '#3d4a60' }}>{carouselItems[currentSlide].description}</p>
                   </div>
-                  <span className="text-4xl ml-4">{carouselItems[currentSlide].icon}</span>
+                  <span className="text-3xl shrink-0">{carouselItems[currentSlide].icon}</span>
                 </div>
               </div>
 
-              <div className="flex items-center justify-between mt-4">
-                <Button
-                  variant="ghost"
-                  size="icon"
+              <div className="flex items-center justify-center gap-4 mt-6">
+                <button
                   onClick={prevSlide}
-                  className="rounded-full"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '6px',
+                    backgroundColor: '#f0f4f8',
+                    border: '1px solid #d4e4f0',
+                    cursor: 'pointer',
+                    color: '#0066cc',
+                    fontWeight: '600',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = '#0066cc';
+                    e.target.style.color = '#fff';
+                    e.target.style.borderColor = '#0066cc';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = '#f0f4f8';
+                    e.target.style.color = '#0066cc';
+                    e.target.style.borderColor = '#d4e4f0';
+                  }}
                 >
                   <ChevronLeft className="w-5 h-5" />
-                </Button>
+                </button>
 
                 <div className="flex gap-2">
                   {carouselItems.map((_, idx) => (
                     <button
                       key={idx}
                       onClick={() => setCurrentSlide(idx)}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        idx === currentSlide ? 'bg-primary' : 'bg-muted-foreground/30'
-                      }`}
+                      className="rounded-full transition-all"
+                      style={{
+                        width: idx === currentSlide ? '24px' : '8px',
+                        height: '8px',
+                        backgroundColor: idx === currentSlide ? '#0066cc' : '#c5d8e8',
+                        cursor: 'pointer',
+                        border: 'none',
+                        padding: 0
+                      }}
                     />
                   ))}
                 </div>
 
-                <Button
-                  variant="ghost"
-                  size="icon"
+                <button
                   onClick={nextSlide}
-                  className="rounded-full"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '6px',
+                    backgroundColor: '#f0f4f8',
+                    border: '1px solid #d4e4f0',
+                    cursor: 'pointer',
+                    color: '#0066cc',
+                    fontWeight: '600',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = '#0066cc';
+                    e.target.style.color = '#fff';
+                    e.target.style.borderColor = '#0066cc';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = '#f0f4f8';
+                    e.target.style.color = '#0066cc';
+                    e.target.style.borderColor = '#d4e4f0';
+                  }}
                 >
                   <ChevronRight className="w-5 h-5" />
-                </Button>
+                </button>
               </div>
             </div>
           </CardContent>
         </Card>
+        </div>
       </div>
       
       {/* ChatBot Fixed Overlay */}

@@ -53,20 +53,16 @@ def upload_document(current_user):
                 'error': message
             }), 400
         
-        # Process document
-        result, error = DocumentExtractionService.extract_text_from_document(file.filename)
+        # Extract data from document
+        result, error = DocumentExtractionService.extract_text_from_document(file)
         if error:
             return jsonify({
                 'success': False,
                 'error': error
             }), 500
         
-        return jsonify({
-            'success': True,
-            'filename': file.filename,
-            'message': 'File uploaded successfully. Processing...',
-            'user': current_user['email']
-        })
+        # Return extracted fields
+        return jsonify(result), 200
     
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500

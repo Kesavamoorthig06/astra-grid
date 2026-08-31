@@ -40,7 +40,7 @@ export default function NavbarSimple() {
 
   const handleLogout = async () => {
     try {
-      await fetch(authUrl('/api/logout'), {
+      await fetch(authUrl('/auth/logout'), {
         method: 'POST',
         credentials: 'include'
       });

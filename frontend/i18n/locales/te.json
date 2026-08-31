@@ -153,7 +153,7 @@
     "materialCost": "పదార్థ వ్యయ అంచనా (INR)",
     "resourcePlanning": "వనరుల ప్రణాళిక",
     "skilledWorkers": "అవసరమైన నైపుణ్యం కలిగిన కార్మికులు",
-    "vendorRating": "విక్రేత పనితీరు రేటింగ్ (0-10)",
+    "vendorRating": "విక్రేత పనితీరు రేటింగ్ (1-5)",
     "vendorChanges": "విక్రేత మార్పు సంఘటనలు",
     "marketSupplyChain": "మార్కెట్ మరియు సరఫరా గొలుసు రిస్క్",
     "materialAvailability": "పదార్థ లభ్యత సమస్య",

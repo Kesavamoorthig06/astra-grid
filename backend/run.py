@@ -63,6 +63,9 @@ def main():
     - POST /api/simulation/recommendations
     - POST /api/simulation/compare
     
+    NEW SIMULATION (Project Timeline & Risk):
+    - POST /api/newsimulation/run
+    
     DOCUMENT PROCESSING:
     - POST /api/document/upload
     - GET  /api/document/status/<id>

@@ -23,17 +23,12 @@ const OPTIONS = [
 export default function ProjectTypeSelect({ value, onValueChange }) {
   const { t } = useTranslation();
   const handleValueChange = (nextValue) => {
-    console.log('🎯 [ProjectTypeSelect] Value changed:', nextValue);
-    console.log('🎯 [ProjectTypeSelect] Calling onValueChange...');
     onValueChange(nextValue);
   };
 
   const handleClear = () => {
-    console.log('🎯 [ProjectTypeSelect] Clearing value');
     onValueChange('');
   };
-
-  console.log('🎯 [ProjectTypeSelect] Rendering with value:', value);
 
   return (
     <Select value={value || undefined} onValueChange={handleValueChange}>

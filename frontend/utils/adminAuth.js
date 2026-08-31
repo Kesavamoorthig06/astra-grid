@@ -1,4 +1,6 @@
 // Admin authentication utility
+import React from 'react';
+
 const ADMIN_EMAILS = ['abroesly@powergrid.com', 'kesavamoorthi@powergrid.com'];
 
 /**
@@ -44,6 +46,3 @@ export const useIsAdmin = () => {
 
   return adminStatus;
 };
-
-// For React import
-import React from 'react';

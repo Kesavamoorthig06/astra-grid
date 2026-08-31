@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useTranslation as useGoogleTranslation } from '../contexts/TranslationContext';
+import { useGoogleTranslationContext } from '../contexts/TranslationContext';
 
 /**
  * Translation component - automatically translates text using Google Translate API
  * Usage: <T>Hello World</T>
  */
 export function T({ children }) {
-  const { currentLanguage, translate } = useGoogleTranslation();
+  const { currentLanguage, translate } = useGoogleTranslationContext();
   const [translatedText, setTranslatedText] = useState(children);
 
   useEffect(() => {
@@ -22,10 +22,10 @@ export function T({ children }) {
 }
 
 /**
- * Hook for programmatic translation
- * Usage: const { t } = useTranslation(); const text = await t('Hello');
+ * Hook for programmatic translation using Google Translate
+ * Usage: const { t } = useGoogleTranslate(); const text = await t('Hello');
  */
-export function useTranslation() {
+export function useGoogleTranslate() {
   const { currentLanguage, translate } = useGoogleTranslation();
 
   return {

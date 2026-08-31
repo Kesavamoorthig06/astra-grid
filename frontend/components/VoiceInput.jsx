@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { X, Mic, Volume2, CheckCircle } from 'lucide-react';
+import { useFeatureToggle } from '../hooks/useFeatureToggle';
 import './VoiceInput.css';
 
 const VOICE_QUESTIONS = [
@@ -15,13 +16,13 @@ const VOICE_QUESTIONS = [
 ];
 
 export default function VoiceInput({ onComplete, isOpen = false, onClose }) {
+  const isVoiceInputEnabled = useFeatureToggle('voiceInput');
   const [currentStep, setCurrentStep] = useState(0);
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [transcript, setTranscript] = useState('');
   const [responses, setResponses] = useState({});
   const [error, setError] = useState('');
-  
   const recognitionRef = useRef(null);
   const synthRef = useRef(window.speechSynthesis);
 
@@ -139,7 +140,8 @@ export default function VoiceInput({ onComplete, isOpen = false, onClose }) {
   const progress = ((currentStep + 1) / VOICE_QUESTIONS.length) * 100;
   const currentQuestion = VOICE_QUESTIONS[currentStep];
 
-  if (!isOpen) return null;
+  // If voice input is disabled or not open, don't render anything
+  if (!isVoiceInputEnabled || !isOpen) return null;
 
   return (
     <div className="voice-input-overlay">

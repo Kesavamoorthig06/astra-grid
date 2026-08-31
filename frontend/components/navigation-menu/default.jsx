@@ -12,6 +12,7 @@ import {
 import { History, Settings, Moon, Sun, LogOut, Globe, Zap } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useTranslation } from 'react-i18next';
+import { useFeatureToggle } from '../../hooks/useFeatureToggle';
 
 const components = [
   {
@@ -306,6 +307,9 @@ export default function NavigationMenuDemo({ onLogout }) {
   const { t, i18n } = useTranslation();
   const [isAdmin, setIsAdmin] = React.useState(false);
   const [showAutofillSubmenu, setShowAutofillSubmenu] = React.useState(false);
+  
+  // Feature toggles
+  const historyEnabled = useFeatureToggle('history');
 
   React.useEffect(() => {
     try {
@@ -336,19 +340,32 @@ export default function NavigationMenuDemo({ onLogout }) {
     }
   };
 
+  const scrollToSection = (sectionId) => {
+    // Scroll to the section on current dashboard page
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const isOnDashboard = location.pathname === '/dashboard' || location.pathname.includes('/dashboard');
+
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="px-4 py-2 text-sm font-semibold">{t('nav.more')}</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[220px] gap-1 p-2">
-              <li>
-                <Link to="/history" className="flex items-center gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
-                  <History className="size-4 shrink-0" />
-                  <span className="text-sm font-medium">{t('nav.history')}</span>
-                </Link>
-              </li>
+            <ul className="grid w-[280px] gap-1 p-2">
+              {/* Other Options */}
+              {historyEnabled && (
+                <li>
+                  <Link to="/history" className="flex items-center gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                    <History className="size-4 shrink-0" />
+                    <span className="text-sm font-medium">{t('nav.history')}</span>
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link to="/settings" className="flex items-center gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                   <Settings className="size-4 shrink-0" />
@@ -384,6 +401,63 @@ export default function NavigationMenuDemo({ onLogout }) {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+        {isOnDashboard && (
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="px-4 py-2 text-sm font-semibold">Navigate</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[280px] gap-1 p-2">
+                <li>
+                  <button
+                    onClick={() => scrollToSection('gridMap')}
+                    className="flex w-full items-center gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-left"
+                  >
+                    <span className="text-sm font-medium">India Transmission Network Map</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('substationDetails')}
+                    className="flex w-full items-center gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-left"
+                  >
+                    <span className="text-sm font-medium">Substation Details</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('voltageDistribution')}
+                    className="flex w-full items-center gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-left"
+                  >
+                    <span className="text-sm font-medium">Voltage Level Distribution</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('regionalPerformance')}
+                    className="flex w-full items-center gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-left"
+                  >
+                    <span className="text-sm font-medium">Regional Performance Overview</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('projectTypeSummary')}
+                    className="flex w-full items-center gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-left"
+                  >
+                    <span className="text-sm font-medium">Project Type Summary</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('powerGridCharts')}
+                    className="flex w-full items-center gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-left"
+                  >
+                    <span className="text-sm font-medium">Power Grid Analysis Charts</span>
+                  </button>
+                </li>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        )}
         <NavigationMenuItem>
           <NavigationMenuTrigger className="px-4 py-2 text-sm font-semibold">{t('nav.language')}</NavigationMenuTrigger>
           <NavigationMenuContent>

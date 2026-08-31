@@ -10,15 +10,21 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { sendChatMessage } from '../utils/api';
+import { useFeatureToggle } from '../hooks/useFeatureToggle';
 
 const ChatBot = () => {
+  const isChatbotEnabled = useFeatureToggle('chatbot');
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  
   const messagesEndRef = useRef(null);
+  
+  // If chatbot is disabled, don't render anything
+  if (!isChatbotEnabled) {
+    return null;
+  }
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

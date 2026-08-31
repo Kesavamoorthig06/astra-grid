@@ -22,8 +22,8 @@ class Config:
     MONGODB_URI = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/')
     MONGODB_DB_NAME = os.environ.get('MONGODB_DB_NAME', 'astra_grid_db')
     
-    # CORS Configuration
-    CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'http://localhost:3000').split(',')
+    # CORS Configuration - Allow all origins in development for network access
+    CORS_ORIGINS = ['*']  # In production, specify exact origins
     
     # Server Configuration
     PORT = int(os.environ.get('PORT', 5000))
@@ -31,7 +31,7 @@ class Config:
     WORKERS = int(os.environ.get('WORKERS', 6))
     
     # ML Models
-    ML_MODELS_PATH = 'ml_model_extracted/models'
+    ML_MODELS_PATH = 'ml_models_powergrid/models'
     
     # Database Collections
     USERS_COLLECTION = 'users'

@@ -1,4 +1,16 @@
-const API_URL = 'http://127.0.0.1:5000/api';
+// Dynamic API URL detection - works on localhost, network, and EC2
+const getBackendUrl = () => {
+  const hostname = window.location.hostname;
+  const port = 5000;
+  
+  if (hostname === 'localhost' || hostname === '127.0.0.1') {
+    return `http://localhost:${port}/api`;
+  } else {
+    return `http://${hostname}:${port}/api`;
+  }
+};
+
+const API_URL = getBackendUrl();
 
 async function handleResponse(response) {
   if (!response.ok) {
@@ -109,3 +121,122 @@ export async function logoutUser() {
 
   return handleResponse(response);
 }
+
+// Prediction API calls
+export async function getPredictionHistory(limit = 50) {
+  const response = await fetch(`${API_URL}/prediction/history?limit=${limit}`, {
+    method: 'GET',
+    headers: { 
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    },
+  });
+
+  return handleResponse(response);
+}
+
+export async function getPredictionById(predictionId) {
+  const response = await fetch(`${API_URL}/prediction/history/${predictionId}`, {
+    method: 'GET',
+    headers: { 
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    },
+  });
+
+  return handleResponse(response);
+}
+
+// Simulation API calls
+export async function simulateScenarios(baseParameters) {
+  const response = await fetch(`${API_URL}/simulation/scenarios`, {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    },
+    body: JSON.stringify(baseParameters),
+  });
+
+  return handleResponse(response);
+}
+
+export async function getRecommendations(predictionData) {
+  const response = await fetch(`${API_URL}/simulation/recommendations`, {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    },
+    body: JSON.stringify(predictionData),
+  });
+
+  return handleResponse(response);
+}
+
+export async function compareProjects(projects) {
+  const response = await fetch(`${API_URL}/simulation/compare`, {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    },
+    body: JSON.stringify({ projects }),
+  });
+
+  return handleResponse(response);
+}
+
+// Document API calls
+export async function uploadDocument(file) {
+  const formData = new FormData();
+  formData.append('file', file);
+
+  const response = await fetch(`${API_URL}/document/upload`, {
+    method: 'POST',
+    headers: { 
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    },
+    body: formData,
+  });
+
+  return handleResponse(response);
+}
+
+export async function getDocumentStatus(fileId) {
+  const response = await fetch(`${API_URL}/document/status/${fileId}`, {
+    method: 'GET',
+    headers: { 
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    },
+  });
+
+  return handleResponse(response);
+}
+
+export async function getSupportedDocumentFormats() {
+  const response = await fetch(`${API_URL}/document/supported-formats`, {
+    method: 'GET',
+  });
+
+  return handleResponse(response);
+}
+
+// System/Health API calls
+export async function getCurrentUser() {
+  const response = await fetch(`${API_URL}/auth/me`, {
+    method: 'GET',
+    headers: { 
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    },
+  });
+
+  return handleResponse(response);
+}
+
+export async function getSystemInfo() {
+  const response = await fetch(`${API_URL}/info`, {
+    method: 'GET',
+  });
+
+  return handleResponse(response);
+}
+

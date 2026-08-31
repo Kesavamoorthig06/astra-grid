@@ -10,6 +10,7 @@ import LocationEnvironmentSection from '../components/form/LocationEnvironmentSe
 import RegulatorySection from '../components/form/RegulatorySection';
 import ResourcePlanningSection from '../components/form/ResourcePlanningSection';
 import VendorSupplyChainSection from '../components/form/VendorSupplyChainSection';
+import AdditionalDataSection from '../components/form/AdditionalDataSection';
 import PredictionResultsModal from '../components/form/PredictionResults';
 import { GradientBackground } from '@/components/ui/gradient-background';
 import VoiceInput from '../components/VoiceInput';
@@ -311,6 +312,19 @@ export default function TransmissionLineForm() {
     // Vendor & Supply Chain
     vendor_performance_rating: 3,
     material_availability_issue: '',
+    
+    // Additional Data (dummy fields - not sent to ML)
+    actual_cost_inr: '',
+    cost_overrun_percent: '',
+    actual_duration_days: '',
+    cost_per_km_cr: '',
+    duration_efficiency: '',
+    num_vendor_change_events: '',
+    num_extreme_weather_days: '',
+    commodity_price_index_start: '',
+    commodity_price_change_during_project: '',
+    historical_local_delay_index: '',
+    risk_flag: '0',
   });
 
   const [targetCostValue, setTargetCostValue] = useState('');
@@ -509,7 +523,7 @@ export default function TransmissionLineForm() {
     try {
       const token = localStorage.getItem('token');
       if (token) {
-        await fetch(authUrl('/api/prediction-history'), {
+        await fetch(authUrl('/prediction/history'), {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -540,7 +554,9 @@ export default function TransmissionLineForm() {
   const recentHistory = useMemo(() => history.slice(0, 3), [history]);
 
   const handleSubmit = async (e) => {
+    console.log('🚀 handleSubmit called!', e);
     e.preventDefault();
+    console.log('✓ preventDefault called');
 
     const isBlank = (value) => value === null || value === undefined || value === '';
     const requiresPositive = [
@@ -593,11 +609,13 @@ export default function TransmissionLineForm() {
 
     if (missingFields.length > 0) {
       setPrediction(null);
-      console.log('Missing fields:', missingFields);
-      setSubmitError(`Missing: ${missingFields.join(', ')}`);
+      console.error('❌ Form validation failed - Missing fields:', missingFields);
+      setSubmitError(`Missing required fields: ${missingFields.join(', ')}`);
+      alert(`Please fill in required fields: ${missingFields.join(', ')}`);
       return;
     }
 
+    console.log('✓ Form validation passed - Submitting...');
     setIsSubmitting(true);
     setSubmitError('');
     setPrediction(null);
@@ -621,23 +639,38 @@ export default function TransmissionLineForm() {
     ];
 
     const payload = { ...formData };
+    
+    // Convert target_cost_inr using the targetCostValue
+    payload.target_cost_inr = Number(targetCostValue) * UNIT_MULTIPLIERS[targetCostUnit];
+    
+    // Ensure ALL numeric fields are properly converted to numbers
     numericFields.forEach((key) => {
+      if (key === 'target_cost_inr') return; // Already handled above
       const value = formData[key];
       const parsed = Number(value);
       payload[key] = Number.isFinite(parsed) ? parsed : 0;
     });
 
+    console.log('📤 Sending payload to API:', payload);
+    
     try {
       const response = await predictRisk(payload);
+      console.log('📥 API Response:', response);
+      console.log('📊 Response.data:', response?.data);
+      
       if (!response?.success) {
         throw new Error(response?.error || 'Prediction failed');
       }
+      
+      console.log('✅ Setting prediction and opening modal');
       setPrediction(response.data);
       setIsResultsModalOpen(true);
       recordHistory(payload, response.data);
     } catch (err) {
+      console.error('❌ Prediction error:', err);
       setPrediction(null);
       setSubmitError(err.message || 'Failed to fetch prediction');
+      alert(`Error: ${err.message || 'Failed to fetch prediction'}`);
     } finally {
       setIsSubmitting(false);
     }
@@ -713,10 +746,21 @@ export default function TransmissionLineForm() {
             />
           </div>
 
+          {/* Additional Data Collection Section - Full Width */}
+          <div className="mt-4">
+            <AdditionalDataSection 
+              formData={formData}
+              handleChange={handleChange}
+            />
+          </div>
+
           <div className="flex justify-center pt-2">
             <button
               type="submit"
               disabled={isSubmitting}
+              onClick={(e) => {
+                console.log('🔘 Submit button clicked!');
+              }}
               className="px-8 py-3 bg-white dark:bg-black border-[3px] border-gray-300 dark:border-gray-700 text-black dark:text-white rounded-md font-semibold transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-60 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black hover:shadow-md shadow-lg"
             >
               {isSubmitting ? t('form.predicting') : t('form.predictRisk')}
@@ -727,6 +771,7 @@ export default function TransmissionLineForm() {
             prediction={prediction} 
             open={isResultsModalOpen}
             onClose={() => setIsResultsModalOpen(false)}
+            formData={formData}
           />
         </form>
       </div>

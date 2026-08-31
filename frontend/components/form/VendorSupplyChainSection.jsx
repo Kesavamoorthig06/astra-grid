@@ -21,7 +21,7 @@ export default function VendorSupplyChainSection({ formData, handleChange }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-start">
         <div>
           <label className="block text-sm font-medium mb-1.5">
-            {t('simulation.vendorRating')}: {formData.vendor_performance_rating}/5
+            {t('simulation.vendorRating')}: {formData.vendor_performance_rating}
           </label>
           <div className="flex items-center h-9">
             <Slider
