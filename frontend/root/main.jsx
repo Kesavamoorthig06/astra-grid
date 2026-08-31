@@ -17,6 +17,7 @@ import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import SimulationPage from '../pages/SimulationPage';
 import ProtectedRoute from '../components/auth/ProtectedRoute';
+import FeatureRoute from '../components/auth/FeatureRoute';
 import { ToastSystemProvider } from '../components/ui/toaster';
 import MetricDashboard from '../components/metrics/MetricDashboard';
 
@@ -61,17 +62,23 @@ function AppLayout() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/prediction" element={
           <ProtectedRoute>
-            <TransmissionLineForm />
+            <FeatureRoute feature="prediction" redirectTo="/dashboard">
+              <TransmissionLineForm />
+            </FeatureRoute>
           </ProtectedRoute>
         } />
         <Route path="/simulation" element={
           <ProtectedRoute>
-            <SimulationPage />
+            <FeatureRoute feature="simulation" redirectTo="/dashboard">
+              <SimulationPage />
+            </FeatureRoute>
           </ProtectedRoute>
         } />
         <Route path="/history" element={
           <ProtectedRoute>
-            <History />
+            <FeatureRoute feature="history" redirectTo="/dashboard">
+              <History />
+            </FeatureRoute>
           </ProtectedRoute>
         } />
         <Route path="/settings" element={
@@ -86,7 +93,9 @@ function AppLayout() {
         } />
         <Route path="/dashboard" element={
           <ProtectedRoute>
-            <Dashboard />
+            <FeatureRoute feature="dashboard" redirectTo="/prediction">
+              <Dashboard />
+            </FeatureRoute>
           </ProtectedRoute>
         } />
         <Route path="/metrics" element={<MetricDashboard />} />

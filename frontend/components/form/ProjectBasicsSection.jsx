@@ -23,7 +23,7 @@ export default function ProjectBasicsSection({
         <div>
           <label className="block text-sm font-medium mb-1.5">{t('simulation.projectType')}</label>
           <ProjectTypeSelect
-            value={formData.project_type || ''}
+            value={formData.project_type || 'Transmission Line'}
             onValueChange={(val) => {
               resetFeedback();
               handleChange('project_type', val);
@@ -73,7 +73,7 @@ export default function ProjectBasicsSection({
           <label className="block text-sm font-medium mb-1.5">{t('simulation.targetDuration')}</label>
           <input
             type="number"
-            value={formData.target_duration_days}
+            value={formData.target_duration_days || ''}
             onChange={(e) => handleChange('target_duration_days', e.target.value)}
             className="w-full h-9 px-3 rounded-md border bg-background text-sm outline-none focus:ring-2 focus:ring-ring"
           />

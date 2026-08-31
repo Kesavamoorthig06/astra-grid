@@ -28,12 +28,8 @@ const getApiUrls = () => {
 const config = getApiUrls();
 
 export const API_BASE_URL = config.API_BASE_URL;
-// For backward compatibility
-export const SIMULATION_API_URL = config.API_BASE_URL;
-export const CHATBOT_API_URL = config.API_BASE_URL;
 
 // Helper function to build API endpoint
 export const apiUrl = (path = '') => `${API_BASE_URL}${path}`;
-export const simulationUrl = (path = '') => `${API_BASE_URL}${path}`;
-export const chatbotUrl = (path = '') => `${API_BASE_URL}${path}`;
+
 

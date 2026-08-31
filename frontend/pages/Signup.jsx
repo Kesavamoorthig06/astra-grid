@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Eye, EyeOff } from 'lucide-react';
+import { authUrl } from '../config/backends';
 
 export default function Signup() {
   const [name, setName] = useState('');
@@ -31,7 +32,7 @@ export default function Signup() {
   useEffect(() => {
     const user = localStorage.getItem('user');
     if (user) {
-      navigate('/prediction', { replace: true });
+      navigate('/dashboard', { replace: true });
     }
   }, [navigate]);
 
@@ -52,7 +53,7 @@ export default function Signup() {
     setLoading(true);
 
     try {
-      const checkResponse = await fetch(authUrl('/api/check-email'), {
+      const checkResponse = await fetch(authUrl('/auth/check-email'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -67,7 +68,7 @@ export default function Signup() {
         return;
       }
 
-      const response = await fetch(authUrl('/api/send-verification'), {
+      const response = await fetch(authUrl('/auth/send-verification'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -95,7 +96,7 @@ export default function Signup() {
     setLoading(true);
 
     try {
-      const response = await fetch(authUrl('/api/verify-code'), {
+      const response = await fetch(authUrl('/auth/verify-code'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -121,7 +122,7 @@ export default function Signup() {
 
   const handleSignup = async () => {
     try {
-      const response = await fetch(authUrl('/api/signup'), {
+      const response = await fetch(authUrl('/auth/signup'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -144,7 +145,7 @@ export default function Signup() {
           deleteCookie('rememberedPassword');
         }
 
-        navigate('/prediction', { replace: true });
+        navigate('/dashboard', { replace: true });
       } else {
         setError(data.error || 'Signup failed');
       }

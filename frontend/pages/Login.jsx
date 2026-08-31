@@ -50,10 +50,10 @@ export default function Login() {
   }, []);
 
   useEffect(() => {
-    // If already logged in, redirect to prediction
+    // If already logged in, redirect to dashboard
     const user = localStorage.getItem('user');
     if (user) {
-      navigate('/prediction', { replace: true });
+      navigate('/dashboard', { replace: true });
       return;
     }
 
@@ -73,7 +73,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const response = await fetch(authUrl('/api/login'), {
+      const response = await fetch(authUrl('/auth/login'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -103,13 +103,13 @@ export default function Login() {
           description: `Welcome back, ${friendlyName}`,
           type: 'success',
         });
-        // Redirect to prediction page and replace history
-        navigate('/prediction', { replace: true });
+        // Redirect to dashboard and replace history
+        navigate('/dashboard', { replace: true });
       } else {
         setError(data.error || 'Login failed');
       }
     } catch (err) {
-      setError('Connection error. Ensure backend is running on port 5001');
+      setError('Connection error. Ensure backend is running on port 5000');
     } finally {
       setLoading(false);
     }

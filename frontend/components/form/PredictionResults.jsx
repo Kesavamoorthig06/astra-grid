@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CountingNumber } from '../ui/counting-number';
 import {
   Dialog,
@@ -123,16 +124,19 @@ function MetricCard({ title, value, unit, subtitle, showNumbers, animationKey, t
   );
 }
 
-export default function PredictionResultsModal({ prediction, open, onClose }) {
+export default function PredictionResultsModal({ prediction, open, onClose, formData }) {
+  const navigate = useNavigate();
   const [showNumbers, setShowNumbers] = useState(false);
   const [animationKey, setAnimationKey] = useState(0);
   const [metricDetailsOpen, setMetricDetailsOpen] = useState(false);
 
+  // Hooks MUST be called before any early returns
   useEffect(() => {
     if (!prediction || !open) {
       setShowNumbers(false);
       return;
     }
+    console.log('PredictionResults - Received prediction:', prediction);
     setShowNumbers(false);
     const timer = setTimeout(() => {
       setAnimationKey((prev) => prev + 1);
@@ -143,7 +147,6 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
 
   useEffect(() => {
     if (metricDetailsOpen) {
-      // Scroll to top when metrics are opened
       const dialogContent = document.querySelector('[role="dialog"]');
       if (dialogContent) {
         dialogContent.scrollTop = 0;
@@ -151,8 +154,42 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
     }
   }, [metricDetailsOpen]);
 
-  const riskAnalysis = prediction?.risk_analysis;
-  const hotspotAnalysis = prediction?.hotspot_analysis;
+  // NOW do early returns AFTER all hooks have been called
+  if (!prediction || typeof prediction !== 'object') {
+    console.log('⚠️ Modal returning null - prediction:', prediction, 'type:', typeof prediction);
+    return null;
+  }
+
+  console.log('✓ Modal has valid prediction object:', prediction);
+
+  // Check if this is an error response
+  if (prediction.success === false || prediction.error) {
+    console.log('⚠️ Showing error modal - prediction.error:', prediction.error);
+    return (
+      <Dialog open={open} onOpenChange={(isOpen) => !isOpen && onClose()}>
+        <DialogPortal>
+          <DialogBackdrop />
+          <DialogPopup className="max-w-md">
+            <DialogHeader className="border-b pb-4 mb-4">
+              <DialogTitle>Prediction Error</DialogTitle>
+            </DialogHeader>
+            <div className="p-4 text-center">
+              <p className="text-red-600 mb-4">{prediction.error || 'An error occurred while generating predictions'}</p>
+              <button
+                onClick={onClose}
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              >
+                Close
+              </button>
+            </div>
+          </DialogPopup>
+        </DialogPortal>
+      </Dialog>
+    );
+  }
+
+  const riskAnalysis = prediction?.risk_analysis || {};
+  const hotspotAnalysis = prediction?.hotspot_analysis || {};
 
   return (
     <Dialog open={open} onOpenChange={(isOpen) => !isOpen && onClose()}>
@@ -184,29 +221,31 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
               <div className="grid gap-4 sm:grid-cols-2">
                 <MetricCard
                   title="Cost Overrun Risk"
-                  value={prediction.cost_overrun_percent}
+                  value={prediction?.cost_overrun_percent || 0}
                   unit="%"
                   subtitle="Above estimated budget"
                   showNumbers={showNumbers}
                   animationKey={animationKey}
                   type="cost"
                   details={[
-                    { label: 'Predicted Overrun', value: `${prediction.cost_overrun_percent.toFixed(2)}%` },
-                    { label: 'Risk Level', value: prediction.cost_overrun_percent > 15 ? 'High' : prediction.cost_overrun_percent > 5 ? 'Medium' : 'Low' },
+                    { label: 'Predicted Overrun', value: `${(prediction?.cost_overrun_percent || 0).toFixed(2)}%` },
+                    { label: 'Risk Level', value: (prediction?.cost_overrun_percent || 0) > 15 ? 'High' : (prediction?.cost_overrun_percent || 0) > 5 ? 'Medium' : 'Low' },
+                    { label: 'DEBUG - Raw Value', value: String(prediction?.cost_overrun_percent) }
                   ]}
                 />
                 
                 <MetricCard
                   title="Schedule Delay"
-                  value={prediction.schedule_delay_days}
+                  value={prediction?.schedule_delay_days || 0}
                   unit="days"
                   subtitle="Beyond planned timeline"
                   showNumbers={showNumbers}
                   animationKey={animationKey}
                   type="delay"
                   details={[
-                    { label: 'Predicted Delay', value: `${prediction.schedule_delay_days.toFixed(1)} days` },
-                    { label: 'Risk Level', value: prediction.schedule_delay_days > 90 ? 'High' : prediction.schedule_delay_days > 30 ? 'Medium' : 'Low' },
+                    { label: 'Predicted Delay', value: `${(prediction?.schedule_delay_days || 0).toFixed(1)} days` },
+                    { label: 'Risk Level', value: (prediction?.schedule_delay_days || 0) > 90 ? 'High' : (prediction?.schedule_delay_days || 0) > 30 ? 'Medium' : 'Low' },
+                    { label: 'DEBUG - Raw Value', value: String(prediction?.schedule_delay_days) }
                   ]}
                 />
               </div>
@@ -221,42 +260,42 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
                     <div className="rounded-lg bg-white p-3 shadow-sm border">
                       <p className="text-xs font-medium text-gray-500 mb-1">Qualitative Risk</p>
                       <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-gray-800">{riskAnalysis.qualitative_risk_score}</span>
-                        <RiskBadge level={riskAnalysis.qualitative_risk_level} />
+                        <span className="text-2xl font-bold text-gray-800">{riskAnalysis?.qualitative_risk_score || 0}</span>
+                        <RiskBadge level={riskAnalysis?.qualitative_risk_level || 'Low'} />
                       </div>
                       <div className="mt-2 h-1.5 w-full rounded-full bg-gray-200">
                         <div 
                           className={`h-1.5 rounded-full transition-all duration-1000 ${
-                            riskAnalysis.qualitative_risk_level === 'Low' ? 'bg-green-500' :
-                            riskAnalysis.qualitative_risk_level === 'Medium' ? 'bg-yellow-500' : 'bg-red-500'
+                            riskAnalysis?.qualitative_risk_level === 'Low' ? 'bg-green-500' :
+                            riskAnalysis?.qualitative_risk_level === 'Medium' ? 'bg-yellow-500' : 'bg-red-500'
                           }`}
-                          style={{ width: `${Math.min(riskAnalysis.qualitative_risk_score * 10, 100)}%` }}
+                          style={{ width: `${Math.min((riskAnalysis?.qualitative_risk_score || 0) * 10, 100)}%` }}
                         />
                       </div>
                     </div>
                     <div className="rounded-lg bg-white p-3 shadow-sm border">
                       <p className="text-xs font-medium text-gray-500 mb-1">Vendor Risk</p>
                       <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-gray-800">{riskAnalysis.vendor_risk_score}</span>
-                        <RiskBadge level={riskAnalysis.vendor_risk_level} />
+                        <span className="text-2xl font-bold text-gray-800">{riskAnalysis?.vendor_risk_score || 0}</span>
+                        <RiskBadge level={riskAnalysis?.vendor_risk_level || 'Low'} />
                       </div>
                       <div className="mt-2 h-1.5 w-full rounded-full bg-gray-200">
                         <div 
                           className={`h-1.5 rounded-full transition-all duration-1000 ${
-                            riskAnalysis.vendor_risk_level === 'Low' ? 'bg-green-500' :
-                            riskAnalysis.vendor_risk_level === 'Medium' ? 'bg-yellow-500' : 'bg-red-500'
+                            riskAnalysis?.vendor_risk_level === 'Low' ? 'bg-green-500' :
+                            riskAnalysis?.vendor_risk_level === 'Medium' ? 'bg-yellow-500' : 'bg-red-500'
                           }`}
-                          style={{ width: `${Math.min(riskAnalysis.vendor_risk_score * 20, 100)}%` }}
+                          style={{ width: `${Math.min((riskAnalysis?.vendor_risk_score || 0) * 20, 100)}%` }}
                         />
                       </div>
                     </div>
                     <div className="rounded-lg bg-white p-3 shadow-sm border">
                       <p className="text-xs font-medium text-gray-500 mb-1">Historical Delay Index</p>
-                      <span className="text-2xl font-bold text-gray-800">{riskAnalysis.historical_delay_index}</span>
+                      <span className="text-2xl font-bold text-gray-800">{riskAnalysis?.historical_delay_index || 0}</span>
                       <div className="mt-2 h-1.5 w-full rounded-full bg-gray-200">
                         <div 
                           className="h-1.5 rounded-full bg-indigo-500 transition-all duration-1000"
-                          style={{ width: `${Math.min(riskAnalysis.historical_delay_index * 10, 100)}%` }}
+                          style={{ width: `${Math.min((riskAnalysis?.historical_delay_index || 0) * 10, 100)}%` }}
                         />
                       </div>
                     </div>
@@ -273,16 +312,16 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="rounded-lg bg-white p-4 shadow-sm border">
                       <p className="text-xs font-medium text-gray-500 mb-2">Region Classification</p>
-                      <p className="text-lg font-semibold text-gray-800">{hotspotAnalysis.region}</p>
+                      <p className="text-lg font-semibold text-gray-800">{hotspotAnalysis?.region || 'Unknown'}</p>
                       <div className="mt-3 flex items-center gap-2">
                         <span className="text-xs text-gray-500">Escalation Likelihood:</span>
-                        <RiskBadge level={hotspotAnalysis.escalation_likelihood} />
+                        <RiskBadge level={hotspotAnalysis?.escalation_likelihood || 'Low'} />
                       </div>
                     </div>
                     <div className="rounded-lg bg-white p-4 shadow-sm border">
                       <p className="text-xs font-medium text-gray-500 mb-2">Identified Risk Factors</p>
                       <div className="flex flex-wrap gap-2">
-                        {hotspotAnalysis.risk_factors.map((factor, idx) => (
+                        {(hotspotAnalysis?.risk_factors || []).map((factor, idx) => (
                           <span
                             key={idx}
                             className="inline-flex items-center rounded-md bg-red-50 border border-red-200 px-2.5 py-1 text-xs font-medium text-red-700"
@@ -297,7 +336,7 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
               )}
 
               {/* Recommendations Header (outside section) */}
-              {prediction.recommendations && prediction.recommendations.length > 0 && (
+              {prediction?.recommendations && Array.isArray(prediction.recommendations) && prediction.recommendations.length > 0 && (
                 <div className="border-b pb-4 mb-4">
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-blue-500">
@@ -318,23 +357,23 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
               {prediction.recommendations && prediction.recommendations.length > 0 && (
                 <div className="rounded-xl border bg-gray-50 p-5">
                   <Accordion type="single" collapsible indicator="plus" className="w-full">
-                    {prediction.recommendations.map((rec, idx) => (
-                      <AccordionItem key={rec.id} value={`rec-${idx}`}>
+                    {(prediction?.recommendations || []).map((rec, idx) => (
+                      <AccordionItem key={rec?.id || idx} value={`rec-${idx}`}>
                         <AccordionTrigger>
                           <div className="flex items-center gap-3 flex-1 pr-4">
                             <div className="flex-1 text-left">
                               <div className="flex items-center gap-2">
-                                <span className="font-semibold text-gray-800">{rec.title}</span>
-                                <PriorityBadge priority={rec.priority} />
+                                <span className="font-semibold text-gray-800">{rec?.title || 'Recommendation'}</span>
+                                <PriorityBadge priority={rec?.priority || 'Medium'} />
                               </div>
-                              <p className="text-xs text-gray-500 mt-0.5">{rec.category}</p>
+                              <p className="text-xs text-gray-500 mt-0.5">{rec?.category || 'General'}</p>
                             </div>
                           </div>
                         </AccordionTrigger>
                         <AccordionContent>
                           <div className="space-y-4">
                             <p className="text-sm text-gray-700 bg-gray-100 p-3 rounded-lg">
-                              {rec.summary}
+                              {rec?.summary || 'No summary available'}
                             </p>
                             
                             <div>
@@ -342,7 +381,7 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
                                 Action Items
                               </p>
                               <ul className="space-y-2">
-                                {rec.details.map((detail, detailIdx) => (
+                                {(rec?.details || []).map((detail, detailIdx) => (
                                   <li key={detailIdx} className="flex items-start gap-2 text-sm text-gray-700">
                                     <span className="text-gray-400">•</span>
                                     {detail}
@@ -353,7 +392,7 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
                             
                             <div className="pt-2 border-t">
                               <span className="text-xs font-medium text-gray-700">
-                                Expected Impact: {rec.impact}
+                                Expected Impact: {rec?.impact || 'TBD'}
                               </span>
                             </div>
                           </div>
@@ -461,12 +500,38 @@ export default function PredictionResultsModal({ prediction, open, onClose }) {
                     Close
                   </button>
                   <button
-                    onClick={() => window.print()}
-                    className="px-6 py-2 bg-white dark:bg-black border-[3px] border-gray-300 dark:border-gray-700 text-black dark:text-white rounded-md font-semibold transition-all duration-200 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black hover:shadow-md shadow-lg flex items-center gap-2"
+                    onClick={() => {
+                      const voltage = formData?.voltage_level_kv || 132;
+                      const duration = formData?.target_duration_days || 365;
+                      const cost = formData?.target_cost_inr ? (formData.target_cost_inr / 10000000) : 50;
+                      const projectType = formData?.project_type || 'Substation';
+                      
+                      const projectData = {
+                        projectType: projectType.toLowerCase(),
+                        startDate: new Date().toISOString().split('T')[0],
+                        plannedEndDate: new Date(Date.now() + duration * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+                        estimatedCost: cost,
+                        additionalDetails: {
+                          voltage: voltage + ' kV',
+                          capacity: voltage,
+                          location: formData?.terrain_complexity_index > 5 ? 'Difficult Terrain' : 'Normal Terrain',
+                          terrain: formData?.terrain_complexity_index > 5 ? 'hilly' : 'plain',
+                          establishmentCost: 3.5,
+                          interestRate: 8.5,
+                          storageCost: 0.8
+                        }
+                      };
+                      navigate('/simulation', { state: { projectData } });
+                      onClose();
+                    }}
+                    className="px-6 py-2 bg-white dark:bg-black border-[3px] border-gray-300 dark:border-gray-700 text-black dark:text-white rounded-md font-semibold transition-all duration-200 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black hover:shadow-md shadow-lg"
                   >
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
-                    </svg>
+                    Make Project Live
+                  </button>
+                  <button
+                    onClick={() => window.print()}
+                    className="px-6 py-2 bg-white dark:bg-black border-[3px] border-gray-300 dark:border-gray-700 text-black dark:text-white rounded-md font-semibold transition-all duration-200 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black hover:shadow-md shadow-lg"
+                  >
                     Export
                   </button>
                 </div>

@@ -104,20 +104,23 @@ export default function SimulationResultsModal({ results, open, onClose }) {
   }, [metricDetailsOpen]);
 
   const prediction = results ? {
-    cost_overrun_percent: results.predictions?.cost_overrun_percent || 0,
-    schedule_delay_days: results.predictions?.timeline_overrun_days || 0,
-    risk_analysis: results.risk_analysis || {
-      qualitative_risk_score: 0,
-      qualitative_risk_level: 'Low',
-      vendor_risk_score: 0,
-      vendor_risk_level: 'Low',
-      historical_delay_index: 0,
+    cost_overrun_percent: results.prediction?.cost_overrun_percent || 0,
+    schedule_delay_days: results.prediction?.timeline_delay_days || 0,
+    risk_score: Math.abs(results.prediction?.risk_score || 0),
+    risk_category: results.prediction?.risk_category || 'Low',
+    risk_analysis: {
+      qualitative_risk_score: Math.abs(results.prediction?.risk_score || 0),
+      qualitative_risk_level: results.prediction?.risk_category || 'Low',
+      vendor_risk_score: results.prediction?.vendor_risk_score || 0,
+      vendor_risk_level: results.prediction?.vendor_risk_level || 'Low',
+      historical_delay_index: results.prediction?.historical_delay_index || 0,
     },
-    hotspot_analysis: results.hotspot_analysis || {
+    hotspot_analysis: results.prediction?.hotspot_analysis || {
       region: 'Unknown Region',
       escalation_likelihood: 'Low',
       risk_factors: [],
     },
+    scenarios: results.scenarios || null,
     recommendations: Array.isArray(results.recommendations) ? results.recommendations : [],
   } : null;
 
@@ -167,13 +170,13 @@ export default function SimulationResultsModal({ results, open, onClose }) {
               <div className="flex-1 space-y-6">
               {!metricDetailsOpen && (<>
               <div className="grid gap-4 sm:grid-cols-2">
-                <MetricCard title="Cost Overrun Risk" value={prediction.cost_overrun_percent} unit="%" subtitle="Above estimated budget" showNumbers={showNumbers} animationKey={animationKey} type="cost" details={[{ label: 'Predicted Overrun', value: `${prediction.cost_overrun_percent.toFixed(2)}%` }, { label: 'Risk Level', value: prediction.cost_overrun_percent > 15 ? 'High' : prediction.cost_overrun_percent > 5 ? 'Medium' : 'Low' }]} />
-                <MetricCard title="Schedule Delay" value={prediction.schedule_delay_days} unit="days" subtitle="Beyond planned timeline" showNumbers={showNumbers} animationKey={animationKey} type="delay" details={[{ label: 'Predicted Delay', value: `${prediction.schedule_delay_days.toFixed(1)} days` }, { label: 'Risk Level', value: prediction.schedule_delay_days > 90 ? 'High' : prediction.schedule_delay_days > 30 ? 'Medium' : 'Low' }]} />
+                <MetricCard title="Cost Overrun Risk" value={Math.abs(prediction.cost_overrun_percent)} unit="%" subtitle="Above estimated budget" showNumbers={showNumbers} animationKey={animationKey} type="cost" details={[{ label: 'Predicted Overrun', value: `${Math.abs(prediction.cost_overrun_percent).toFixed(2)}%` }, { label: 'Risk Level', value: Math.abs(prediction.cost_overrun_percent) > 15 ? 'High' : Math.abs(prediction.cost_overrun_percent) > 5 ? 'Medium' : 'Low' }]} />
+                <MetricCard title="Schedule Delay" value={Math.abs(prediction.schedule_delay_days)} unit="days" subtitle="Beyond planned timeline" showNumbers={showNumbers} animationKey={animationKey} type="delay" details={[{ label: 'Predicted Delay', value: `${Math.abs(prediction.schedule_delay_days).toFixed(1)} days` }, { label: 'Risk Level', value: Math.abs(prediction.schedule_delay_days) > 90 ? 'High' : Math.abs(prediction.schedule_delay_days) > 30 ? 'Medium' : 'Low' }]} />
               </div>
               {riskAnalysis && (
                 <div className="rounded-xl border bg-gray-50 p-5">
                   <h3 className="mb-4 text-base font-semibold text-gray-800">Risk Analysis</h3>
-                  <div className="grid gap-3 sm:grid-cols-3">
+                  <div className="grid gap-3 sm:grid-cols-2">
                     <div className="rounded-lg bg-white p-3 shadow-sm border">
                       <p className="text-xs font-medium text-gray-500 mb-1">Qualitative Risk</p>
                       <div className="flex items-center justify-between"><span className="text-2xl font-bold text-gray-800">{riskAnalysis.qualitative_risk_score}</span><RiskBadge level={riskAnalysis.qualitative_risk_level} /></div>
@@ -183,11 +186,6 @@ export default function SimulationResultsModal({ results, open, onClose }) {
                       <p className="text-xs font-medium text-gray-500 mb-1">Vendor Risk</p>
                       <div className="flex items-center justify-between"><span className="text-2xl font-bold text-gray-800">{riskAnalysis.vendor_risk_score}</span><RiskBadge level={riskAnalysis.vendor_risk_level} /></div>
                       <div className="mt-2 h-1.5 w-full rounded-full bg-gray-200"><div className={`h-1.5 rounded-full transition-all duration-1000 ${riskAnalysis.vendor_risk_level === 'Low' ? 'bg-green-500' : riskAnalysis.vendor_risk_level === 'Medium' ? 'bg-yellow-500' : 'bg-red-500'}`} style={{ width: `${Math.min(riskAnalysis.vendor_risk_score * 20, 100)}%` }} /></div>
-                    </div>
-                    <div className="rounded-lg bg-white p-3 shadow-sm border">
-                      <p className="text-xs font-medium text-gray-500 mb-1">Historical Delay Index</p>
-                      <span className="text-2xl font-bold text-gray-800">{riskAnalysis.historical_delay_index}</span>
-                      <div className="mt-2 h-1.5 w-full rounded-full bg-gray-200"><div className="h-1.5 rounded-full bg-indigo-500 transition-all duration-1000" style={{ width: `${Math.min(riskAnalysis.historical_delay_index * 10, 100)}%` }} /></div>
                     </div>
                   </div>
                 </div>
@@ -216,6 +214,94 @@ export default function SimulationResultsModal({ results, open, onClose }) {
                   </div>
                 </div>
               )}
+              {prediction.scenarios && (
+                <div className="rounded-xl border bg-gradient-to-br from-blue-50 to-purple-50 p-5">
+                  <h3 className="mb-4 text-base font-semibold text-gray-800">Scenario Analysis</h3>
+                  <div className="grid gap-4 md:grid-cols-3">
+                    {prediction.scenarios.optimistic && (
+                      <div className="rounded-lg bg-white p-4 shadow-sm border border-green-200">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                          <p className="text-sm font-semibold text-gray-800">{prediction.scenarios.optimistic.name}</p>
+                        </div>
+                        <p className="text-xs text-gray-600 mb-3">{prediction.scenarios.optimistic.description}</p>
+                        <div className="space-y-2">
+                          <div className="flex justify-between text-xs">
+                            <span className="text-gray-600">Risk Score:</span>
+                            <span className="font-semibold text-green-700">{prediction.scenarios.optimistic.risk_score}</span>
+                          </div>
+                          <div className="flex justify-between text-xs">
+                            <span className="text-gray-600">Cost Change:</span>
+                            <span className="font-semibold text-green-700">{prediction.scenarios.optimistic.cost_change_percent}%</span>
+                          </div>
+                          <div className="flex justify-between text-xs">
+                            <span className="text-gray-600">Timeline:</span>
+                            <span className="font-semibold text-green-700">{prediction.scenarios.optimistic.timeline_change_days} days</span>
+                          </div>
+                          <div className="pt-2 border-t border-gray-200">
+                            <div className="text-xs text-gray-600">Estimated Cost:</div>
+                            <div className="text-sm font-bold text-gray-800">₹{((prediction.scenarios.optimistic.estimated_cost || 0) / 1e7).toFixed(2)}Cr</div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    {prediction.scenarios.realistic && (
+                      <div className="rounded-lg bg-white p-4 shadow-sm border border-yellow-200">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
+                          <p className="text-sm font-semibold text-gray-800">{prediction.scenarios.realistic.name}</p>
+                        </div>
+                        <p className="text-xs text-gray-600 mb-3">{prediction.scenarios.realistic.description}</p>
+                        <div className="space-y-2">
+                          <div className="flex justify-between text-xs">
+                            <span className="text-gray-600">Risk Score:</span>
+                            <span className="font-semibold text-yellow-700">{prediction.scenarios.realistic.risk_score}</span>
+                          </div>
+                          <div className="flex justify-between text-xs">
+                            <span className="text-gray-600">Cost Change:</span>
+                            <span className="font-semibold text-yellow-700">{prediction.scenarios.realistic.cost_change_percent}%</span>
+                          </div>
+                          <div className="flex justify-between text-xs">
+                            <span className="text-gray-600">Timeline:</span>
+                            <span className="font-semibold text-yellow-700">{prediction.scenarios.realistic.timeline_change_days} days</span>
+                          </div>
+                          <div className="pt-2 border-t border-gray-200">
+                            <div className="text-xs text-gray-600">Estimated Cost:</div>
+                            <div className="text-sm font-bold text-gray-800">₹{((prediction.scenarios.realistic.estimated_cost || 0) / 1e7).toFixed(2)}Cr</div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    {prediction.scenarios.pessimistic && (
+                      <div className="rounded-lg bg-white p-4 shadow-sm border border-red-200">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="h-3 w-3 rounded-full bg-red-500"></div>
+                          <p className="text-sm font-semibold text-gray-800">{prediction.scenarios.pessimistic.name}</p>
+                        </div>
+                        <p className="text-xs text-gray-600 mb-3">{prediction.scenarios.pessimistic.description}</p>
+                        <div className="space-y-2">
+                          <div className="flex justify-between text-xs">
+                            <span className="text-gray-600">Risk Score:</span>
+                            <span className="font-semibold text-red-700">{prediction.scenarios.pessimistic.risk_score}</span>
+                          </div>
+                          <div className="flex justify-between text-xs">
+                            <span className="text-gray-600">Cost Change:</span>
+                            <span className="font-semibold text-red-700">+{prediction.scenarios.pessimistic.cost_change_percent}%</span>
+                          </div>
+                          <div className="flex justify-between text-xs">
+                            <span className="text-gray-600">Timeline:</span>
+                            <span className="font-semibold text-red-700">+{prediction.scenarios.pessimistic.timeline_change_days} days</span>
+                          </div>
+                          <div className="pt-2 border-t border-gray-200">
+                            <div className="text-xs text-gray-600">Estimated Cost:</div>
+                            <div className="text-sm font-bold text-gray-800">₹{((prediction.scenarios.pessimistic.estimated_cost || 0) / 1e7).toFixed(2)}Cr</div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
               {prediction.recommendations && prediction.recommendations.length > 0 && (
                 <div className="border-b pb-4 mb-4">
                   <div className="flex items-center gap-3">
@@ -231,8 +317,51 @@ export default function SimulationResultsModal({ results, open, onClose }) {
                   <Accordion type="single" collapsible indicator="plus" className="w-full">
                     {prediction.recommendations.map((rec, idx) => (
                       <AccordionItem key={rec.id || `rec-${idx}`} value={`rec-${idx}`}>
-                        <AccordionTrigger><div className="flex items-center gap-3 flex-1 pr-4"><div className="flex-1 text-left"><div className="flex items-center gap-2"><span className="font-semibold text-gray-800">{rec.title || 'Recommendation'}</span><PriorityBadge priority={rec.priority || 'medium'} /></div><p className="text-xs text-gray-500 mt-0.5">{rec.category || 'General'}</p></div></div></AccordionTrigger>
-                        <AccordionContent><div className="space-y-4"><p className="text-sm text-gray-700 bg-gray-100 p-3 rounded-lg">{rec.summary || 'No summary available'}</p>{rec.details && rec.details.length > 0 && (<div><p className="text-xs font-semibold text-gray-600 mb-2 uppercase tracking-wide">Action Items</p><ul className="space-y-2">{rec.details.map((detail, detailIdx) => (<li key={detailIdx} className="flex items-start gap-2 text-sm text-gray-700"><span className="text-gray-400">•</span>{detail}</li>))}</ul></div>)}<div className="pt-2 border-t"><span className="text-xs font-medium text-gray-700">Expected Impact: {rec.impact || 'Not specified'}</span></div></div></AccordionContent>
+                        <AccordionTrigger>
+                          <div className="flex items-center gap-3 flex-1 pr-4">
+                            <div className="flex-1 text-left">
+                              <div className="flex items-center gap-2">
+                                <span className="font-semibold text-gray-800">
+                                  {rec.recommendation || rec.title || 'Recommendation'}
+                                </span>
+                                <PriorityBadge priority={rec.priority || 'Medium'} />
+                              </div>
+                              <p className="text-xs text-gray-500 mt-0.5">
+                                {rec.area || rec.category || 'General'}
+                              </p>
+                            </div>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <div className="space-y-3 pt-2">
+                            <p className="text-sm text-gray-700 bg-white p-3 rounded-lg border">
+                              {rec.recommendation || rec.summary || 'No details available'}
+                            </p>
+                            {rec.details && rec.details.length > 0 && (
+                              <div>
+                                <p className="text-xs font-semibold text-gray-600 mb-2 uppercase tracking-wide">
+                                  Action Items
+                                </p>
+                                <ul className="space-y-2">
+                                  {rec.details.map((detail, detailIdx) => (
+                                    <li key={detailIdx} className="flex items-start gap-2 text-sm text-gray-700">
+                                      <span className="text-emerald-500 font-bold">→</span>
+                                      <span>{detail}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                            <div className="flex items-center gap-4 pt-2 border-t">
+                              <span className="text-xs font-medium text-gray-600">
+                                Priority: <span className="font-bold">{rec.priority || 'Not specified'}</span>
+                              </span>
+                              <span className="text-xs font-medium text-gray-600">
+                                Category: <span className="font-bold">{rec.area || 'General'}</span>
+                              </span>
+                            </div>
+                          </div>
+                        </AccordionContent>
                       </AccordionItem>
                     ))}
                   </Accordion>

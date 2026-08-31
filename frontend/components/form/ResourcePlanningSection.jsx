@@ -68,7 +68,7 @@ export default function ResourcePlanningSection({
           </div>
           {labourRupeeValue !== null && (
             <p className="mt-2 text-xs text-muted-foreground">
-              {t('form.valueInINR')}: ₹{labourFormattedRupeeValue}
+              Value in INR: ₹{labourFormattedRupeeValue}
             </p>
           )}
         </div>
@@ -106,7 +106,7 @@ export default function ResourcePlanningSection({
           </div>
           {materialRupeeValue !== null && (
             <p className="mt-2 text-xs text-muted-foreground">
-              {t('form.valueInINR')}: ₹{materialFormattedRupeeValue}
+              Value in INR: ₹{materialFormattedRupeeValue}
             </p>
           )}
         </div>

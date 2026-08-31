@@ -152,7 +152,7 @@
     "materialCost": "सामग्री लागत अनुमान (INR)",
     "resourcePlanning": "संसाधन योजना",
     "skilledWorkers": "आवश्यक कुशल कर्मचारी",
-    "vendorRating": "विक्रेता प्रदर्शन रेटिंग (0-10)",
+    "vendorRating": "विक्रेता प्रदर्शन रेटिंग (1-5)",
     "vendorChanges": "विक्रेता परिवर्तन घटनाएं",
     "marketSupplyChain": "बाजार और आपूर्ति श्रृंखला जोखिम",
     "materialAvailability": "सामग्री उपलब्धता समस्या",

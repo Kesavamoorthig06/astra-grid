@@ -50,17 +50,23 @@ def create_app(config=None):
     from app.routes.auth_routes import auth_bp
     from app.routes.prediction_routes import prediction_bp
     from app.routes.simulation_routes import simulation_bp
+    from app.routes.new_simulation_routes import new_simulation_bp
     from app.routes.document_routes import document_bp
     from app.routes.chatbot_routes import chatbot_bp
+    from app.routes.dashboard_routes import dashboard_bp
+    from simulation_api import simulation_bp as project_simulation_bp
     
     app.register_blueprint(health_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(prediction_bp)
     app.register_blueprint(simulation_bp)
+    app.register_blueprint(new_simulation_bp)
     app.register_blueprint(document_bp)
     app.register_blueprint(chatbot_bp)
+    app.register_blueprint(dashboard_bp)
+    app.register_blueprint(project_simulation_bp, name='project_simulation')
     
-    logger.info("✓ All blueprints registered")
+    logger.info("✓ All blueprints registered including project simulation API")
     
     # Initialize database
     try:

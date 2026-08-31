@@ -1,8 +1,10 @@
 import React, { useState, useRef } from 'react';
 import { X, Upload, Camera, FileText, Loader2, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useFeatureToggle } from '../hooks/useFeatureToggle';
 
 const DocumentExtractor = ({ isOpen, onClose, onComplete }) => {
+  const isDocumentExtractorEnabled = useFeatureToggle('documentExtractor');
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -10,9 +12,13 @@ const DocumentExtractor = ({ isOpen, onClose, onComplete }) => {
   const [extractedText, setExtractedText] = useState('');
   const [error, setError] = useState('');
   const [useCamera, setUseCamera] = useState(false);
-  
   const fileInputRef = useRef(null);
   const cameraInputRef = useRef(null);
+  
+  // If document extractor is disabled, don't render anything
+  if (!isDocumentExtractorEnabled) {
+    return null;
+  }
 
   const handleFileSelect = (e) => {
     const selectedFile = e.target.files[0];
@@ -70,12 +76,18 @@ const DocumentExtractor = ({ isOpen, onClose, onComplete }) => {
       // Attempt extraction with backend
       let response;
       try {
-        response = await fetch('http://localhost:5004/upload', {
+        const token = localStorage.getItem('token');
+        const apiUrl = `${window.location.protocol}//${window.location.hostname}:5000/api/document/upload`;
+        
+        response = await fetch(apiUrl, {
           method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          },
           body: formData,
         });
       } catch (fetchErr) {
-        throw new Error('Cannot connect to extraction service. Make sure the backend is running on port 5004.');
+        throw new Error('Cannot connect to extraction service. Make sure the backend is running on port 5000.');
       }
 
       if (!response.ok) {
@@ -122,7 +134,7 @@ const DocumentExtractor = ({ isOpen, onClose, onComplete }) => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+      <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}

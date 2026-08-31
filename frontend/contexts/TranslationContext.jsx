@@ -44,10 +44,10 @@ export function TranslationProvider({ children }) {
   );
 }
 
-export function useTranslation() {
+export function useGoogleTranslationContext() {
   const context = useContext(TranslationContext);
   if (!context) {
-    throw new Error('useTranslation must be used within TranslationProvider');
+    throw new Error('useGoogleTranslationContext must be used within TranslationProvider');
   }
   return context;
 }

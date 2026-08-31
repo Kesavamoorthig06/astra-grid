@@ -5,6 +5,7 @@ import NavigationMenuDemo from '../navigation-menu/default';
 import { Avatar, AvatarImage, AvatarFallback } from '../ui/avatar';
 import { useTranslation } from 'react-i18next';
 import { authUrl } from '../../config/backends';
+import { useFeatureToggle } from '../../hooks/useFeatureToggle';
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -14,6 +15,11 @@ export default function Navbar() {
   const [userName, setUserName] = useState('Project Admin');
   const [userEmail, setUserEmail] = useState('');
   const [userRole, setUserRole] = useState('Officer');
+  
+  // Feature toggles
+  const dashboardEnabled = useFeatureToggle('dashboard');
+  const predictionEnabled = useFeatureToggle('prediction');
+  const simulationEnabled = useFeatureToggle('simulation');
 
   useEffect(() => {
     try {
@@ -48,7 +54,7 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await fetch(authUrl('/api/logout'), {
+      await fetch(authUrl('/auth/logout'), {
         method: 'POST',
         credentials: 'include'
       });
@@ -91,27 +97,33 @@ export default function Navbar() {
           <div className="absolute left-1/2 -translate-x-1/2">
             <Tabs value={currentPath} className="w-auto">
               <TabsList className="bg-white dark:bg-slate-800/80 p-1 h-auto rounded-md shadow-inner shadow-black/5 dark:shadow-slate-900/30">
-                <TabsTrigger
-                  value="/dashboard"
-                  asChild
-                  className="px-4 py-2 text-sm font-semibold text-gray-600 transition-colors rounded-md hover:bg-black/5 data-[state=active]:bg-black data-[state=active]:text-white"
-                >
-                  <Link to="/dashboard">{t('nav.dashboard')}</Link>
-                </TabsTrigger>
-                <TabsTrigger
-                  value="/prediction"
-                  asChild
-                  className="px-4 py-2 text-sm font-semibold text-gray-600 transition-colors rounded-md hover:bg-black/5 data-[state=active]:bg-black data-[state=active]:text-white"
-                >
-                  <Link to="/prediction">{t('nav.prediction')}</Link>
-                </TabsTrigger>
-                <TabsTrigger
-                  value="/simulation"
-                  asChild
-                  className="px-4 py-2 text-sm font-semibold text-gray-600 transition-colors rounded-md hover:bg-black/5 data-[state=active]:bg-black data-[state=active]:text-white"
-                >
-                  <Link to="/simulation">{t('nav.simulation')}</Link>
-                </TabsTrigger>
+                {dashboardEnabled && (
+                  <TabsTrigger
+                    value="/dashboard"
+                    asChild
+                    className="px-4 py-2 text-sm font-semibold text-gray-600 transition-colors rounded-md hover:bg-black/5 data-[state=active]:bg-black data-[state=active]:text-white"
+                  >
+                    <Link to="/dashboard">{t('nav.dashboard')}</Link>
+                  </TabsTrigger>
+                )}
+                {predictionEnabled && (
+                  <TabsTrigger
+                    value="/prediction"
+                    asChild
+                    className="px-4 py-2 text-sm font-semibold text-gray-600 transition-colors rounded-md hover:bg-black/5 data-[state=active]:bg-black data-[state=active]:text-white"
+                  >
+                    <Link to="/prediction">{t('nav.prediction')}</Link>
+                  </TabsTrigger>
+                )}
+                {simulationEnabled && (
+                  <TabsTrigger
+                    value="/simulation"
+                    asChild
+                    className="px-4 py-2 text-sm font-semibold text-gray-600 transition-colors rounded-md hover:bg-black/5 data-[state=active]:bg-black data-[state=active]:text-white"
+                  >
+                    <Link to="/simulation">{t('nav.simulation')}</Link>
+                  </TabsTrigger>
+                )}
               </TabsList>
             </Tabs>
           </div>

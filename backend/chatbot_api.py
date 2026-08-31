@@ -102,7 +102,7 @@ def generate_intelligent_response(user_message):
     if any(word in msg_lower for word in ['astra', 'platform', 'tool']):
         return f"""ASTRA GRID is an AI-powered platform that predicts cost overruns and delays in power transmission projects.
 
-Using {stats.get('total_projects', 14500)} actual projects from our dataset:
+Key Metrics:
 • Average cost overrun: {stats.get('avg_cost_overrun', '53%')}
 • Average timeline delay: {stats.get('avg_timeline_delay', '56 days')}
 • Total investment analyzed: {stats.get('total_investment', '₹168L Cr')}
@@ -112,13 +112,13 @@ Features: Prediction models, simulation engine, risk dashboard, document extract
     # Cost questions
     if any(word in msg_lower for word in ['cost', 'expensive', 'highest']):
         if stats.get('highest_cost_project'):
-            return f"""Highest cost project in dataset: {stats['highest_cost_project'][:50]}
+            return f"""Highest cost project: {stats['highest_cost_project'][:50]}
 Cost: {stats.get('highest_cost', 'N/A')}
 
-From 14,500 projects analyzed:
+Cost Analysis:
 • Average cost overrun: {stats.get('avg_cost_overrun', '53%')}
 • Range: ₹1 Cr to ₹8,500 Cr
-• Material costs drive ~60% of overruns"""
+• Material costs & environmental permits drive ~53% of overruns"""
         else:
             return f"""Project costs vary by voltage level:
 • 765 kV: ₹3,500 Cr avg | {stats.get('voltage_765', 145)} projects
@@ -130,7 +130,7 @@ Average overrun: {stats.get('avg_cost_overrun', '53%')}"""
     
     # Timeline/delay questions
     if any(word in msg_lower for word in ['timeline', 'delay', 'duration', 'how long']):
-        return f"""Typical timelines from {stats['total_projects']} projects:
+        return f"""Typical timelines for transmission projects:
 • 765 kV lines: 24-30 months | Avg delay: {stats.get('avg_timeline_delay', '56 days')}
 • 400 kV systems: 20-24 months
 • 220 kV systems: 18-22 months
@@ -145,7 +145,6 @@ Terrain & weather add 20-35% to durations."""
 • {stats.get('total_line_length', '1.8M')} km transmission lines
 • Voltage levels: 765/400/220/132 kV
 • 350+ substations across India
-• Active projects: {stats['total_projects']}
 
 Breakdown by voltage:
 • 765 kV: {stats.get('voltage_765', 145)} projects (ultra-high)
@@ -214,12 +213,12 @@ Projects: {stats.get('voltage_400', 892)}
 ✓ Ministry initiatives
 ✓ Voltage levels & infrastructure
 
-Ask: "What's ASTRA GRID?" or "Tell me about costs" or "How does terrain affect projects?"
-
-Data: {stats['total_projects']} projects analyzed."""
+Ask: "What's ASTRA GRID?" or "Tell me about costs" or "How does terrain affect projects?""""
     
     # Default
-    return f"""ASTRA GRID handles power transmission data. From {stats['total_projects']} projects:
+    return f"""ASTRA GRID handles power transmission data analytics. 
+
+Key Insights:
 • Avg cost overrun: {stats.get('avg_cost_overrun', '53%')}
 • Avg delay: {stats.get('avg_timeline_delay', '56 days')}
 • Total investment: {stats.get('total_investment', '₹168L Cr')}

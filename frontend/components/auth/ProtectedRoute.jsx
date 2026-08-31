@@ -17,7 +17,7 @@ export default function ProtectedRoute({ children }) {
       }
 
       try {
-        const response = await fetch(authUrl('/api/verify-token'), {
+        const response = await fetch(authUrl('/auth/verify-token'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',

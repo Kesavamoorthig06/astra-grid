@@ -1,21 +1,24 @@
 // Network detection utility
 export const getBackendUrl = () => {
   const hostname = window.location.hostname;
+  const port = 5000;
   
   // If accessing from network IP (not localhost/127.0.0.1), use that IP
   if (hostname !== 'localhost' && hostname !== '127.0.0.1') {
-    return `http://${hostname}`;
+    return `http://${hostname}:${port}`;
   }
   
   // Otherwise use localhost
-  return 'http://localhost';
+  return `http://localhost:${port}`;
 };
 
-export const AUTH_API_URL = `${getBackendUrl()}:5001`;
-export const PREDICTION_API_URL = `${getBackendUrl()}:5000`;
-export const SIMULATION_API_URL = `${getBackendUrl()}:5002`;
-export const CHATBOT_API_URL = `${getBackendUrl()}:5003`;
-export const DOCUMENT_EXTRACTOR_API_URL = `${getBackendUrl()}:5004`;
+// Unified Backend - All services on port 5000
+export const BACKEND_BASE_URL = getBackendUrl();
+export const AUTH_API_URL = `${BACKEND_BASE_URL}/api`;
+export const PREDICTION_API_URL = `${BACKEND_BASE_URL}/api`;
+export const SIMULATION_API_URL = `${BACKEND_BASE_URL}/api`;
+export const CHATBOT_API_URL = `${BACKEND_BASE_URL}/api`;
+export const DOCUMENT_EXTRACTOR_API_URL = `${BACKEND_BASE_URL}/api`;
 
 // Helper functions for endpoints
 export const authUrl = (path = '') => `${AUTH_API_URL}${path}`;
