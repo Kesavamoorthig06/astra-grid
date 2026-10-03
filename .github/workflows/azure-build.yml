@@ -67,6 +67,9 @@ jobs:
         run: |
           OWNER=$(echo "${{ github.repository_owner }}" | tr A-Z a-z)
           docker build -t ghcr.io/$OWNER/astra-grid-frontend:latest .
+          
+          cp Final_dataset.csv backend/Final_dataset.csv
+
           docker build -t ghcr.io/$OWNER/astra-grid-backend:latest ./backend
           docker push ghcr.io/$OWNER/astra-grid-frontend:latest
           docker push ghcr.io/$OWNER/astra-grid-backend:latest
