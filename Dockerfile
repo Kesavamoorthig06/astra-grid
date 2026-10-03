@@ -31,3 +31,4 @@ EXPOSE 80
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
 COPY india_substations_precise_only.html /usr/share/nginx/html/india_substations_precise_only.html
+COPY Final_dataset.csv substations_geocoded_v2.csv /usr/share/nginx/html/
