@@ -29,6 +29,10 @@ jobs:
           sub('frontend/components/DocumentExtractor.jsx',
               "`${window.location.protocol}//${window.location.hostname}:5000/api/document/upload`",
               "'/api/document/upload'")
+          # signup: the unified backend has no email-code endpoints, so sign up directly
+          sub('frontend/pages/Signup.jsx', "const checkResponse = await fetch(authUrl('/auth/check-email'), {", "await handleSignup();\n      setLoading(false);\n      return;\n      const checkResponse = await fetch(authUrl('/auth/check-email'), {")
+          # login page: visible link to signup
+          sub('frontend/pages/Login.jsx', "          </form>\n        </div>\n\n        <div className=\"bg-gray-50/80", "          </form>\n          <p className=\"mt-4 text-center text-sm text-gray-600\">Don't have an account? <a href=\"/signup\" className=\"text-blue-600 font-semibold\">Sign up</a></p>\n        </div>\n\n        <div className=\"bg-gray-50/80")
           # backend: real entry point, no default admin seeding
           sub('backend/Dockerfile', 'CMD ["python", "unified_api.py"]', 'ENV FLASK_ENV=production\nCMD ["python", "run.py"]')
           sub('backend/app/factory.py', "AuthService.seed_admin_users()",
